@@ -1,0 +1,23 @@
+// core
+
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/typography';
+
+// components
+
+@import 'components/info';
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/preview';
+
+// layout
+
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/mainPage';
+@import 'layout/footer';
+
+// pages
+
+@import 'pages/aviso-legal';

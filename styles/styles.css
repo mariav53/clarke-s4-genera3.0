@@ -16,7 +16,6 @@ body {
 	padding: 0;
 	display: flex;
 	flex-direction: column;
-
 	box-sizing: border-box;
 	font-family: 'Roboto Condensed', sans-serif;
 }
@@ -26,7 +25,7 @@ main {
 	padding-top: 80px;
 	min-height: 100vh;
 }
-.main-block {
+.block__cv {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -131,11 +130,11 @@ main {
 
 /* SECTION2 INFO*/
 
-.imagen-desktop {
+.hero__img-desktop {
 	display: none;
 }
 
-.title-on-cover-main {
+.title-hero {
 	color: #EAB931;
 	text-align: center;
 	background-color: #424A5F;
@@ -144,23 +143,23 @@ main {
 	margin-bottom: 0px;
 }
 
-.main-img-section1 {
+.hero__img-mobile {
 	width: 100%;
 	height: auto;
 }
 
-.instructions-paragraph {
+.container__instructions {
 	padding: 3%;
 	text-align: center;
 	background-color: #E7ECED;
 }
 
-.instructions-paragraph p {
+.container__instructions-paragraph {
 	color: #424A5F;
 	font-size: 15px;
 }
 
-.steps-band {
+.block__info-steps {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
@@ -168,7 +167,7 @@ main {
 	padding: 10px;
 }
 
-.step-element {
+.step {
 	/*background-color: #EAB931;
 	border-color: black;
 	border-width: 1px;
@@ -177,7 +176,7 @@ main {
 	text-align: center;
 }
 
-.img-step-element {
+.img-step {
 	display: block;
 	width: 80px;
 	height: 60px;
@@ -196,7 +195,7 @@ main {
 
 /* SECTION DESIGN*/
 
-.section2design {
+.creation__design {
 	background: #31B89A;
 	height: 126px;
 	width: 100%;
@@ -205,7 +204,7 @@ main {
 	justify-content: center;
 }
 
-.design-options {
+.creation__design__options {
 	position: relative;
 	list-style: none;
 	display: flex;
@@ -215,7 +214,7 @@ main {
 	height: 106px;
 }
 
-.design-options-font, .design-options-colour, .design-options-theme {
+.creation__design__options-font, .creation__design__options-colour, .creation__design__options-theme {
 	border-color: #424A5F;
 	border-width: 3px;
 	border-style: solid;
@@ -225,26 +224,26 @@ main {
 	z-index: 2;
 }
 
-.design-img {
+.img-design {
 	width: 100px;
 	height: 100px;
 }
 
-.fonts, .colours, .themes {
+.design-fonts, .design-colours, .design-themes {
 	display: none;
 	position: absolute;
 	padding: 0;
 }
 
-.design-options-font:hover .fonts {
+.creation__design__options-font:hover .design-fonts {
 	display: block;
 }
 
-.design-options-colour:hover .colours {
+.creation__design__options-colour:hover .design-colours {
 	display: block;
 }
 
-.design-options-theme:hover .themes {
+.creation__design__options-theme:hover .design-themes {
 	display: block;
 }
 
@@ -322,7 +321,7 @@ main {
 
 /*SECTION IMAGE*/
 
-.section3photo {
+.creation__photo {
 	padding: 3%;
 	text-align: center;
 	background-color: #E7ECED;
@@ -474,7 +473,7 @@ fieldset {
 /*ELECCIÓN DE DISEÑO*/
 
 
-.preview-titleE, .config-title, .label {
+.preview-titleE, .title-creation, .label {
 	text-align: center;
 	color: #31B89A;
 	margin-top: 0;
@@ -815,23 +814,23 @@ footer {
 	}
 }
 @media all and (min-width:768px) {
-	.title-on-cover-main {
+	.title-hero {
 		font-size: 45px;
 		padding: 35px 0 35px 0;
 	}
-	.instructions-paragraph p {
+	.container__instructions-paragraph {
 		font-size: 20px;
 	}
-	.steps-band {
+	.block__info-steps {
 		padding: 3em 0em 2em 0em;
 		width: auto;
 	}
-	.img-step-element {
+	.img-step {
 			height:120px;
 			margin: auto;
 			width: auto;
 	}
-	.step-element {
+	.step {
 		width: 45%;
 	}
 	.span-step {
@@ -858,17 +857,17 @@ footer {
 		width: 30px;
 		height: auto;
 	}
-	.imagen-desktop {
+	.hero__img-desktop {
 		display: inline-block;
 		width: 100%
 	}
-	.main-img-section1{
+	.hero__img-mobile{
 		display: none;
 	}
 }
 
 @media all and (min-width:1100px) {
-	.main-block {
+	.block__cv {
 		flex-direction: row;
 		padding: 0 2%;
 		background-color: #E7ECED;
@@ -876,10 +875,10 @@ footer {
 	.showpreview {
 		height: 130vh;
 	}
-	.col1, .col2 {
+	.section__creation, .section__preview {
 		width: 50%;
 	}
-	.col2 {
+	.section__preview {
 		margin-left: 2%;
 	}
 	.cookie .preview-title{

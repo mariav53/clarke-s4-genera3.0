@@ -28,53 +28,53 @@
 	</header>
 
 	<main>
-		<div class="cover">
-			<img class="main-img-section1" src="images/cover_mobile2.png" alt="Imagen de portada">
-			<img class="imagen-desktop" src="images/desktop.png">
+		<div class="hero">
+			<img class="hero__img-mobile" src="images/cover_mobile2.png" alt="Imagen de portada movil">
+			<img class="hero__img-desktop" src="images/desktop.png" alt="Imagen de portada escritorio">
 		</div>
-		<h1 class="title-on-cover-main">Diseña tu CV sin perder tiempo</h1>
-		<section class="section1info">
-			<div class="steps-band">
-				<div class="step-element">
-					<img class="img-step-element" src="images/designer.svg" alt="Elige tu diseño">
+		<h1 class="title-hero">Diseña tu CV sin perder tiempo</h1>
+		<section class="block__info">
+			<div class="block__info-steps">
+				<div class="step">
+					<img class="img-step" src="images/designer.svg" alt="Elige tu diseño">
 					<span class="span-step">Elige tu diseño</span>
 				</div>
-				<div class="step-element">
-					<img class="img-step-element" src="images/writing.svg" alt="Introduce tus datos">
+				<div class="step">
+					<img class="img-step" src="images/writing.svg" alt="Introduce tus datos">
 					<span class="span-step">Introduce tus datos</span>
 				</div>
-				<div class="step-element">
-					<img class="img-step-element" src="images/download.svg" alt="Obtén tu CV personalizado">
+				<div class="step">
+					<img class="img-step" src="images/download.svg" alt="Obtén tu CV personalizado">
 					<span class="span-step">Obtén tu CV</span>
 				</div>
 			</div>
-			<div class="instructions">
-				<div class="instructions-paragraph">
-					<p>Generatrix CV es un generador de currículums vitae con diseños muy estudiados para conseguir trabajo o cambiar el que ya tienes por uno mejor. ¡Es muy sencillo! Elige los colores, el tipo de letra y un fondo, añade una foto si lo deseas y rellena los datos para hacer un CV de 10. Después podrás guardarlo e imprimirlo. ¡Comienza a diseñarlo!</p>
+			<div class="block__info-instructions">
+				<div class="container__instructions">
+					<p class="container__instructions-paragraph">Generatrix CV es un generador de currículums vitae con diseños muy estudiados para conseguir trabajo o cambiar el que ya tienes por uno mejor. ¡Es muy sencillo! Elige los colores, el tipo de letra y un fondo, añade una foto si lo deseas y rellena los datos para hacer un CV de 10. Después podrás guardarlo e imprimirlo. ¡Comienza a diseñarlo!</p>
 				</div>
 			</div>
 		</section>
 
-		<!-- DESING SECTION -->
-		<section class="main-block" id="diseño">
-			<section class="col1">
-				<h2 class="config-title"> Configura tu currículum </h2>
-				<div class="config">
-					<section class="section2design">
-						<ul class="design-options">
-							<li class="design-options-font">
-								<img class="design-img" src="images/text.svg" title="fuente" alt="fuentes">
+		<!-- DESIGN SECTION -->
+		<section class="block__cv" id="design">
+			<section class="section__creation">
+				<h2 class="title-creation">Configura tu currículum</h2>
+				<section class="container__creation">
+					<section class="creation__design">
+						<ul class="creation__design__options">
+							<li class="creation__design__options-font">
+								<img class="img-design" src="images/text.svg" title="fuente" alt="fuentes">
 								<!-- hidden -->
-								<ul class="fonts">
-									<li class="font" data-font-class="cookie"><h4>Cookie</h4></li>
-									<li class="font" data-font-class="annie"><h4>Annie</h4></li>
-									<li class="font" data-font-class="philosopher"><h4>Philosopher</h4></li>
+								<ul class="design-fonts">
+									<li class="font" data-font-class="cookie"><h3>Cookie</h3></li>
+									<li class="font" data-font-class="annie"><h3>Annie</h3></li>
+									<li class="font" data-font-class="philosopher"><h3>Philosopher</h3></li>
 								</ul>
 							</li>
-							<li class="design-options-colour">
-								<img class="design-img" src="images/paint-palette.svg" title="color" alt="color">
+							<li class="creation__design__options-colour">
+								<img class="img-design" src="images/paint-palette.svg" title="color" alt="color">
 								<!-- hidden -->
-								<ul class="colours">
+								<ul class="design-colours">
 									<li class="colour" data-colour-class="red-green-lime">
 										<div class="red"></div>
 										<div class="green"></div>
@@ -92,10 +92,10 @@
 									</li>
 								</ul>
 							</li>
-							<li class="design-options-theme">
-								<img class="design-img" src="images/menu.svg" title="estilo" alt="estilo">
+							<li class="creation__design__options-theme">
+								<img class="img-design" src="images/menu.svg" title="estilo" alt="estilo">
 								<!-- hidden -->
-								<ul class="themes">
+								<ul class="design-themes">
 									<li class="theme" data-theme-class="dots"><h4>Dots</h4></li>
 									<li class="theme" data-theme-class="stripes">Stripes</li>
 									<li class="theme" data-theme-class="zigZag">Zig Zag</li>
@@ -104,12 +104,16 @@
 						</ul>
 					</section>
 					<!-- ADD FILES -->
-					<section class="section3photo">
+					<section class="creation__photo">
 						<h3 class="label" for="files">Sube tu foto</h3>
 						<input class="selection-image" type="file" id="files" name="files[]" class="foto"/>
 						<div class="trigger"></div>
 					</section>
-					<section class="section5form" id="form">
+					<section class="creation__form" id="form">
+
+
+
+						
 						<form class="personal-information" action="index.html" method="post">
 
 							<!-- PERSONAL DATA -->
@@ -164,7 +168,7 @@
 								<div id="experience">
 									<div class="experience-element" id="experience-element">
 										<input class="claseinput" id="puesto1" type="text" name="puesto" placeholder="Puesto">
-										<div class="experience-dates">
+										<section class="experience-dates">
 											<div class="desde">
 												<label class="label from" for="desde">Desde</label>
 												<select id="start_month1" name="start_month" class="month">
@@ -183,7 +187,7 @@
 													<input class="present-button" id="actualidad1" type="checkbox" name="actualidad">
 												</div>
 											</div>
-										</div>
+										</section>
 										<input class="claseinput" id="lugar1" type="text" name="lugar" placeholder="Lugar">
 										<textarea class="experience-text" id="description1" name="description" rows="8" cols="80" placeholder="Despripción del puesto"></textarea>
 										<button type="button" name="button" class="save-experience-button" data-id="1">Guardar</button>
@@ -196,7 +200,7 @@
 							<!-- FORMATION -->
 							<fieldset class="formation">
 								<legend class="legend">Formación</legend>
-								<div class="form-section-header">
+									<div class="form-section-header">
 									<h3 class="h3-form">Formación</h3>
 									<!--botones colapsable-->
 									<div class="form-section-buttons">
@@ -208,7 +212,7 @@
 									<div class="formation-element" id="formation-element">
 										<label class="label" for="titulo"></label>
 										<input class="claseinput" id="titulo1" type="text" name="titulation" placeholder="Título*" required>
-										<div class="formation-dates">
+										<section class="formation-dates">
 											<div class="desde">
 												<label class="label from" for="desde">Desde</label>
 												<select id="start_month-formation1" name="start_month" class="month">
@@ -227,7 +231,7 @@
 													<input class="present-button" id="actualidad-formation1" type="checkbox" name="actualidad">
 												</div>
 											</div>
-										</div>
+										</section>
 										<label class="label" for="centro"></label>
 										<input class="claseinput" id="centro1" type="text" name="place" placeholder="Centro de estudios*" required>
 										<label class="label" for="description"></label>
@@ -301,148 +305,149 @@
 								<label class="label" for="skill-element1"></label>
 								<input class="skill-element claseinput" id="skill-element1" type="text" name="skill-element" placeholder="Destreza 1">
 								<! <button type="button" name="button" class="new-skill-button">Nueva destreza</button> -->
-
-								<hr class="line">
-							</fieldset>
-						</form>
-					</section> <!--Cierra form section-->
-				</div> <!--Cierra config-->
-			</section> <!--Cierra col 1-->
-
-			<section class="col2" id="previo">
-				<h2 class="preview-titleE"> Previsualización </h2>
-				<!-- DATOS PERSONALES + IMAGEN -->
-				<div class="showpreview dots philosopher black-pink-grey">
-					<div class="preview-header preview-div">
-						<div class="cuadro-photo">
-							<div class="preview-photo-div">
-							</div>
-						</div>
-						<div class="nombre-direccion-div">
-							<div class="nombre-cargo">
-								<div class="preview-data-div preview-text">
-									<div class="nombre-preview"><span id="name-preview-id"></span></div>
-									<div class="apellido-preview"><span id="surname-preview-id"></span></div>
-									<div class="cargo-preview"><span id="jobtitle-preview-id"></span></div>
-								</div>
-							</div>
-							<div class="cuadro-direccion">
-								<div class="preview-data-div preview-text">
-									<div class="telefono-preview"><span id="phone-preview-id"></span></div>
-									<div class="nacimiento-preview"><span id="birthdate-preview-id"></span></div>
-									<div class="email"><span id="email-preview-id"></span></div>
-									<div class="direccion"><span id="address-preview-id"></span></div>
-								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<hr class="line">
+			</fieldset>
+		</form>
+	</section>
+</section>
+</section>
 
-				<!-- EXTRACTO + RRSS -->
-				<div class="preview-extract-div preview-div">
-					<div class="title-extract-preview preview-title">
-						<h1>Extracto</h1>
-					</div>
-					<div class="cuadro-extract preview-text">
-						<div class="preview-extract" id="extracto-preview-id">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-						</div>
-						<div class="preview-rrss">
-							<div><span id="twitter-preview-id">@moniaguado</span></div>
-							<div><span id="linkedin-preview-id">linkedin.es/monicaaguadoalonso</span></div>
-							<div><span id="facebook-preview-id">facebook.com/moni.monroe.7</span></div>
-						</div>
+<section class="section__preview" id="preview">
+	<h2 class="preview-titleE"> Previsualización </h2>
+	<!-- DATOS PERSONALES + IMAGEN -->
+	<div class="showpreview dots philosopher black-pink-grey">
+		<div class="preview-header preview-div">
+			<div class="cuadro-photo">
+				<div class="preview-photo-div">
+				</div>
+			</div>
+			<div class="nombre-direccion-div">
+				<div class="nombre-cargo">
+					<div class="preview-data-div preview-text">
+						<div class="nombre-preview"><span id="name-preview-id"></span></div>
+						<div class="apellido-preview"><span id="surname-preview-id"></span></div>
+						<div class="cargo-preview"><span id="jobtitle-preview-id"></span></div>
 					</div>
 				</div>
+				<div class="cuadro-direccion">
+					<div class="preview-data-div preview-text">
+						<div class="telefono-preview"><span id="phone-preview-id"></span></div>
+						<div class="nacimiento-preview"><span id="birthdate-preview-id"></span></div>
+						<div class="email"><span id="email-preview-id"></span></div>
+						<div class="direccion"><span id="address-preview-id"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-				<!-- EXPERIENCIA -->
-				<div class="preview-experience-div preview-div">
-					<div class="title-experiencie-preview preview-title">
-						<h1>Experiencia profesional</h1>
+		<!-- EXTRACTO + RRSS -->
+		<div class="preview-extract-div preview-div">
+			<div class="title-extract-preview preview-title">
+				<h1>Extracto</h1>
+			</div>
+			<div class="cuadro-extract preview-text">
+				<div class="preview-extract" id="extracto-preview-id">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+				</div>
+				<div class="preview-rrss">
+					<div><span id="twitter-preview-id">@moniaguado</span></div>
+					<div><span id="linkedin-preview-id">linkedin.es/monicaaguadoalonso</span></div>
+					<div><span id="facebook-preview-id">facebook.com/moni.monroe.7</span></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- EXPERIENCIA -->
+		<div class="preview-experience-div preview-div">
+			<div class="title-experiencie-preview preview-title">
+				<h1>Experiencia profesional</h1>
+			</div>
+			<div class="item-experience-preview preview-text">
+				<div class="cargo-fecha-emp">
+					<div><span id="job-preview-id-1">Social Media</span></div>
+					<div><span id="from-preview-id-1">11/2016</span></div>
+					<div><span id="until-preview-id1">09/2017</span></div>
+					<div><span id="place-preview-id1">Swing Swing</span></div>
+				</div>
+				<div class="responsabilidades">
+					<div><span id="description-preview-id1">Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.</span></div>
+				</div>
+			</div>
+			<div class="item-experience-preview preview-text">
+				<div class="cargo-fecha-emp">
+					<div><span id="job-preview-id-2"></span></div>
+					<div><span id="from-preview-id-2"></span></div>
+					<div><span id="until-preview-id2"></span></div>
+					<div><span id="place-preview-id2"></span></div>
+				</div>
+				<div class="responsabilidades">
+					<div><span id="description-preview-id2"></span></div>
+				</div>
+			</div>
+
+			<!-- FORMACIÓN -->
+			<div class="preview-formation preview-div">
+				<div class="title-formation-preview preview-title">
+					<h1>Formación</h1>
+				</div>
+				<div class="item-formation-preview preview-text">
+					<div class="curso-fecha-escuela">
+						<div><span id="titulo-preview-id1">Front-end</span></div>
+						<div><span id="from-formation-preview-id1">10/2017</span></div>
+						<div><span id="until-formation-preview-id1">Actualidad</span></div>
+						<div><span id="centro-id1">Adalab</span></div>
 					</div>
-					<div class="item-experience-preview preview-text">
-						<div class="cargo-fecha-emp">
-							<div><span id="job-preview-id-1">Social Media</span></div>
-							<div><span id="from-preview-id-1">11/2016</span></div>
-							<div><span id="until-preview-id1">09/2017</span></div>
-							<div><span id="place-preview-id1">Swing Swing</span></div>
-						</div>
-						<div class="responsabilidades">
-							<div><span id="description-preview-id1">Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.</span>
-							</div>
-						</div>
-					</div>
-					<div class="item-experience-preview preview-text">
-						<div class="cargo-fecha-emp">
-							<div><span id="job-preview-id-2"></span></div>
-							<div><span id="from-preview-id-2"></span></div>
-							<div><span id="until-preview-id2"></span></div>
-							<div><span id="place-preview-id2"></span></div>
-						</div>
-						<div class="responsabilidades">
-							<div><span id="description-preview-id2"></span></div>
-						</div>
+					<div class="record">
+						<div><span id="description-formation-preview-id1">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
 					</div>
 				</div>
-				<!-- FORMACIÓN -->
-				<div class="preview-formation preview-div">
-					<div class="title-formation-preview preview-title">
-						<h1>Formación</h1>
+				<div class="item-formation-preview preview-text">
+					<div class="curso-fecha-escuela">
+						<div><span id="titulo-preview-id2">Front-end</span></div>
+						<div><span id="from-formation-preview-id2">10/2017</span></div>
+						<div><span id="until-formation-preview-id2">Actualidad</span></div>
+						<div><span id="centro-id2">Adalab</span></div>
 					</div>
-					<div class="item-formation-preview preview-text">
-						<div class="curso-fecha-escuela">
-							<div><span id="titulo-preview-id1">Front-end</span></div>
-							<div><span id="from-formation-preview-id1">10/2017</span></div>
-							<div><span id="until-formation-preview-id1">Actualidad</span></div>
-							<div><span id="centro-id1">Adalab</span></div>
-						</div>
-						<div class="record">
-							<div><span id="description-formation-preview-id1">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
-						</div>
-					</div>
-					<div class="item-formation-preview preview-text">
-						<div class="curso-fecha-escuela">
-							<div><span id="titulo-preview-id2">Front-end</span></div>
-							<div><span id="from-formation-preview-id2">10/2017</span></div>
-							<div><span id="until-formation-preview-id2">Actualidad</span></div>
-							<div><span id="centro-id2">Adalab</span></div>
-						</div>
-						<div class="record">
-							<div><span id="description-formation-preview-id2">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
-						</div>
+					<div class="record">
+						<div><span id="description-formation-preview-id2">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
 					</div>
 				</div>
-				<!-- HABILIDADES -->
-				<div class="preview-skills preview-div">
-					<div class="item-skills-preview preview-text">
-						<div class="languages-preview">
-							<img src="images/speak.png" class="talk-icon">
-							<div class="language-selection"><span id="language-name1-preview-id"></span><span> | </span><span id="language-level1-preview-id"></span></div>
-							<div class="language-selection"><span id="language-name2-preview-id"></span><span> | </span><span id="language-level2-preview-id"></span></div>
-						</div>
-						<div class="it-preview">
-							<img src="images/computer-monitor-and-mouse.png" class="it-icon">
-							<div class="it-selection"><span id="it-name1-preview-id"></span><span> | </span ><span id="it-level1-preview-id"></span></div>
-							<div class="it-selection"><span id="it-name2-preview-id"></span><span> | </span ><span id="it-level2-preview-id"></span></div>
-						</div>
-						<div class="bonus-preview">
-							<img src="images/settings.png" class="bonus-icon">
-							<div class="bonus-selection"><span id="skill-element1-preview-id"></span></div>
-							<div class="bonus-selection"><span id="skill-element2-preview-id"></span></div>
-						</div>
+			</div>
+			<!-- HABILIDADES -->
+			<div class="preview-skills preview-div">
+				<div class="item-skills-preview preview-text">
+					<div class="languages-preview">
+						<img src="images/speak.png" class="talk-icon">
+						<div class="language-selection"><span id="language-name1-preview-id"></span><span> | </span><span id="language-level1-preview-id"></span></div>
+						<div class="language-selection"><span id="language-name2-preview-id"></span><span> | </span><span id="language-level2-preview-id"></span></div>
+					</div>
+					<div class="it-preview">
+						<img src="images/computer-monitor-and-mouse.png" class="it-icon">
+						<div class="it-selection"><span id="it-name1-preview-id"></span><span> | </span ><span id="it-level1-preview-id"></span></div>
+						<div class="it-selection"><span id="it-name2-preview-id"></span><span> | </span ><span id="it-level2-preview-id"></span></div>
+					</div>
+					<div class="bonus-preview">
+						<img src="images/settings.png" class="bonus-icon">
+						<div class="bonus-selection"><span id="skill-element1-preview-id"></span></div>
+						<div class="bonus-selection"><span id="skill-element2-preview-id"></span></div>
 					</div>
 				</div>
-			</section>
+			</div>
 		</section>
-	</main>
+	</section>
+</main>
 
-	<footer>
-		<ul class="footer-list">
-			<a href="avisolegal.html"><li class="list-element">Aviso legal</li></a>
-			<!-- <a href="index.html"><li class="list-element">Aviso de cookies</li></a> -->
-			<a href="mailto:crearcv@generatrix.com"class="list-element"><li>Contacto</li></a>
-			<a href="index.html"><li class="list-element">Generatrix &copy; 2017</li></a>
-		</ul>
-		<a href="index.html">
+<footer>
+	<ul class="footer-list">
+		<a href="avisolegal.html"><li class="list-element">Aviso legal</li></a>
+		<!-- <a href="index.html"><li class="list-element">Aviso de cookies</li></a> -->
+		<a href="mailto:crearcv@generatrix.com"class="list-element"><li>Contacto</li></a>
+		<a href="index.html"><li class="list-element">Generatrix &copy; 2017</li></a>
+	</ul>
+	<a href="index.html">
 		<img class="footer__logo" src="images/logocorto.png" alt="logo" alt="Generatrix"></a>
 	</footer>
 	<script src="original-js/original-main.js"></script>
