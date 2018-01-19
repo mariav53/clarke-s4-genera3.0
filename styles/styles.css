@@ -49,7 +49,7 @@ main {
 
 /*HEADER*/
 
-.header {
+.container__header {
 	height: 80px;
 	width: 100%;
 	margin: 0;
@@ -70,7 +70,7 @@ main {
 	border-bottom: 5px;
 }
 
-.logo {
+.header__logo {
 	background-image: url(../images/logocorto.png);
 	background-position: center;
 	background-size: contain;
@@ -85,23 +85,23 @@ main {
 
 /*burger*/
 
-.burger {
+.header__nav {
 	position: relative;
 }
 
-.button-burger {
+.button__nav {
 	width: 40px;
 	height: 40px;
 }
 
-.burger ul {
+.header__nav ul {
 	margin-top: 0;
 	-webkit-margin-before: 0;
 	-webkit-margin-after: 0;
 	-webkit-padding-start: 0;
 }
 
-.burger ul li {
+.header__nav ul li {
 	list-style: none;
 	border-bottom: #31B89A;
 	border-width: 1px;
@@ -113,19 +113,19 @@ main {
 	margin: 0;
 }
 
-.burger ul li a {
+.header__nav ul li a {
 	text-decoration: none;
 	color: #E7ECED;
 	padding: 10px;
 	padding-top: 10px;
 }
 
-.list-burger {
+.nav__list {
 	position: absolute;
 	display: block;
 }
 
-#list-burger {
+#nav__list {
 	display: none;
 }
 
@@ -750,7 +750,7 @@ footer {
 	font-size: 14px;
 	color: white;
 }
-.mini-logo {
+.footer__logo {
 	display: block;
 	margin-right: 20px;
 	padding-top: 8px;
@@ -782,7 +782,7 @@ footer {
 }
 
 @media all and (min-width:768px){
-	.logo {
+	.header__logo {
 		background-image: url(../images/logolargo.png);
 		width: 200px;
 	}
