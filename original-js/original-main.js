@@ -66,7 +66,7 @@ for (var i = 0; i < themes.length; i++) {
 
 
 // desplegables sin onclick
-var botones = document.querySelectorAll('.boton-abrir');
+var botones = document.querySelectorAll('.button--open');
 function desplegable(event){
 	// llamo al evento
 	// currentTarget coge el elemento (en este caso un boton) que dispara el evento. Le ponemos data-plus porque queremos que busque la id del elemento que tiene que mostrar
@@ -171,17 +171,17 @@ inputFile.addEventListener('change', archivo);
 
 // SECCIÓN GUARDAR DATOS FORMULARIO EN PREVIEW (4FUNCIONES)
 function printPersonalDataToPreview() {
- 	document.getElementById('name-preview-id').innerHTML = document.getElementById('name').value;
-	document.getElementById('surname-preview-id').innerHTML = document.getElementById('surname').value;
-	document.getElementById('jobtitle-preview-id').innerHTML = document.getElementById('profesion').value;
-	document.getElementById('phone-preview-id').innerHTML = document.getElementById('telephone').value;
-	document.getElementById('birthdate-preview-id').innerHTML = document.getElementById('date').value;
-	document.getElementById('email-preview-id').innerHTML = document.getElementById('email').value;
-	document.getElementById('address-preview-id').innerHTML = document.getElementById('address').value;
-	document.getElementById('extracto-preview-id').innerHTML = document.getElementById('extracto').value;
-	document.getElementById('twitter-preview-id').innerHTML = document.getElementById('Twitter').value;
-	document.getElementById('linkedin-preview-id').innerHTML = document.getElementById('Linkedin').value;
-	document.getElementById('facebook-preview-id').innerHTML = document.getElementById('Facebook').value;
+ 	document.getElementById('name-preview-id').innerHTML = document.getElementById('input-name').value;
+	document.getElementById('surname-preview-id').innerHTML = document.getElementById('input-surname').value;
+	document.getElementById('jobtitle-preview-id').innerHTML = document.getElementById('input-profession').value;
+	document.getElementById('phone-preview-id').innerHTML = document.getElementById('input-phone').value;
+	document.getElementById('birthdate-preview-id').innerHTML = document.getElementById('input-birthdate').value;
+	document.getElementById('email-preview-id').innerHTML = document.getElementById('input-email').value;
+	document.getElementById('address-preview-id').innerHTML = document.getElementById('input-address').value;
+	document.getElementById('aboutme-preview-id').innerHTML = document.getElementById('text-aboutme').value;
+	document.getElementById('twitter-preview-id').innerHTML = document.getElementById('input-twitter').value;
+	document.getElementById('linkedin-preview-id').innerHTML = document.getElementById('input-linkedin').value;
+	document.getElementById('facebook-preview-id').innerHTML = document.getElementById('input-facebook').value;
 }
 document.querySelector('.save-data-button').addEventListener('click',printPersonalDataToPreview);
 
@@ -266,7 +266,7 @@ document.querySelector('.save-skills-button').addEventListener('click',printSkil
 // GENERAR NUEVOS ELEMENTOS A PETICIÓN (experience)_______________________
 var idExperienceModifier = 2;
 function addItemExperience() {
-	var repeatedItemExperience = '<div class="experience-element" id="experience-element' + idExperienceModifier + '"><input class="claseinput" id="puesto' + idExperienceModifier + '" type="text" name="puesto" placeholder="Puesto' + idExperienceModifier + '"><section class="experience-dates"><div class="desde"><label class="label" for="desde">Desde</label><select id="start_month' + idExperienceModifier + '" name="start_month" class="month"></select><select id="start_year' + idExperienceModifier + '" name="start_year" class="year"></select></div><div class="hasta"><label class="label" for="hasta">Hasta</label><select id="end_month' + idExperienceModifier + '" name="end_month" class="month"></select><select id="end_year' + idExperienceModifier + '" name="start_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad' + idExperienceModifier + '"type="checkbox" name="actualidad"></div></div></section><input class="claseinput" id="lugar'+ idExperienceModifier + '" type="text" name="lugar" placeholder="Lugar"><textarea class="experience-text" id=description' + idExperienceModifier + ' name="description" rows="8" cols="80" placeholder="Despripción del puesto"></textarea><button type="button" name="button" class="save-experience-button" id="save-experience-button-' + idExperienceModifier + '" data-id="' + idExperienceModifier + '">Guardar</button></div>';
+	var repeatedItemExperience = '<div class="experience-element" id="experience-element' + idExperienceModifier + '"><input class="class-input" id="puesto' + idExperienceModifier + '" type="text" name="puesto" placeholder="Puesto' + idExperienceModifier + '"><section class="experience-dates"><div class="date-container-from"><label class="label">Desde</label><select id="start_month' + idExperienceModifier + '" name="start_month" class="month"></select><select id="start_year' + idExperienceModifier + '" name="start_year" class="year"></select></div><div class="date-container-until"><label class="label" >Hasta</label><select id="end_month' + idExperienceModifier + '" name="end_month" class="month"></select><select id="end_year' + idExperienceModifier + '" name="start_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad' + idExperienceModifier + '" type="checkbox" name="actualidad"></div></div></section><input class="class-input" id="lugar'+ idExperienceModifier + '" type="text" name="lugar" placeholder="Lugar"><textarea class="experience-text" id=description' + idExperienceModifier + ' name="description" rows="8" cols="80" placeholder="Despripción del puesto"></textarea><button type="button" name="button" class="save-experience-button" id="save-experience-button-' + idExperienceModifier + '" data-id="' + idExperienceModifier + '">Guardar</button></div>';
 
 	document.querySelector('.experience-element').insertAdjacentHTML('beforeend', repeatedItemExperience);
 
@@ -284,7 +284,7 @@ newExperienceButton.addEventListener('click',addItemExperience);
 // GENERAR NUEVOS ELEMENTOS A PETICIÓN (formation)_______________________
 var idFormationModifier = 2;
 function addItemFormation() {
-	var repeatedItemFormation = '<div class="formation-element" id="formation-element' + idFormationModifier + '"><label class="label" for="titulo"></label><input class="claseinput" id="titulo' + idFormationModifier + '" type="text" name="titulation" placeholder="Título*" required><section class="formation-dates"><div class="desde"><label class="label" for="desde">Desde</label><select id="start_month-formation' + idFormationModifier + '" name="start_month" class="month"></select><select id="start_year-formation' + idFormationModifier + '" name="start_year" class="year"></select></div><div class="hasta"><label class="label" for="hasta">Hasta</label><select id="end_month-formation' + idFormationModifier + '" name="end_month" class="month"></select><select id="end_year-formation' + idFormationModifier + '" name="start_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad-formation' + idFormationModifier + '" type="checkbox" name="actualidad"></div></div></section><label class="label" for="centro"></label><input class="claseinput" id="centro' + idFormationModifier + '" type="text" name="place" placeholder="Centro de estudios*" required><label class="label" for="description"></label><textarea class="description" id="description-formation' + idFormationModifier + '" cols="30" rows="10" name="description" placeholder="Descripción"></textarea><button type="button" name="button" class="save-formation-button" id="save-formation-button' + idFormationModifier + '" data-id="' + idFormationModifier + '">Guardar</button></div>'
+	var repeatedItemFormation = '<div class="formation-element" id="formation-element' + idFormationModifier + '"><label class="label" for="titulo"></label><input class="class-input" id="titulo' + idFormationModifier + '" type="text" name="titulation" placeholder="Título*" required><section class="formation-dates"><div class="date-container-from"><label class="label">Desde</label><select id="start_month-formation' + idFormationModifier + '" name="start_month" class="month"></select><select id="start_year-formation' + idFormationModifier + '" name="start_year" class="year"></select></div><div class="date-container-until"><label class="label" >Hasta</label><select id="end_month-formation' + idFormationModifier + '" name="end_month" class="month"></select><select id="end_year-formation' + idFormationModifier + '" name="start_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad-formation' + idFormationModifier + '" type="checkbox" name="actualidad"></div></div></section><label class="label" for="centro"></label><input class="class-input" id="centro' + idFormationModifier + '" type="text" name="place" placeholder="Centro de estudios*" required><label class="label" for="description"></label><textarea class="description" id="description-formation' + idFormationModifier + '" cols="30" rows="10" name="description" placeholder="Descripción"></textarea><button type="button" name="button" class="save-formation-button" id="save-formation-button' + idFormationModifier + '" data-id="' + idFormationModifier + '">Guardar</button></div>'
 
 	document.querySelector('.formation-element').insertAdjacentHTML('beforeend', repeatedItemFormation);
 
@@ -305,7 +305,7 @@ newFormationButton.addEventListener('click',addItemFormation);
 var idLanguageModifier = 2;
 function addItemLanguage() {
 	var repeatedItemLanguage = '<div class="language-element"><label class="label" for="language-name' + idLanguageModifier + '"></label>';
-	repeatedItemLanguage+= '<input class="language-name claseinput" id="language-name' + idLanguageModifier + '" type="text" name="language-name" placeholder="Idioma ' + idLanguageModifier +'">';
+	repeatedItemLanguage+= '<input class="language-name class-input" id="language-name' + idLanguageModifier + '" type="text" name="language-name" placeholder="Idioma ' + idLanguageModifier +'">';
 	repeatedItemLanguage+= '<select id="language-level' + idLanguageModifier  +'" name="level" class="level"><option value="nivel">Nivel</option><option >--</option><option>Básico</option><option>Intermedio</option><option>Alto</option><option>Nativo</option></select><button type="button" name="button" class="save-languages-button" id="save-languages-button' + idLanguageModifier +'" data-id="' + idLanguageModifier + '">Guardar</button></div>';
 
 	var languageElement = document.querySelector('.language-element');
@@ -324,7 +324,7 @@ newLanguageButton.addEventListener('click',addItemLanguage);
 // // GENERAR NUEVOS ELEMENTOS A PETICIÓN (it)__________________________
 var idItModifier = 2;
 function addItemIt() {
-	var repeatedItemIt = '<div class="it-element"><label class="label" for="it-name' + idItModifier + '"></label><input class="it-name claseinput" id="it-name' + idItModifier + '" type="text" name="it-name" placeholder="Tecnología ' + idItModifier + '"><select id="it-level' + idItModifier + '" name="level" class="level"><option value="nivel">Nivel</option><option >--</option><option>Básico</option><option>Intermedio</option><option>Alto</option></select><button type="button" name="button" class="save-it-button" id="save-it-button' + idItModifier + '" data-id="' + idItModifier + '">Guardar</button></div>';
+	var repeatedItemIt = '<div class="it-element"><label class="label" for="it-name' + idItModifier + '"></label><input class="it-name class-input" id="it-name' + idItModifier + '" type="text" name="it-name" placeholder="Tecnología ' + idItModifier + '"><select id="it-level' + idItModifier + '" name="level" class="level"><option value="nivel">Nivel</option><option >--</option><option>Básico</option><option>Intermedio</option><option>Alto</option></select><button type="button" name="button" class="save-it-button" id="save-it-button' + idItModifier + '" data-id="' + idItModifier + '">Guardar</button></div>';
 
 	var itElement = document.querySelector('.it-element');
 
@@ -342,7 +342,7 @@ newItButton.addEventListener('click',addItemIt);
 // GENERAR NUEVOS ELEMENTOS A PETICIÓN (skills)___________________________
 var idSkillsModifier = 2;
 function addItemSkills() {
-	var repeatedItemSkills = '<div class="skills-element"><label class="label" for="skill-element' + idSkillsModifier + '"></label><input class="skills-element claseinput" id="skill-element' + idSkillsModifier +'" type="text" name="skill-element" placeholder="Destreza ' + idSkillsModifier + '"><button type="button" name="button" class="save-skills-button" id="save-skills-button' + idSkillsModifier + '" data-id="' + idSkillsModifier + '">Guardar</button></div>';
+	var repeatedItemSkills = '<div class="skills-element"><label class="label" for="skill-element' + idSkillsModifier + '"></label><input class="skills-element class-input" id="skill-element' + idSkillsModifier +'" type="text" name="skill-element" placeholder="Destreza ' + idSkillsModifier + '"><button type="button" name="button" class="save-skills-button" id="save-skills-button' + idSkillsModifier + '" data-id="' + idSkillsModifier + '">Guardar</button></div>';
 
 	var skillsElement = document.querySelector('.skills-element');
 

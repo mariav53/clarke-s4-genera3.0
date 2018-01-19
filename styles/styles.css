@@ -33,7 +33,7 @@ main {
 	padding: 0;
 	background-color: #E7ECED;
 }
-.personal-data {
+.form__personal-data {
 	margin-top: 1.2em;
 }
 
@@ -330,9 +330,7 @@ main {
 	align-items: center;
 	justify-content: space-around;
 }
-.claseinput-img {
-	margin-bottom: 10px;
-}
+
 .foto {
 	display: none;
 }
@@ -373,15 +371,15 @@ fieldset {
 
 /*personal information*/
 
-.personal-data, .formation {
+.form__personal-data, .formation {
 	background-color: #55607F;
 }
 
-.experience, .skills-fieldset {
+.form__experience, .skills-fieldset {
 	background-color: #55607F;
 }
 
-.personal-information {
+.form__container {
 	display: flex;
 	flex-wrap: wrap;
 	flex-direction: column;
@@ -389,16 +387,16 @@ fieldset {
 	background: #55607F;
 }
 
-#personal-information, #experience, #formation, #skills {
+#container-inputs__personal-data, #container-inputs__experience, #formation, #skills {
 	display: none;
 }
 
-.boton-abrir, .boton-cerrar {
+.button--open, .button--close {
 	height: 20px;
 	width: 20px;
 }
 
-.claseinput, .description, .experience-text, .extracto-text {
+.class-input, .description, .experience-text, .textarea-aboutme {
 	display: block;
 	border-radius: 5px;
 	background: #E7ECED;
@@ -407,11 +405,11 @@ fieldset {
 	margin: 5px;
 	width: 80%;
 }
-#date {
+#input-birthdate {
 	color:#757575;
 }
 
-.description, .experience-text, .extracto-text {
+.description, .experience-text, .textarea-aboutme {
 
 	resize: vertical;
 	font-size: 13.3333px;
@@ -446,7 +444,7 @@ fieldset {
 	color: black;
 	font-size: 14px;
 }
-.desde, .hasta, .level{
+.date-container-from, .date-container-until, .level{
 	display: block;
 	margin: 4px 0 4px 6px;
 }
@@ -464,7 +462,7 @@ fieldset {
 .until {
 	margin-left: 2px;
 }
-#experience {
+#container-inputs__experience {
 	display: none;
 }
 
@@ -720,9 +718,6 @@ h1 {
 	padding: 0 10px;
 }
 
-#date {
-	color: #757575;
-}
 
 
 /*FOOTER*/
@@ -788,7 +783,7 @@ footer {
 }
 
 @media all and (min-width:500px){
-	.hasta {
+	.date-container-until {
 		display: flex;
 		flex-direction: row;
 		height: 19px;
@@ -849,11 +844,7 @@ footer {
 	.sube {
 		font-size: 22px;
 	}
-	.claseinput-img {
-		font-size: 15px;
-		margin-bottom: 10px;
-	}
-	.boton-abrir, .boton-cerrar {
+	.button--open, .button--close {
 		width: 30px;
 		height: auto;
 	}
