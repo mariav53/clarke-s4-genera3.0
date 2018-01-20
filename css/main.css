@@ -406,11 +406,11 @@ main {
 fieldset {
   border: none;
   margin: 0;
-}/*personal information*/.form__personal-data,.formation {
+}/*personal information*/.form__personal-data,.form__education {
   background-color: #55607F;
 }
 
-.form__experience,.skills-fieldset {
+.form__experience,.form__education {
   background-color: #55607F;
 }
 
@@ -476,12 +476,12 @@ fieldset {
   align-items: center;
   width: auto;
   height: auto;
-}/*ANTES PARA LAS OTRAS FECHAS.AHORA NO NECESARIO*//*.experience-dates input, .experience-dates p, .formation-dates input
+}/*ANTES PARA LAS OTRAS FECHAS.AHORA NO NECESARIO*//*.experience-dates input, .experience-dates p, .education-dates input
 	width: 20%;
 	display: inline;
 	font-size: 10px;
 	color: rgb(117, 117, 117);
-}*/.formation-dates-p,.experience-dates-p {
+}*/.education-dates-p,.experience-dates-p {
   display: inline;
   color: black;
   font-size: 14px;
@@ -742,7 +742,7 @@ h1 {
   text-align: right;
 }
 
-.item-experience-preview,.item-formation-preview {
+.item-experience-preview,.item-education-preview {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -861,7 +861,7 @@ h1 {
   color: #424A5F;
 }
 
-.save-data-button,.save-experience-button,.new-experience-button,.save-formation-button,.new-formation-button,.save-languages-button,.new-language-button,.save-it-button,.new-it-button,.save-skills-button,.new-skills-button {
+.save-data-button,.save-experience-button,.new-experience-button,.save-education-button,.new-education-button,.save-languages-button,.new-language-button,.save-it-button,.new-it-button,.save-skills-button,.new-skills-button {
   background-color: #EAB931;
   color: #424A5F;
   font-weight: bold;
@@ -885,13 +885,13 @@ h1 {
     margin-left: 5px;
   }
 
-  #end_month1,#end_year1,#end_month-formation1,#end_year-formation1 {
+  #end_month1,#end_year1,#end_month-education1,#end_year-education1 {
     margin-left: 2px;
   }
 }
 
 @media all and (min-width: 622px) {
-  .formation-dates,.experience-dates {
+  .education-dates,.experience-dates {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

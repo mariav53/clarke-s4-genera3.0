@@ -15,7 +15,7 @@
 
 @import 'components/info';
 @import 'components/buttons';
-@import 'components/form';
+@import 'components/forms';
 @import 'components/preview';
 
 // pages
@@ -395,11 +395,11 @@ fieldset {
 
 /*personal information*/
 
-.form__personal-data, .formation {
+.form__personal-data, .form__education {
 	background-color: #55607F;
 }
 
-.form__experience, .skills-fieldset {
+.form__experience, .form__education {
 	background-color: #55607F;
 }
 
@@ -411,7 +411,7 @@ fieldset {
 	background: #55607F;
 }
 
-#container-inputs__personal-data, #container-inputs__experience, #formation, #skills {
+#container-inputs__personal-data, #container-inputs__experience, #container-inputs__education, #container-inputs__skills {
 	display: none;
 }
 
@@ -456,14 +456,14 @@ fieldset {
 
 /*ANTES PARA LAS OTRAS FECHAS.AHORA NO NECESARIO*/
 
-/*.experience-dates input, .experience-dates p, .formation-dates input
+/*.experience-dates input, .experience-dates p, .education-dates input
 	width: 20%;
 	display: inline;
 	font-size: 10px;
 	color: rgb(117, 117, 117);
 }*/
 
-.formation-dates-p, .experience-dates-p {
+.education-dates-p, .experience-dates-p {
 	display: inline;
 	color: black;
 	font-size: 14px;
@@ -692,7 +692,7 @@ h1 {
 	text-align: right;
 }
 
-.item-experience-preview, .item-formation-preview {
+.item-experience-preview, .item-education-preview {
 	display: flex;
 	flex-direction: column;
 	margin-top: 10px;
@@ -784,8 +784,8 @@ footer {
 .save-data-button,
 .save-experience-button,
 .new-experience-button,
-.save-formation-button,
-.new-formation-button,
+.save-education-button,
+.new-education-button,
 .save-languages-button,
 .new-language-button,
 .save-it-button,
@@ -815,12 +815,12 @@ footer {
 	.actualidad {
 		margin-left: 5px;
 }
-#end_month1, #end_year1, #end_month-formation1, #end_year-formation1 {
+#end_month1, #end_year1, #end_month-education1, #end_year-education1 {
 	margin-left: 2px;
 }
 }
 @media all and (min-width:622px){
-	.formation-dates, .experience-dates {
+	.education-dates, .experience-dates {
 		display: flex;
 		flex-direction: row;
 	}
