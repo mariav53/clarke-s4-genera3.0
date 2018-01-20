@@ -192,66 +192,66 @@
 								<hr class="line">
 							</fieldset>
 
-							<!-- FORMATION -->
-							<fieldset class="formation">
+							<!-- education -->
+							<fieldset class="form__education">
 								<legend class="legend">Formación</legend>
 								<div class="form-section-header">
 									<h3 class="h3-form">Formación</h3>
 									<!--botones colapsable-->
 									<div class="form-section-buttons">
-										<img src="images/plus.png" id='button--open' class="button--open" data-idDesplegar="formation" alt="abrir">
+										<img src="images/plus.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__education" alt="abrir">
 									</div>
 								</div>
 								<!--oculto-->
-								<div id="formation">
-									<div class="formation-element" id="formation-element">
+								<div id="container-inputs__education">
+									<div class="education-element" id="education-element">
 										<label class="label" for="titulo"></label>
 										<input class="class-input" id="titulo1" type="text" name="titulation" placeholder="Título*" required>
-										<div class="formation-dates">
+										<div class="education-dates">
 											<div class="date-container-from">
 												<label class="label from">Desde</label>
 
-												<select id="start_month-formation1" name="start_month" class="month">
+												<select id="start_month-education1" name="start_month" class="month">
 												</select>
-												<select id="start_year-formation1" name="start_year" class="year">
+												<select id="start_year-education1" name="start_year" class="year">
 												</select>
 											</div>
 											<div class="date-container-until">
 												<label class="label until">Hasta</label>
-												<select id="end_month-formation1" name="end_month" class="month">
+												<select id="end_month-education1" name="end_month" class="month">
 												</select>
-												<select id="end_year-formation1" name="start_year" class="year">
+												<select id="end_year-education1" name="start_year" class="year">
 												</select>
 												<div class="actualidad">
 													<label for="actualidad" class="present-button-p">Actualidad</label>
-													<input class="present-button" id="actualidad-formation1" type="checkbox" name="actualidad">
+													<input class="present-button" id="actualidad-education1" type="checkbox" name="actualidad">
 												</div>
 											</div>
 										</div>
 										<label class="label" for="centro"></label>
 										<input class="class-input" id="centro1" type="text" name="place" placeholder="Centro de estudios*" required>
 										<label class="label" for="description"></label>
-										<textarea class="description" id="description-formation1" cols="30" rows="10" name="description" placeholder="Descripción"></textarea>
-										<button type="button" name="button" class="save-formation-button" id="save-formation-button1" data-id="1">Guardar</button>
+										<textarea class="description" id="description-education1" cols="30" rows="10" name="description" placeholder="Descripción"></textarea>
+										<button type="button" name="button" class="save-education-button" id="save-education-button1" data-id="1">Guardar</button>
 									</div>
-									<button type="button" name="button" class="new-formation-button" data-id="1">Nueva formación</button>
+									<button type="button" name="button" class="new-education-button" data-id="1">Nueva formación</button>
 								</div>
 								<hr class="line">
 							</fieldset>
 
 							<!-- SKILLS -->
-							<fieldset class="skills-fieldset">
+							<fieldset class="form__skills">
 								<legend class="legend">Habilidades</legend>
 								<div class="form-section-header">
 									<h3 class="h3-form">Habilidades</h3>
 									<!--botones colapsable-->
 									<div class="form-section-buttons">
-										<img src="images/plus.png" id='button--open' class="button--open" data-idDesplegar="skills" alt="abrir">
+										<img src="images/plus.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__skills" alt="abrir">
 									</div>
 								</div>
 								<!--oculto-->
-								<div id="skills">
-									<div class="skills">
+								<div id="container-inputs__skills">
+									<div class="skills"><!--OJO CON ESTE DIV-->
 										<div class="languages">
 											<p>Idiomas</p>
 											<div class="language-element">
@@ -269,7 +269,7 @@
 											</div>
 											<button type="button" name="button" class="new-language-button">Nuevo idioma</button>
 										</div>
-									</div>
+									</div><!--OJO CON ESTE DIV-->
 									<div class="it">
 										<p>Programas informáticos</p>
 										<div class="it-element">
@@ -382,30 +382,30 @@
 						</div>
 					</div>
 					<!-- FORMACIÓN -->
-					<div class="preview-formation preview-div">
-						<div class="title-formation-preview preview-title">
+					<div class="preview-education preview-div">
+						<div class="title-education-preview preview-title">
 							<h1>Formación</h1>
 						</div>
-						<div class="item-formation-preview preview-text">
+						<div class="item-education-preview preview-text">
 							<div class="curso-fecha-escuela">
 								<div><span id="titulo-preview-id1">Front-end</span></div>
-								<div><span id="from-formation-preview-id1">10/2017</span></div>
-								<div><span id="until-formation-preview-id1">Actualidad</span></div>
+								<div><span id="from-education-preview-id1">10/2017</span></div>
+								<div><span id="until-education-preview-id1">Actualidad</span></div>
 								<div><span id="centro-id1">Adalab</span></div>
 							</div>
 							<div class="record">
-								<div><span id="description-formation-preview-id1">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
+								<div><span id="description-education-preview-id1">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
 							</div>
 						</div>
-						<div class="item-formation-preview preview-text">
+						<div class="item-education-preview preview-text">
 							<div class="curso-fecha-escuela">
 								<div><span id="titulo-preview-id2">Front-end</span></div>
-								<div><span id="from-formation-preview-id2">10/2017</span></div>
-								<div><span id="until-formation-preview-id2">Actualidad</span></div>
+								<div><span id="from-education-preview-id2">10/2017</span></div>
+								<div><span id="until-education-preview-id2">Actualidad</span></div>
 								<div><span id="centro-id2">Adalab</span></div>
 							</div>
 							<div class="record">
-								<div><span id="description-formation-preview-id2">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
+								<div><span id="description-education-preview-id2">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
 							</div>
 						</div>
 					</div>
