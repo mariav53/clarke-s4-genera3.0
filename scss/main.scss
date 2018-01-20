@@ -1,3 +1,27 @@
+// core
+
+@import 'core/variables';
+@import 'core/mixins';
+@import 'core/typography';
+
+// layout
+
+@import 'layout/header';
+@import 'layout/nav';
+@import 'layout/mainPage';
+@import 'layout/footer';
+
+// components
+
+@import 'components/info';
+@import 'components/buttons';
+@import 'components/form';
+@import 'components/preview';
+
+// pages
+
+@import 'pages/aviso-legal';
+
 /*azul marino: #424A5F; AZUL: #55607F; AZUL CLARO: #E7ECED; AMARILLO: #EAB931; VERDE: #31B89A */
 
 /*font-family: 'annie', sans-serif;
@@ -794,7 +818,7 @@ footer {
 #end_month1, #end_year1, #end_month-formation1, #end_year-formation1 {
 	margin-left: 2px;
 }
-
+}
 @media all and (min-width:622px){
 	.formation-dates, .experience-dates {
 		display: flex;
@@ -850,7 +874,7 @@ footer {
 	}
 	.hero__img-desktop {
 		display: inline-block;
-		width: 100%
+		width: 100%;
 	}
 	.hero__img-mobile{
 		display: none;
