@@ -1,0 +1,43 @@
+/*FOOTER*/
+.section__footer {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
+	background-color: #31B89A;
+	color: white;
+}
+.container__footer{
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.footer__link {
+	text-decoration: none;
+	list-style: none;
+}
+.footer__list {
+	list-style-type: none;
+	align-self: center;
+}
+.footer__logo {
+	display: block;
+	margin-right: 20px;
+	padding-top: 8px;
+	width: 57px;
+	height: auto;
+}
+@media all and (min-width:768px) {
+	.footer__list {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.footer__list--element {
+		font-size: 18px;
+		padding-right: 10px;
+	}
+
+
+}
