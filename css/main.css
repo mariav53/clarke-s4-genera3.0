@@ -604,7 +604,7 @@ fieldset {
   padding: 8%;
 }
 
-.preview-header {
+.container__preview {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -619,11 +619,11 @@ fieldset {
   height: 80px;
 }
 
-.cuadro-photo {
+.container__preview--photo {
   width: 25%;
 }
 
-.preview-photo-div {
+.container__photo {
   margin-top: 12%;
   width: 60px;
   height: 60px;
@@ -631,7 +631,7 @@ fieldset {
   border-radius: 100px;
 }
 
-.nombre-direccion-div {
+.container__preview--personal-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -648,7 +648,7 @@ fieldset {
   width: 80%;
 }
 
-.nombre-cargo {
+.container__personal-data {
  /*background-color: #EAB931;*/
   width: 32%;
   height: 50px;
@@ -665,7 +665,7 @@ fieldset {
   padding-top: 10px;
 }
 
-.cuadro-direccion {
+.container__direction {
   width: 60%;
   height: 50px;
  /*background-color: #EAB931;*/
@@ -685,7 +685,7 @@ fieldset {
   margin-top: 10px;
 }
 
-.preview-photo-div .thumb {
+.container__photo .thumb {
   width: 100%;
   width: 60px;
   height: 60px;
@@ -705,7 +705,7 @@ fieldset {
   width: 60%;
 }
 
-.preview-extract-div {
+.container__preview--summary {
   height: 100px;
   width: 100%;
 }
@@ -715,7 +715,7 @@ h1 {
   padding-right: 15px;
 }
 
-.cuadro-extract {
+.container__summary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -730,19 +730,19 @@ h1 {
   margin-top: 10px;
 }
 
-.preview-extract {
+.preview__summary {
   width: 60%;
   height: 70px;
   text-align: left;
   padding-left: 5px;
 }
 
-.preview-rrss {
+.container__preview--rrss {
   width: 30%;
   text-align: right;
 }
 
-.item-experience-preview,.item-education-preview {
+.preview__experience,.preview__formation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -753,7 +753,7 @@ h1 {
   margin-top: 10px;
 }
 
-.cargo-fecha-emp,.curso-fecha-escuela {
+.container__experience--main-data,.container__formation--main-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -770,7 +770,7 @@ h1 {
   padding-right: 10px;
 }
 
-.responsabilidades,.record {
+.container__experience--description,.container__formation--description {
   height: 20px;
   width: 95%;
   padding-left: 10px;
@@ -778,7 +778,7 @@ h1 {
   text-align: justify;
 }
 
-.item-skills-preview {
+.preview__skills {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -795,7 +795,7 @@ h1 {
   padding-right: 10px;
 }
 
-.languages-preview,.it-preview,.bonus-preview {
+.preview__skills--languages,.preview__skills--it,.preview__skills--bonus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -813,7 +813,7 @@ h1 {
   height: 30px;
 }
 
-.language-selection,.it-selection,.bonus-selection {
+.skills__language--select,.skills__it--select,.skills__bonus--select {
   width: 90%;
   padding: 0 10px;
 }/*FOOTER*/footer {
@@ -829,14 +829,29 @@ h1 {
   color: white;
 }
 
-.footer-list {
+.container__footer {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.footer__list {
   list-style-type: none;
   -ms-flex-item-align: center;
   align-self: center;
 }
 
-.footer-list a {
+.footer__list a {
   text-decoration: none;
+  list-style: none;
 }
 
 .list-element {
@@ -946,7 +961,7 @@ h1 {
     padding-top: 1.2em;
   }
 
-  .footer-list {
+  .footer__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -959,7 +974,7 @@ h1 {
     justify-content: space-between;
   }
 
-  .list-element {
+  .footer__list--element {
     font-size: 18px;
     padding-right: 10px;
   }
@@ -1033,16 +1048,16 @@ h1 {
     font-size: .8em;
   }
 
-  .item-skills-preview {
+  .preview__skills {
     margin-top: 30px;
   }
 
-  .preview-photo-div .thumb {
+  .container__photo .thumb {
     width: 70px;
     height: 70px;
   }
 
-  .preview-photo-div {
+  .container__photo {
     width: 70px;
     height: 70px;
   }
