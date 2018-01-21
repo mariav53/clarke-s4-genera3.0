@@ -171,17 +171,17 @@ inputFile.addEventListener('change', archivo);
 
 // SECCIÓN GUARDAR DATOS FORMULARIO EN PREVIEW (4FUNCIONES)
 function printPersonalDataToPreview() {
- 	document.getElementById('name-preview-id').innerHTML = document.getElementById('input-name').value;
-	document.getElementById('surname-preview-id').innerHTML = document.getElementById('input-surname').value;
-	document.getElementById('jobtitle-preview-id').innerHTML = document.getElementById('input-profession').value;
-	document.getElementById('phone-preview-id').innerHTML = document.getElementById('input-phone').value;
-	document.getElementById('birthdate-preview-id').innerHTML = document.getElementById('input-birthdate').value;
-	document.getElementById('email-preview-id').innerHTML = document.getElementById('input-email').value;
-	document.getElementById('address-preview-id').innerHTML = document.getElementById('input-address').value;
-	document.getElementById('aboutme-preview-id').innerHTML = document.getElementById('text-aboutme').value;
-	document.getElementById('twitter-preview-id').innerHTML = document.getElementById('input-twitter').value;
-	document.getElementById('linkedin-preview-id').innerHTML = document.getElementById('input-linkedin').value;
-	document.getElementById('facebook-preview-id').innerHTML = document.getElementById('input-facebook').value;
+ 	document.getElementById('personal-data--name').innerHTML = document.getElementById('input-name').value;
+	document.getElementById('personal-data--surname').innerHTML = document.getElementById('input-surname').value;
+	document.getElementById('personal-data--job').innerHTML = document.getElementById('input-profession').value;
+	document.getElementById('preview__direction--phone').innerHTML = document.getElementById('input-phone').value;
+	document.getElementById('preview__direction--date').innerHTML = document.getElementById('input-birthdate').value;
+	document.getElementById('preview__direction--mail').innerHTML = document.getElementById('input-email').value;
+	document.getElementById('preview__direction--adress').innerHTML = document.getElementById('input-address').value;
+	document.getElementById('preview__summary').innerHTML = document.getElementById('text-aboutme').value;
+	document.getElementById('preview__rrss--twitter').innerHTML = document.getElementById('input-twitter').value;
+	document.getElementById('preview__rrss--linkedin').innerHTML = document.getElementById('input-linkedin').value;
+	document.getElementById('preview__rrss--facebook').innerHTML = document.getElementById('input-facebook').value;
 }
 document.querySelector('.save-data-button').addEventListener('click',printPersonalDataToPreview);
 
@@ -208,26 +208,26 @@ var dataIdValue = event.currentTarget.getAttribute('data-id');
 document.querySelector('.save-experience-button').addEventListener('click',printProfessionalExperienceToPreview);
 
 
-function printFormationToPreview(event) {
+function printEducationToPreview(event) {
 
 var dataIdValue = event.currentTarget.getAttribute('data-id');
 
 	document.getElementById('titulo-preview-id' + dataIdValue).innerHTML = document.getElementById('titulo' + dataIdValue).value;
-	document.getElementById('from-formation-preview-id' + dataIdValue).innerHTML =
-	document.getElementById('start_month-formation' + dataIdValue).value + ' ' +
-	document.getElementById('start_year-formation' + dataIdValue).value;
-	if (document.getElementById('actualidad-formation' + dataIdValue).checked) {
-		document.getElementById('until-formation-preview-id' + dataIdValue).innerHTML = 'Diciembre 2017';
+	document.getElementById('from-education-preview-id' + dataIdValue).innerHTML =
+	document.getElementById('start_month-education' + dataIdValue).value + ' ' +
+	document.getElementById('start_year-education' + dataIdValue).value;
+	if (document.getElementById('actualidad-education' + dataIdValue).checked) {
+		document.getElementById('until-education-preview-id' + dataIdValue).innerHTML = 'Diciembre 2017';
 	}
 	else {
-		document.getElementById('until-formation-preview-id' + dataIdValue).innerHTML =
-		document.getElementById('end_month-formation' + dataIdValue).value + ' ' +
-		document.getElementById('end_year-formation' + dataIdValue).value;
+		document.getElementById('until-education-preview-id' + dataIdValue).innerHTML =
+		document.getElementById('end_month-education' + dataIdValue).value + ' ' +
+		document.getElementById('end_year-education' + dataIdValue).value;
 	}
 	document.getElementById('centro-id' + dataIdValue).innerHTML = document.getElementById('centro' +dataIdValue).value;
-	document.getElementById('description-formation-preview-id' + dataIdValue).innerHTML = document.getElementById('description-formation' + dataIdValue).value;
+	document.getElementById('description-education-preview-id' + dataIdValue).innerHTML = document.getElementById('description-education' + dataIdValue).value;
 }
-document.querySelector('.save-formation-button').addEventListener('click',printFormationToPreview);
+document.querySelector('.save-education-button').addEventListener('click',printEducationToPreview);
 
 
 
@@ -281,22 +281,22 @@ var newExperienceButton = document.querySelector('.new-experience-button');
 newExperienceButton.addEventListener('click',addItemExperience);
 
 
-// GENERAR NUEVOS ELEMENTOS A PETICIÓN (formation)_______________________
-var idFormationModifier = 2;
-function addItemFormation() {
-	var repeatedItemFormation = '<div class="formation-element" id="formation-element' + idFormationModifier + '"><label class="label" for="titulo"></label><input class="class-input" id="titulo' + idFormationModifier + '" type="text" name="titulation" placeholder="Título*" required><section class="formation-dates"><div class="date-container-from"><label class="label">Desde</label><select id="start_month-formation' + idFormationModifier + '" name="start_month" class="month"></select><select id="start_year-formation' + idFormationModifier + '" name="start_year" class="year"></select></div><div class="date-container-until"><label class="label" >Hasta</label><select id="end_month-formation' + idFormationModifier + '" name="end_month" class="month"></select><select id="end_year-formation' + idFormationModifier + '" name="start_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad-formation' + idFormationModifier + '" type="checkbox" name="actualidad"></div></div></section><label class="label" for="centro"></label><input class="class-input" id="centro' + idFormationModifier + '" type="text" name="place" placeholder="Centro de estudios*" required><label class="label" for="description"></label><textarea class="description" id="description-formation' + idFormationModifier + '" cols="30" rows="10" name="description" placeholder="Descripción"></textarea><button type="button" name="button" class="save-formation-button" id="save-formation-button' + idFormationModifier + '" data-id="' + idFormationModifier + '">Guardar</button></div>'
+// GENERAR NUEVOS ELEMENTOS A PETICIÓN (Education)_______________________
+var idEducationModifier = 2;
+function addItemEducation() {
+	var repeatedItemEducation = '<div class="education-element" id="education-element' + idEducationModifier + '"><label class="label" for="titulo"></label><input class="class-input" id="titulo' + idEducationModifier + '" type="text" name="titulation" placeholder="Título*" required><section class="education-dates"><div class="date-container-from"><label class="label">Desde</label><select id="start_month-education' + idEducationModifier + '" name="start_month" class="month"></select><select id="start_year-education' + idEducationModifier + '" name="start_year" class="year"></select></div><div class="date-container-until"><label class="label" >Hasta</label><select id="end_month-education' + idEducationModifier + '" name="end_month" class="month"></select><select id="end_year-education' + idEducationModifier + '" name="start_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad-education' + idEducationModifier + '" type="checkbox" name="actualidad"></div></div></section><label class="label" for="centro"></label><input class="class-input" id="centro' + idEducationModifier + '" type="text" name="place" placeholder="Centro de estudios*" required><label class="label" for="description"></label><textarea class="description" id="description-education' + idEducationModifier + '" cols="30" rows="10" name="description" placeholder="Descripción"></textarea><button type="button" name="button" class="save-education-button" id="save-education-button' + idEducationModifier + '" data-id="' + idEducationModifier + '">Guardar</button></div>'
 
-	document.querySelector('.formation-element').insertAdjacentHTML('beforeend', repeatedItemFormation);
+	document.querySelector('.education-element').insertAdjacentHTML('beforeend', repeatedItemEducation);
 
-	document.getElementById('save-formation-button' + idFormationModifier).addEventListener('click',printFormationToPreview);
+	document.getElementById('save-education-button' + idEducationModifier).addEventListener('click',printEducationToPreview);
 
-	idFormationModifier++;
+	idEducationModifier++;
 	añosInput ();
 	selectMonths();
 }
 
-var newFormationButton = document.querySelector('.new-formation-button');
-newFormationButton.addEventListener('click',addItemFormation);
+var newEducationButton = document.querySelector('.new-education-button');
+newEducationButton.addEventListener('click',addItemEducation);
 
 
 

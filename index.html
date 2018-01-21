@@ -192,66 +192,66 @@
 								<hr class="line">
 							</fieldset>
 
-							<!-- FORMATION -->
-							<fieldset class="formation">
+							<!-- education -->
+							<fieldset class="form__education">
 								<legend class="legend">Formación</legend>
 								<div class="form-section-header">
 									<h3 class="h3-form">Formación</h3>
 									<!--botones colapsable-->
 									<div class="form-section-buttons">
-										<img src="images/plus.png" id='button--open' class="button--open" data-idDesplegar="formation" alt="abrir">
+										<img src="images/plus.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__education" alt="abrir">
 									</div>
 								</div>
 								<!--oculto-->
-								<div id="formation">
-									<div class="formation-element" id="formation-element">
+								<div id="container-inputs__education">
+									<div class="education-element" id="education-element">
 										<label class="label" for="titulo"></label>
 										<input class="class-input" id="titulo1" type="text" name="titulation" placeholder="Título*" required>
-										<div class="formation-dates">
+										<div class="education-dates">
 											<div class="date-container-from">
 												<label class="label from">Desde</label>
 
-												<select id="start_month-formation1" name="start_month" class="month">
+												<select id="start_month-education1" name="start_month" class="month">
 												</select>
-												<select id="start_year-formation1" name="start_year" class="year">
+												<select id="start_year-education1" name="start_year" class="year">
 												</select>
 											</div>
 											<div class="date-container-until">
 												<label class="label until">Hasta</label>
-												<select id="end_month-formation1" name="end_month" class="month">
+												<select id="end_month-education1" name="end_month" class="month">
 												</select>
-												<select id="end_year-formation1" name="start_year" class="year">
+												<select id="end_year-education1" name="start_year" class="year">
 												</select>
 												<div class="actualidad">
 													<label for="actualidad" class="present-button-p">Actualidad</label>
-													<input class="present-button" id="actualidad-formation1" type="checkbox" name="actualidad">
+													<input class="present-button" id="actualidad-education1" type="checkbox" name="actualidad">
 												</div>
 											</div>
 										</div>
 										<label class="label" for="centro"></label>
 										<input class="class-input" id="centro1" type="text" name="place" placeholder="Centro de estudios*" required>
 										<label class="label" for="description"></label>
-										<textarea class="description" id="description-formation1" cols="30" rows="10" name="description" placeholder="Descripción"></textarea>
-										<button type="button" name="button" class="save-formation-button" id="save-formation-button1" data-id="1">Guardar</button>
+										<textarea class="description" id="description-education1" cols="30" rows="10" name="description" placeholder="Descripción"></textarea>
+										<button type="button" name="button" class="save-education-button" id="save-education-button1" data-id="1">Guardar</button>
 									</div>
-									<button type="button" name="button" class="new-formation-button" data-id="1">Nueva formación</button>
+									<button type="button" name="button" class="new-education-button" data-id="1">Nueva formación</button>
 								</div>
 								<hr class="line">
 							</fieldset>
 
 							<!-- SKILLS -->
-							<fieldset class="skills-fieldset">
+							<fieldset class="form__skills">
 								<legend class="legend">Habilidades</legend>
 								<div class="form-section-header">
 									<h3 class="h3-form">Habilidades</h3>
 									<!--botones colapsable-->
 									<div class="form-section-buttons">
-										<img src="images/plus.png" id='button--open' class="button--open" data-idDesplegar="skills" alt="abrir">
+										<img src="images/plus.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__skills" alt="abrir">
 									</div>
 								</div>
 								<!--oculto-->
-								<div id="skills">
-									<div class="skills">
+								<div id="container-inputs__skills">
+									<div class="skills"><!--OJO CON ESTE DIV-->
 										<div class="languages">
 											<p>Idiomas</p>
 											<div class="language-element">
@@ -269,7 +269,7 @@
 											</div>
 											<button type="button" name="button" class="new-language-button">Nuevo idioma</button>
 										</div>
-									</div>
+									</div><!--OJO CON ESTE DIV-->
 									<div class="it">
 										<p>Programas informáticos</p>
 										<div class="it-element">
@@ -312,120 +312,134 @@
 				<h2 class="preview-titleE"> Previsualización </h2>
 				<!-- DATOS PERSONALES + IMAGEN -->
 				<div class="showpreview dots philosopher black-pink-grey">
-					<div class="preview-header preview-div">
-						<div class="cuadro-photo">
-							<div class="preview-photo-div">
+					<div class="container__preview preview-div">
+						<div class="container__preview--photo">
+							<div class="container__photo">
 							</div>
 						</div>
-						<div class="nombre-direccion-div">
-							<div class="nombre-cargo">
-								<div class="preview-data-div preview-text">
-									<div class="nombre-preview"><span id="name-preview-id"></span></div>
-									<div class="apellido-preview"><span id="surname-preview-id"></span></div>
-									<div class="cargo-preview"><span id="jobtitle-preview-id"></span></div>
+						<div class="container__preview--personal-data">
+							<div class="container__personal-data">
+								<div class="preview-text">
+									<div class="preview__personal-data--name"><span id="personal-data--name"></span>
+									</div>
+									<div class="preview__personal-data--surname"><span id="personal-data--surname"></span>
+									</div>
+									<div class="preview__personal-data--job"><span id="personal-data--job"></span>
+									</div>
 								</div>
 							</div>
-							<div class="cuadro-direccion">
-								<div class="preview-data-div preview-text">
-									<div class="telefono-preview"><span id="phone-preview-id"></span></div>
-									<div class="nacimiento-preview"><span id="birthdate-preview-id"></span></div>
-									<div class="email"><span id="email-preview-id"></span></div>
-									<div class="direccion"><span id="address-preview-id"></span></div>
+							<div class="container__direction">
+								<div class="preview-text">
+									<div class="preview__direction--phone"><span id="preview__direction--phone"></span>
+									</div>
+									<div class="preview__direction--date"><span id="preview__direction--date"></span>
+									</div>
+									<div class="preview__direction--mail"><span id="preview__direction--mail"></span></div>
+									<div class="preview__direction--adress"><span id="preview__direction--adress"></span></div>
 								</div>
 							</div>
 						</div>
 					</div>
 
 					<!-- EXTRACTO + RRSS -->
-					<div class="preview-extract-div preview-div">
-						<div class="title-extract-preview preview-title">
-							<h1>Extracto</h1>
+					<div class="container__preview--summary">
+						<div class="preview-title">
+							<h3>Extracto</h3>
 						</div>
-						<div class="cuadro-extract preview-text">
-							<div class="preview-extract" id="aboutme-preview-id">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+						<div class="container__summary preview-text">
+							<div class="preview__summary" id="preview__summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 							</div>
-							<div class="preview-rrss">
-								<div><span id="twitter-preview-id">@moniaguado</span></div>
-								<div><span id="linkedin-preview-id">linkedin.es/monicaaguadoalonso</span></div>
-								<div><span id="facebook-preview-id">facebook.com/moni.monroe.7</span></div>
+							<div class="container__preview--rrsss">
+								<div><span id="preview__rrss--twitter">@moniaguado</span>
+								</div>
+								<div><span id="preview__rrss--linkedin">linkedin.es/monicaaguadoalonso</span>
+								</div>
+								<div><span id="preview__rrss--facebook">facebook.com/moni.monroe.7</span>
+								</div>
 							</div>
 						</div>
 					</div>
 
 					<!-- EXPERIENCIA -->
-					<div class="preview-experience-div preview-div">
-						<div class="title-experiencie-preview preview-title">
-							<h1>Experiencia profesional</h1>
+					<div class="container__preview--experience preview-div">
+						<div class="preview-title">
+							<h3>Experiencia profesional</h3>
 						</div>
-						<div class="item-experience-preview preview-text">
-							<div class="cargo-fecha-emp">
+						<div class="preview__experience preview-text">
+							<div class="container__experience--main-data">
 								<div><span id="job-preview-id-1">Social Media</span></div>
 								<div><span id="from-preview-id-1">11/2016</span></div>
 								<div><span id="until-preview-id1">09/2017</span></div>
 								<div><span id="place-preview-id1">Swing Swing</span></div>
 							</div>
-							<div class="responsabilidades">
+							<div class="container__experience--description">
 								<div><span id="description-preview-id1">Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.</span>
 								</div>
 							</div>
 						</div>
-						<div class="item-experience-preview preview-text">
-							<div class="cargo-fecha-emp">
+						<div class="preview__experience preview-text">
+							<div class="container__experience--main-data">
 								<div><span id="job-preview-id-2"></span></div>
 								<div><span id="from-preview-id-2"></span></div>
 								<div><span id="until-preview-id2"></span></div>
 								<div><span id="place-preview-id2"></span></div>
 							</div>
-							<div class="responsabilidades">
+							<div class="container__experience--description">
 								<div><span id="description-preview-id2"></span></div>
 							</div>
 						</div>
 					</div>
 					<!-- FORMACIÓN -->
-					<div class="preview-formation preview-div">
-						<div class="title-formation-preview preview-title">
-							<h1>Formación</h1>
+					<div class="container__preview--formation preview-div">
+						<div class="preview-title">
+							<h3>Formación</h3>
 						</div>
-						<div class="item-formation-preview preview-text">
-							<div class="curso-fecha-escuela">
+						<div class="preview__formation preview-text">
+							<div class="container__formation--main-data">
 								<div><span id="titulo-preview-id1">Front-end</span></div>
-								<div><span id="from-formation-preview-id1">10/2017</span></div>
-								<div><span id="until-formation-preview-id1">Actualidad</span></div>
+								<div><span id="from-education-preview-id1">10/2017</span></div>
+								<div><span id="until-education-preview-id1">Actualidad</span></div>
 								<div><span id="centro-id1">Adalab</span></div>
 							</div>
-							<div class="record">
-								<div><span id="description-formation-preview-id1">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
+							<div class="container__formation--description">
+								<div><span id="description-education-preview-id1">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
 							</div>
 						</div>
-						<div class="item-formation-preview preview-text">
-							<div class="curso-fecha-escuela">
+						<div class="preview__formation preview-text">
+							<div class="container__formation--main-data">
 								<div><span id="titulo-preview-id2">Front-end</span></div>
-								<div><span id="from-formation-preview-id2">10/2017</span></div>
-								<div><span id="until-formation-preview-id2">Actualidad</span></div>
+								<div><span id="from-education-preview-id2">10/2017</span></div>
+								<div><span id="until-education-preview-id2">Actualidad</span></div>
 								<div><span id="centro-id2">Adalab</span></div>
 							</div>
-							<div class="record">
-								<div><span id="description-formation-preview-id2">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
+							<div class="container__formation--description">
+								<div><span id="description-education-preview-id2">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
 							</div>
 						</div>
 					</div>
 					<!-- HABILIDADES -->
-					<div class="preview-skills preview-div">
-						<div class="item-skills-preview preview-text">
-							<div class="languages-preview">
-								<img src="images/speak.png" class="talk-icon">
-								<div class="language-selection"><span id="language-name1-preview-id"></span><span> | </span><span id="language-level1-preview-id"></span></div>
-								<div class="language-selection"><span id="language-name2-preview-id"></span><span> | </span><span id="language-level2-preview-id"></span></div>
+					<div class="container__preview--skills">
+						<div class="preview__skills preview-text">
+							<div class="preview__skills--languages">
+								<img src="images/speak.png" alt="talk-icon" class="talk-icon">
+								<div class="skills__language--select"><span id="language-name1-preview-id"></span><span> | </span><span id="language-level1-preview-id"></span>
+								</div>
+								<div class="skills__language--select"><span id="language-name2-preview-id"></span><span> | </span><span id="language-level2-preview-id"></span>
+								</div>
 							</div>
-							<div class="it-preview">
-								<img src="images/computer-monitor-and-mouse.png" class="it-icon">
-								<div class="it-selection"><span id="it-name1-preview-id"></span><span> | </span ><span id="it-level1-preview-id"></span></div>
-								<div class="it-selection"><span id="it-name2-preview-id"></span><span> | </span ><span id="it-level2-preview-id"></span></div>
+							<div class="preview__skills--it">
+								<img src="images/computer-monitor-and-mouse.png" alt="it-icon" class="it-icon">
+								<div class="skills__it--select"><span id="it-name1-preview-id"></span><span> | </span><span id="it-level1-preview-id"></span>
+								</div>
+								<div class="skills__it--select"><span id="it-name2-preview-id"></span><span> | </span><span id="it-level2-preview-id"></span>
+								</div>
 							</div>
-							<div class="bonus-preview">
-								<img src="images/settings.png" class="bonus-icon">
-								<div class="bonus-selection"><span id="skill-element1-preview-id"></span></div>
-								<div class="bonus-selection"><span id="skill-element2-preview-id"></span></div>
+							<div class="preview__skills--bonus">
+								<img src="images/settings.png" alt="bonus-icon" class="bonus-icon">
+								<div class="skills__bonus--select"><span id="skill-element1-preview-id"></span>
+								</div>
+								<div class="skills__bonus--select"><span id="skill-element2-preview-id"></span>
+								</div>
 							</div>
 						</div>
 					</div> <!--End of SKILLS-->
@@ -435,14 +449,15 @@
 	</main>
 
 	<footer>
-		<ul class="footer-list">
-			<a href="avisolegal.html"><li class="list-element">Aviso legal</li></a>
-			<!-- <a href="index.html"><li class="list-element">Aviso de cookies</li></a> -->
-			<a href="mailto:crearcv@generatrix.com"class="list-element"><li>Contacto</li></a>
-			<a href="index.html"><li class="list-element">Generatrix &copy; 2017</li></a>
+		<div class="container__footer">
+		<ul class="footer__list">
+			<a href="avisolegal.html"><li class="footer__list--element">Aviso legal</li></a>
+			<a href=""><li class="footer__list--element">Contacto</li></a>
+			<a href="index.html"><li class="footer__list--element">Generatrix &copy; 2017</li></a>
 		</ul>
 		<a href="index.html">
-			<img class="footer__logo" src="images/logocorto.png" alt="logo" alt="Generatrix"></a>
+				<img class="footer__logo" src="images/logocorto.png"  alt="logo-Generatrix"></a>
+			</div>
 		</footer>
 		<script src="original-js/original-main.js"></script>
 	</body>
