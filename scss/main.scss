@@ -407,9 +407,7 @@ main {
 
 
 
-/*PREVIEW*/
 
-/*ELECCIÓN DE DISEÑO*/
 
 
 .preview-titleE, .title-creation{
@@ -586,83 +584,6 @@ main {
 	width: 100%;
 }
 
-h1 {
-	font-size: 15px;
-	padding-right: 15px;
-}
-
-.container__summary{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-content: flex-start;
-	margin-top: 10px;
-}
-.preview__summary {
-	width: 60%;
-	height: 70px;
-	text-align: left;
-	padding-left: 5px;
-}
-.container__preview--rrss {
-	width: 30%;
-	text-align: right;
-}
-
-.preview__experience, .preview__formation {
-	display: flex;
-	flex-direction: column;
-	margin-top: 10px;
-}
-
-.container__experience--main-data, .container__formation--main-data {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	height: 15px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.container__experience--description, .container__formation--description {
-	height: 20px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
-	text-align: justify;
-}
-
-.preview__skills {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	height: 40px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
-}
-
-.preview__skills--languages, .preview__skills--it, .preview__skills--bonus {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.talk-icon, .it-icon, .bonus-icon {
-	width: 30px;
-	height: 30px;
-}
-
-.skills__language--select, .skills__it--select, .skills__bonus--select {
-	width: 90%;
-	padding: 0 10px;
-}
-
-
-
-/*FOOTER*/
-
 footer {
 	display: flex;
 	justify-content: space-between;
@@ -713,6 +634,7 @@ footer {
 // **********************************************mediaqueries*****
 
 
+
 @media all and (min-width:768px){
 	.header__logo {
 		background-image: url(../images/logolargo.png);
@@ -752,15 +674,7 @@ footer {
 		font-size: 20px;
 		padding-top: 1.2em;
 	}
-	.footer__list {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-	.footer__list--element {
-		font-size: 18px;
-		padding-right: 10px;
-	}
+
 	.sube {
 		font-size: 22px;
 	}
@@ -783,52 +697,5 @@ footer {
 		padding: 0 2%;
 		background-color: #E7ECED;
 	}
-	.showpreview {
-		height: 130vh;
-	}
-	.section__creation, .section__preview {
-		width: 50%;
-	}
-	.section__preview {
-		margin-left: 2%;
-	}
-	.cookie .preview-title{
-		font-family: 'Cookie';
-		font-size: 1.2em;
-	}
-	.cookie .preview-text{
-		font-family: 'arial';
-		font-size: .7em;
-	}
-	/*annie*/
-	.annie .preview-title{
-		font-family: 'Leckerli One';
-		font-size: .1em;
-		font-weight: 700;
-	}
-	.annie .preview-text{
-		font-family: 'Annie Use Your Telescope';
-		font-size: .8em;
-	}
-	/*Philosopher*/
-	.philosopher .preview-title{
-		font-family: 'Philosopher';
-		font-size: 1em;
-		font-weight: 700;
-	}
-	.philosopher .preview-text{
-		font-family: 'Philosopher';
-		font-size: .8em;
-	}
-	.preview__skills {
-		margin-top: 30px;
-	}
-	.container__photo .thumb {
-		width: 70px;
-		height: 70px;
-	}
-	.container__photo {
-		width: 70px;
-		height: 70px;
-	}
+
 }
