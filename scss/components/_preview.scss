@@ -121,7 +121,7 @@
 	background-color: #31B89A;
 	border-radius: 100px;
 }
-.container__preview--personal-data{
+.container__preview--personal-data {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -132,7 +132,7 @@
 .container__personal-data {
 	/*background-color: #EAB931;*/
 	width: 32%;
-	height: 50px;
+	// height: 50px;
 	margin-top: 10px;
 	display: flex;
 	flex-direction: column;
@@ -157,7 +157,6 @@
 .container__photo .thumb {
 	width: 100%;
 	width: 60px;
-	height: 60px;
 	border-radius: 100px;
 	width: 70px;
 	height: 70px;
@@ -170,12 +169,11 @@
 }
 
 .container__preview--summary{
-	height: 100px;
 	width: 100%;
 }
 
 
-.container__summary{
+.container__summary {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -184,7 +182,7 @@
 }
 .preview__summary {
 	width: 60%;
-	height: 70px;
+	height: auto;
 	text-align: left;
 	padding-left: 5px;
 }
@@ -210,7 +208,7 @@
 }
 
 .container__experience--description, .container__formation--description {
-	height: 20px;
+	// height: 20px;
 	width: 95%;
 	padding-left: 10px;
 	padding-right: 10px;
@@ -291,6 +289,7 @@
 		width: 70px;
 		height: 70px;
 	}
+
 
 
 }
