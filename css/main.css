@@ -2,7 +2,163 @@
 
 @import url("https://fonts.googleapis.com/css?family=Cookie|Philosopher:400,700");
 
-@import url("https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope%7CLeckerli+One");/*azul marino: #424A5F; AZUL: #55607F; AZUL CLARO: #E7ECED; AMARILLO: #EAB931; VERDE: #31B89A *//*font-family: 'annie', sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope%7CLeckerli+One");
+
+.button--open,.button--close {
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.button--save,.button--new {
+  background-color: #EAB931;
+  color: #424A5F;
+  font-weight: bold;
+  border-style: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 4px 5px;
+  margin: 7px 0;
+}
+
+.h3-form {
+  color: #31B89A;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.legend {
+  display: none;
+}
+
+.form-section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  border-bottom: 5px;
+}
+
+.form__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-item-align: center;
+  align-self: center;
+  background: #55607F;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+}
+
+.form__personal-data {
+  margin-top: 1.2em;
+}
+
+.form__personal-data,.form__education,.form__experience,.form__skills {
+  background-color: #55607F;
+  padding: 0 35px;
+}
+
+#container-inputs__personal-data,#container-inputs__experience,#container-inputs__education,#container-inputs__skills {
+  display: none;
+}
+
+.label {
+  font-size: 1em;
+  text-align: center;
+  color: #31B89A;
+  margin-top: 0;
+}
+
+.class-input,.description,.experience-text,.textarea-aboutme {
+  display: block;
+  border-radius: 5px;
+  background: #E7ECED;
+  font-family: inherit;
+  width: 100%;
+  margin: 8px 0;
+  padding: 9px;
+  font-size: 0.9em;
+  outline: none;
+  border: none;
+}
+
+.education-dates,.experience-dates {
+  display: inline;
+  color: black;
+  font-size: 14px;
+}
+
+select {
+  border: none;
+  padding: 3px;
+  width: 67px;
+}
+
+.date-container-from,.level {
+  display: block;
+  margin: 4px 0;
+}
+
+.date-container-until {
+  display: block;
+  margin: 4px 0;
+}
+
+.from {
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+.until {
+  margin-left: 2px;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+.actualidad {
+  margin-top: 4px;
+}
+
+.present-button-p {
+  font-size: 1em;
+  color: #31B89A;
+}
+
+.skills-p {
+  color: white;
+  font-size: 1.3em;
+}
+
+.line {
+  border-color: #E7ECED;
+  border-style: solid;
+  border-width: 0.5px;
+  display: block;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}/*azul marino: #424A5F; AZUL: #55607F; AZUL CLARO: #E7ECED; AMARILLO: #EAB931; VERDE: #31B89A *//*font-family: 'annie', sans-serif;
 font-family: 'Cookie', cursive;
 font-family: 'Philosopher', sans-serif;*/* {
   -webkit-box-sizing: border-box;
@@ -46,19 +202,6 @@ main {
   width: 100%;
   padding: 0;
   background-color: #E7ECED;
-}
-
-.form__personal-data {
-  margin-top: 1.2em;
-}
-
-.line {
-  border-color: #E7ECED;
-  border-style: solid;
-  border-width: 0.5px;
-  display: block;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
 }/*HEADER*/.container__header {
   height: 80px;
   width: 100%;
@@ -84,10 +227,6 @@ main {
   justify-content: space-between;
   padding: 0 20px;
   z-index: 3;
-}
-
-.form-section-header {
-  border-bottom: 5px;
 }
 
 .header__logo {
@@ -394,121 +533,17 @@ main {
 
 .selection-image {
   display: none;
-}/*FORM*/.h3-form {
-  color: #31B89A;
-  text-transform: uppercase;
-}
-
-.legend {
-  display: none;
-}
-
-fieldset {
-  border: none;
-  margin: 0;
-}/*personal information*/.form__personal-data,.form__education {
-  background-color: #55607F;
-}
-
-.form__experience,.form__education {
-  background-color: #55607F;
-}
-
-.form__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-item-align: center;
-  align-self: center;
-  background: #55607F;
-}
-
-#container-inputs__personal-data,#container-inputs__experience,#container-inputs__education,#container-inputs__skills {
-  display: none;
-}
-
-.button--open,.button--close {
-  height: 20px;
-  width: 20px;
-}
-
-.class-input,.description,.experience-text,.textarea-aboutme {
-  display: block;
-  border-radius: 5px;
-  background: #E7ECED;
-  font-family: inherit;
-  padding: 5px;
-  margin: 5px;
-  width: 80%;
-}
-
-#input-birthdate {
+}/*FORM*//*personal information*/#input-birthdate {
   color: #757575;
-}
-
-.description,.experience-text,.textarea-aboutme {
-  resize: vertical;
-  font-size: 13.3333px;
- /*NECESARIO porque si no se descuajeringa la caja y también cambia el tamaña y la fuente.*/;
-}
-
-.fill {
-  margin: 0 0 0 6px;
-}/*EXPERIENCE*/.form-section-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  width: auto;
-  height: auto;
-}/*ANTES PARA LAS OTRAS FECHAS.AHORA NO NECESARIO*//*.experience-dates input, .experience-dates p, .education-dates input
+}/*EXPERIENCE*//*ANTES PARA LAS OTRAS FECHAS.AHORA NO NECESARIO*//*.experience-dates input, .experience-dates p, .education-dates input
 	width: 20%;
 	display: inline;
 	font-size: 10px;
 	color: rgb(117, 117, 117);
-}*/.education-dates-p,.experience-dates-p {
-  display: inline;
-  color: black;
-  font-size: 14px;
-}
-
-.date-container-from,.date-container-until,.level {
-  display: block;
-  margin: 4px 0 4px 6px;
-}/*.present-button {
+}*//*.present-button {
 	right: 25%;
 	margin-right: 0;
-}*/.actualidad {
-  margin-top: 4px;
-}
-
-.label,.present-button-p {
-  font-family: 5px;
-  color: #31B89A;
-}
-
-.until {
-  margin-left: 2px;
-}
-
-#container-inputs__experience {
-  display: none;
-}/*PREVIEW*//*ELECCIÓN DE DISEÑO*/.preview-titleE,.title-creation,.label {
+}*//*PREVIEW*//*ELECCIÓN DE DISEÑO*/.preview-titleE,.title-creation {
   text-align: center;
   color: #31B89A;
   margin-top: 0;
@@ -876,14 +911,6 @@ h1 {
   color: #424A5F;
 }
 
-.save-data-button,.save-experience-button,.new-experience-button,.save-education-button,.new-education-button,.save-languages-button,.new-language-button,.save-it-button,.new-it-button,.save-skills-button,.new-skills-button {
-  background-color: #EAB931;
-  color: #424A5F;
-  font-weight: bold;
-  border-style: none;
-  border-radius: 5px;
-}
-
 @media all and (min-width: 500px) {
   .date-container-until {
     display: -webkit-box;
@@ -893,15 +920,14 @@ h1 {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    height: 19px;
-  }
-
-  .actualidad {
-    margin-left: 5px;
   }
 
   #end_month1,#end_year1,#end_month-education1,#end_year-education1 {
     margin-left: 2px;
+  }
+
+  .actualidad {
+    margin-left: 5px;
   }
 }
 
@@ -914,6 +940,7 @@ h1 {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
+    margin: 15px 0;
   }
 
   .actualidad {
@@ -927,6 +954,11 @@ h1 {
 }
 
 @media all and (min-width: 768px) {
+  .button--open,.button--close {
+    width: 30px;
+    height: auto;
+  }
+
   .header__logo {
     background-image: url(../images/logolargo.png);
     width: 200px;

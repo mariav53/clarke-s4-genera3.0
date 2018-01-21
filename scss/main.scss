@@ -57,18 +57,9 @@ main {
 	padding: 0;
 	background-color: #E7ECED;
 }
-.form__personal-data {
-	margin-top: 1.2em;
-}
 
-.line {
-	border-color: #E7ECED;
-	border-style: solid;
-	border-width: 0.5px;
-	display: block;
-	margin-top: 1.5em;
-	margin-bottom: 0.5em;
-}
+
+
 
 /*HEADER*/
 
@@ -89,9 +80,7 @@ main {
 	z-index: 3;
 }
 
-.form-section-header {
-	border-bottom: 5px;
-}
+
 
 .header__logo {
 	background-image: url(../images/logocorto.png);
@@ -379,80 +368,25 @@ main {
 
 /*FORM*/
 
-.h3-form {
-	color: #31B89A;
-	text-transform: uppercase;
-}
 
-.legend {
-	display: none;
-}
-
-fieldset {
-	border: none;
-	margin: 0;
-}
 
 /*personal information*/
 
-.form__personal-data, .form__education {
-	background-color: #55607F;
-}
 
-.form__experience, .form__education {
-	background-color: #55607F;
-}
 
-.form__container {
-	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
-	align-self: center;
-	background: #55607F;
-}
 
-#container-inputs__personal-data, #container-inputs__experience, #container-inputs__education, #container-inputs__skills {
-	display: none;
-}
 
-.button--open, .button--close {
-	height: 20px;
-	width: 20px;
-}
-
-.class-input, .description, .experience-text, .textarea-aboutme {
-	display: block;
-	border-radius: 5px;
-	background: #E7ECED;
-	font-family: inherit;
-	padding: 5px;
-	margin: 5px;
-	width: 80%;
-}
 #input-birthdate {
 	color:#757575;
 }
 
-.description, .experience-text, .textarea-aboutme {
 
-	resize: vertical;
-	font-size: 13.3333px;
-	/*NECESARIO porque si no se descuajeringa la caja y también cambia el tamaña y la fuente.*/
-}
-.fill {
-	margin:0 0 0 6px;
-}
+// .fill {
+// 	margin:0 0 0 6px;
+// }
 
 /*EXPERIENCE*/
 
-.form-section-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	width: auto;
-	height: auto;
-}
 
 /*ANTES PARA LAS OTRAS FECHAS.AHORA NO NECESARIO*/
 
@@ -463,39 +397,22 @@ fieldset {
 	color: rgb(117, 117, 117);
 }*/
 
-.education-dates-p, .experience-dates-p {
-	display: inline;
-	color: black;
-	font-size: 14px;
-}
-.date-container-from, .date-container-until, .level{
-	display: block;
-	margin: 4px 0 4px 6px;
-}
+
 /*.present-button {
 	right: 25%;
 	margin-right: 0;
 }*/
-.actualidad{
-	margin-top: 4px;
-}
-.label, .present-button-p  {
-	font-family: 5px;
-	color: #31B89A;
-}
-.until {
-	margin-left: 2px;
-}
-#container-inputs__experience {
-	display: none;
-}
+
+
+
+
 
 /*PREVIEW*/
 
 /*ELECCIÓN DE DISEÑO*/
 
 
-.preview-titleE, .title-creation, .label {
+.preview-titleE, .title-creation{
 	text-align: center;
 	color: #31B89A;
 	margin-top: 0;
@@ -787,23 +704,14 @@ footer {
 	text-align: justify;
 	color: #424A5F;
 }
-.save-data-button,
-.save-experience-button,
-.new-experience-button,
-.save-education-button,
-.new-education-button,
-.save-languages-button,
-.new-language-button,
-.save-it-button,
-.new-it-button,
-.save-skills-button,
-.new-skills-button {
-	background-color: #EAB931;
-	color: #424A5F;
-	font-weight: bold;
-	border-style: none;
-	border-radius: 5px;
-}
+
+// **********************************************mediaqueries*****
+// **********************************************mediaqueries*****
+// **********************************************mediaqueries*****
+// **********************************************mediaqueries*****
+// **********************************************mediaqueries*****
+// **********************************************mediaqueries*****
+
 
 @media all and (min-width:768px){
 	.header__logo {
@@ -813,31 +721,13 @@ footer {
 }
 
 @media all and (min-width:500px){
-	.date-container-until {
-		display: flex;
-		flex-direction: row;
-		height: 19px;
-	}
+
 	.actualidad {
-		margin-left: 5px;
+
 }
-#end_month1, #end_year1, #end_month-education1, #end_year-education1 {
-	margin-left: 2px;
+
 }
-}
-@media all and (min-width:622px){
-	.education-dates, .experience-dates {
-		display: flex;
-		flex-direction: row;
-	}
-	.actualidad {
-		margin-top: 0;
-	}
-	.present-button-p {
-		margin-top: 0;
-		padding-top: 0;
-	}
-}
+
 @media all and (min-width:768px) {
 	.title-hero {
 		font-size: 45px;
