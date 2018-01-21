@@ -190,20 +190,20 @@ function printProfessionalExperienceToPreview(event) {
 
 var dataIdValue = event.currentTarget.getAttribute('data-id');
 
-	document.getElementById('job-preview-id-' + dataIdValue).innerHTML = document.getElementById('puesto' + dataIdValue).value;
-	document.getElementById('from-preview-id-' + dataIdValue).innerHTML =
-	document.getElementById('start_month' + dataIdValue).value + ' ' +
-	document.getElementById('start_year' + dataIdValue).value;
-	if (document.getElementById('actualidad' + dataIdValue).checked) {
-		document.getElementById('until-preview-id' + dataIdValue).innerHTML = 'Diciembre 2017';
+	document.getElementById('job-preview-id-' + dataIdValue).innerHTML = document.getElementById('job' + dataIdValue).value;
+	document.getElementById('from-job-preview-id' + dataIdValue).innerHTML =
+	document.getElementById('start_month-job' + dataIdValue).value + ' ' +
+	document.getElementById('start_year-job' + dataIdValue).value;
+	if (document.getElementById('actualidad-job' + dataIdValue).checked) {
+		document.getElementById('until-job-preview-id' + dataIdValue).innerHTML = 'Actualmente';
 	}
 	else {
-		document.getElementById('until-preview-id' + dataIdValue).innerHTML =
-		document.getElementById('end_month' + dataIdValue).value + ' ' +
-		document.getElementById('end_year' + dataIdValue).value;
+		document.getElementById('until-job-preview-id' + dataIdValue).innerHTML =
+		document.getElementById('end_month-job' + dataIdValue).value + ' ' +
+		document.getElementById('end_year-job' + dataIdValue).value;
 	}
-	document.getElementById('place-preview-id' + dataIdValue).innerHTML = document.getElementById('lugar' + dataIdValue).value;
-	document.getElementById('description-preview-id' + dataIdValue).innerHTML = document.getElementById('description' + dataIdValue).value;
+	document.getElementById('place-preview-id' + dataIdValue).innerHTML = document.getElementById('company' + dataIdValue).value;
+	document.getElementById('description-job-preview-id' + dataIdValue).innerHTML = document.getElementById('description-job' + dataIdValue).value;
 }
 document.querySelector('.save-experience-button').addEventListener('click',printProfessionalExperienceToPreview);
 
@@ -217,7 +217,7 @@ var dataIdValue = event.currentTarget.getAttribute('data-id');
 	document.getElementById('start_month-education' + dataIdValue).value + ' ' +
 	document.getElementById('start_year-education' + dataIdValue).value;
 	if (document.getElementById('actualidad-education' + dataIdValue).checked) {
-		document.getElementById('until-education-preview-id' + dataIdValue).innerHTML = 'Diciembre 2017';
+		document.getElementById('until-education-preview-id' + dataIdValue).innerHTML = 'Actualmente';
 	}
 	else {
 		document.getElementById('until-education-preview-id' + dataIdValue).innerHTML =
@@ -266,7 +266,7 @@ document.querySelector('.save-skills-button').addEventListener('click',printSkil
 // GENERAR NUEVOS ELEMENTOS A PETICIÓN (experience)_______________________
 var idExperienceModifier = 2;
 function addItemExperience() {
-	var repeatedItemExperience = '<div class="experience-element" id="experience-element' + idExperienceModifier + '"><input class="class-input" id="puesto' + idExperienceModifier + '" type="text" name="puesto" placeholder="Puesto' + idExperienceModifier + '"><section class="experience-dates"><div class="date-container-from"><label class="label">Desde</label><select id="start_month' + idExperienceModifier + '" name="start_month" class="month"></select><select id="start_year' + idExperienceModifier + '" name="start_year" class="year"></select></div><div class="date-container-until"><label class="label" >Hasta</label><select id="end_month' + idExperienceModifier + '" name="end_month" class="month"></select><select id="end_year' + idExperienceModifier + '" name="start_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad' + idExperienceModifier + '" type="checkbox" name="actualidad"></div></div></section><input class="class-input" id="lugar'+ idExperienceModifier + '" type="text" name="lugar" placeholder="Lugar"><textarea class="experience-text" id=description' + idExperienceModifier + ' name="description" rows="8" cols="80" placeholder="Despripción del puesto"></textarea><button type="button" name="button" class="save-experience-button" id="save-experience-button-' + idExperienceModifier + '" data-id="' + idExperienceModifier + '">Guardar</button></div>';
+	var repeatedItemExperience = '<div class="experience-element" id="experience-element' + idExperienceModifier + '"><input class="class-input" id="job' + idExperienceModifier + '" type="text" name="puesto" placeholder="Puesto' + idExperienceModifier + '"><section class="experience-dates"><div class="date-container-from"><label class="label">Desde</label><select id="start_month-job' + idExperienceModifier + '" name="start_month" class="month"></select><select id="start_year-job' + idExperienceModifier + '" name="start_year" class="year"></select></div><div class="date-container-until"><label class="label" >Hasta</label><select id="end_month-job' + idExperienceModifier + '" name="end_month" class="month"></select><select id="end_year-job' + idExperienceModifier + '" name="end_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad-job' + idExperienceModifier + '" type="checkbox" name="actualidad"></div></div></section><input class="class-input" id="company'+ idExperienceModifier + '" type="text" name="company" placeholder="Empresa"><textarea class="experience-text" id=description-job' + idExperienceModifier + ' name="description" rows="8" cols="80" placeholder="Despripción del puesto"></textarea><button type="button" name="button" class="save-experience-button" id="save-experience-button-' + idExperienceModifier + '" data-id="' + idExperienceModifier + '">Guardar</button></div>';
 
 	document.querySelector('.experience-element').insertAdjacentHTML('beforeend', repeatedItemExperience);
 
@@ -284,7 +284,7 @@ newExperienceButton.addEventListener('click',addItemExperience);
 // GENERAR NUEVOS ELEMENTOS A PETICIÓN (Education)_______________________
 var idEducationModifier = 2;
 function addItemEducation() {
-	var repeatedItemEducation = '<div class="education-element" id="education-element' + idEducationModifier + '"><label class="label" for="titulo"></label><input class="class-input" id="titulo' + idEducationModifier + '" type="text" name="titulation" placeholder="Título*" required><section class="education-dates"><div class="date-container-from"><label class="label">Desde</label><select id="start_month-education' + idEducationModifier + '" name="start_month" class="month"></select><select id="start_year-education' + idEducationModifier + '" name="start_year" class="year"></select></div><div class="date-container-until"><label class="label" >Hasta</label><select id="end_month-education' + idEducationModifier + '" name="end_month" class="month"></select><select id="end_year-education' + idEducationModifier + '" name="start_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad-education' + idEducationModifier + '" type="checkbox" name="actualidad"></div></div></section><label class="label" for="centro"></label><input class="class-input" id="centro' + idEducationModifier + '" type="text" name="place" placeholder="Centro de estudios*" required><label class="label" for="description"></label><textarea class="description" id="description-education' + idEducationModifier + '" cols="30" rows="10" name="description" placeholder="Descripción"></textarea><button type="button" name="button" class="save-education-button" id="save-education-button' + idEducationModifier + '" data-id="' + idEducationModifier + '">Guardar</button></div>'
+	var repeatedItemEducation = '<div class="education-element" id="education-element' + idEducationModifier + '"><label class="label" for="titulo"></label><input class="class-input" id="titulo' + idEducationModifier + '" type="text" name="titulation" placeholder="Título*" required><section class="education-dates"><div class="date-container-from"><label class="label">Desde</label><select id="start_month-education' + idEducationModifier + '" name="start_month" class="month"></select><select id="start_year-education' + idEducationModifier + '" name="start_year" class="year"></select></div><div class="date-container-until"><label class="label" >Hasta</label><select id="end_month-education' + idEducationModifier + '" name="end_month" class="month"></select><select id="end_year-education' + idEducationModifier + '" name="end_year" class="year"></select><div class="actualidad"><label for="actualidad" class="present-button-p">Actualidad</label><input class="present-button" id="actualidad-education' + idEducationModifier + '" type="checkbox" name="actualidad"></div></div></section><label class="label" for="centro"></label><input class="class-input" id="centro' + idEducationModifier + '" type="text" name="place" placeholder="Centro de estudios*" required><label class="label" for="description-education"></label><textarea class="description" id="description-education' + idEducationModifier + '" cols="30" rows="10" name="description" placeholder="Descripción"></textarea><button type="button" name="button" class="save-education-button" id="save-education-button' + idEducationModifier + '" data-id="' + idEducationModifier + '">Guardar</button></div>'
 
 	document.querySelector('.education-element').insertAdjacentHTML('beforeend', repeatedItemEducation);
 
