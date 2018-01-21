@@ -1,0 +1,154 @@
+.block__cv {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 100%;
+	padding: 0;
+	background-color: #E7ECED; // variable
+  @media all and (min-width: 1100px) {
+    display: flex;
+    flex-direction: row;
+    padding: 0 2%;
+    background-color: #E7ECED; // variable
+    .section__creation,
+    .section__preview {
+      width: 50%;
+    }
+  }
+}
+
+// DESIGN SECTION
+
+.creation__design {
+	background-color: #31B89A; // variable
+	height: 126px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  .creation__design__options {
+  	position: relative;
+  	list-style: none;
+  	display: flex;
+  	justify-content: space-between;
+  	margin: 0;
+  	padding: 0;
+  	height: 106px;
+  }
+}
+
+.creation__design__options-font, .creation__design__options-colour, .creation__design__options-theme {
+  border: 3px solid #424A5F; // variable
+	padding: 0;
+	height: 106px;
+	background-color: white;
+	z-index: 2;
+  .img-design {
+  	width: 100px;
+  	height: 100px;
+  }
+  &:hover .design-fonts,
+  &:hover .design-colours,
+  &:hover .design-themes {
+    display: block;
+  }
+}
+
+.design-fonts,
+.design-colours,
+.design-themes {
+	display: none;
+	position: absolute;
+	padding: 0;
+}
+
+.font,
+.colour,
+.theme {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 40px;
+	background-color: #424A5F; // variable
+	color: #E7ECED; // variable
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border-radius: 7px;
+}
+
+.font:hover,
+.colour:hover,
+.theme:hover {
+	background-color: #55607F; // variable
+}
+
+
+.font+.font,
+.colour+.colour,
+.theme+.theme {
+	border-top: 1px solid #EAB931; // variable
+}
+
+.red,
+.green,
+.lime,
+.black,
+.blue,
+.pink,
+.grey {
+	border-radius: 30px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid black; // variable
+}
+.red{
+	background-color: rgb(221, 90, 75); // variable
+}
+.green{
+	background-color: rgb(23, 71, 82); // variable
+}
+.lime{
+	background-color: rgb(210, 222, 107); // variable
+}
+.black{
+	background-color: rgb(37, 31, 33); // variable
+}
+.blue{
+	background-color: rgb(148, 211, 201); // variable
+}
+.pink{
+	background-color: rgb(238, 91, 120); // variable
+}
+.grey{
+	background-color: rgb(129, 126, 126); // variable
+}
+
+
+// SECTION IMAGE
+
+.creation__photo {
+	padding: 3%;
+	text-align: center;
+	background-color: #E7ECED; // variable
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+  .selection-image {
+  	display: none;
+  }
+  .trigger {
+  	display: inline-block;
+  	width: 100px;
+  	height: 100px;
+  	background-color: #424A5F; // variable
+  	background-repeat: no-repeat;
+  	/*no mosaico*/
+  	background-size: cover;
+  	background-position: center center;
+  	border-radius: 100px;
+  	border-color: #424A5F;
+  }
+}

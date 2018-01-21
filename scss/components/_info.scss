@@ -1,0 +1,97 @@
+// HERO
+
+.hero {
+  .hero__img-mobile {
+  	width: 100%;
+  	height: auto;
+    display: block;
+    @media all and (min-width: 768px) {
+      display: none;
+    }
+  }
+  .hero__img-desktop {
+  	display: none;
+    @media all and (min-width: 768px) {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.title-hero {
+	color: #EAB931; // variable
+	text-align: center;
+	background-color: #424A5F; // variable
+  font-size: 18px;
+	padding: 20px 5px;
+	margin: 0;
+  @media all and (min-width: 320px) and (max-width: 520px) {
+    font-size: 25px;
+		padding: 30px 5px;
+  }
+  @media all and (min-width: 521px) and (max-width: 767px) {
+    font-size: 35px;
+		padding: 30px 5px;
+  }
+  @media all and (min-width: 768px) {
+    font-size: 45px;
+		padding: 35px 5px;
+  }
+}
+
+// INFO STEPS DESIGN CV
+
+.block__info-steps {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: auto;
+	padding: 10px;
+  @media all and (min-width: 768px) {
+    padding: 3em 0em 2em;
+    width: auto;
+  }
+  .step {
+  	display: block;
+  	text-align: center;
+    @media all and (min-width: 768px) {
+      width: 45%;
+    }
+  }
+}
+.img-step {
+	display: block;
+	width: 80px;
+	height: 60px;
+	margin: 8px auto auto;
+	filter: opacity(0.3);
+  @media all and (min-width:768px) {
+    height:120px;
+    margin: auto;
+    width: auto;
+  }
+  .span-step {
+  	display: block;
+  	align-items: center;
+  	font-size: 13px;
+  	padding-top: 1.2em;
+    @media all and (min-width:768px) {
+      font-size: 20px;
+      padding-top: 1.2em;
+    }
+  }
+}
+
+// INSTRUCTIONS
+
+.container__instructions {
+	padding: 3%;
+	text-align: center;
+	background-color: #E7ECED; // variable
+  .container__instructions-paragraph {
+  	color: #424A5F; // variable
+    @media all and (min-width:768px) {
+      font-size: 20px;
+    }
+  }
+}
