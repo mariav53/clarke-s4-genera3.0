@@ -31,9 +31,9 @@
 
 .container__header .header__logo {
   background-image: url("../images/logocorto.png");
-  background-position: center;
-  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   display: block;
   width: 50px;
   height: 50px;
@@ -116,7 +116,7 @@ main {
   position: relative;
   width: 100%;
   background-color: #31B89A;
-  color: white;
+  color: #ffffff;
 }
 
 .container__footer {
@@ -265,7 +265,7 @@ main {
   border: 3px solid #424A5F;
   padding: 0;
   height: 106px;
-  background-color: white;
+  background-color: #ffffff;
   z-index: 2;
 }
 
@@ -288,12 +288,12 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100px;
   height: 40px;
   background-color: #424A5F;
@@ -316,7 +316,7 @@ main {
   border-radius: 30px;
   width: 20px;
   height: 20px;
-  border: 2px solid black;
+  border: 2px solid #000000;
 }
 
 .red {
@@ -349,7 +349,6 @@ main {
 
 .creation__photo {
   padding: 3%;
-  text-align: center;
   background-color: #E7ECED;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,11 +357,11 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
 }
 
 .creation__photo .selection-image {
@@ -375,9 +374,8 @@ main {
   height: 100px;
   background-color: #424A5F;
   background-repeat: no-repeat;
- /*no mosaico*/
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
   border-radius: 100px;
   border-color: #424A5F;
 }
@@ -391,11 +389,11 @@ main {
 .button--save,.button--new {
   background-color: #EAB931;
   color: #424A5F;
+  font-size: 18px;
   font-weight: bold;
   border-style: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 18px;
   padding: 4px 5px;
   margin: 7px 0;
 }
@@ -433,12 +431,12 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -ms-flex-item-align: center;
   align-self: center;
   background: #55607F;
@@ -462,7 +460,7 @@ fieldset {
   display: none;
 }
 
-#input-birthdate {
+.input-birthdate {
   color: #757575;
 }
 
@@ -488,7 +486,7 @@ fieldset {
 
 .education-dates,.experience-dates {
   display: inline;
-  color: black;
+  color: #000000;
   font-size: 14px;
 }
 
@@ -529,7 +527,7 @@ select {
 }
 
 .skills-p {
-  color: white;
+  color: #ffffff;
   font-size: 1.3em;
 }
 
@@ -583,7 +581,7 @@ select {
 .philosopher .preview-text {
   font-family: 'Philosopher';
   font-size: .45em;
-}/*Colour rgb(221, 90, 75) rgb(85, 85, 85) rgb(23, 71, 82) rgb(210, 222, 107) rgb(37, 31, 33) rgb(148, 211, 201) rgb(238, 91, 120) rgb(129, 126, 126)*//*red-green-lime*/.red-green-lime .preview-title {
+}/*Colour $colorRed $colorDarkGreen $colorLime $colorDarkGrey $colorHeavenBlue $colorPink $colorGrey*//*red-green-lime*/.red-green-lime .preview-title {
   color: #dd5a4b;
   border-bottom: 1px solid #d2de6b;
 }
@@ -606,23 +604,20 @@ select {
   color: #817e7e;
 }/*Temas*/.dots.showpreview {
   background-image: url("../images/themes/dots.png");
-  background-color: white;
-  background-size: contain;
-  background-position: center;
 }
 
 .stripes.showpreview {
   background-image: url("../images/themes/stripes.png");
-  background-position: center;
+  background-size: contain;
 }
 
 .zigZag.showpreview {
   background-image: url("../images/themes/zigZag.png");
-  background-position: center;
 }/*MAQUETACIÓN PREVIEW*/.showpreview {
-  background-position: center;
+  background-color: #ffffff;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-position: center center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -672,14 +667,14 @@ select {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0 10px;
   -ms-flex-line-pack: start;
   align-content: flex-start;
+  padding: 0 10px;
   width: 80%;
 }
 
 .container__personal-data {
- /*background-color: #EAB931;*/
+ /*background-color: $colorYellow;*/
   width: 32%;
   margin-top: 10px;
   display: -webkit-box;
@@ -697,7 +692,7 @@ select {
 .container__direction {
   width: 60%;
   height: 50px;
- /*background-color: #EAB931;*/
+ /*background-color: $colorYellow;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -718,8 +713,7 @@ select {
   width: 100%;
   width: 60px;
   border-radius: 100px;
-  width: 70px;
-  height: 70px;
+  height: 60px;
 }
 
 .preview-data {
@@ -844,16 +838,16 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .container__legal-warning {
@@ -999,6 +993,10 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 320px) and (
 }
 
 @media all and (min-width: 1100px) {
+  .section__creation,.section__preview {
+    width: 50%;
+  }
+
   .block__cv {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1011,52 +1009,37 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 320px) and (
     background-color: #E7ECED;
   }
 
-  .block__cv .section__creation,.block__cv .section__preview {
-    width: 50%;
+  .cookie .preview-title {
+    font-size: 1.2em;
+  }
+
+  .cookie .preview-text {
+    font-size: .7em;
+  }
+
+  .annie .preview-title {
+    font-size: .1em;
+  }
+
+  .annie .preview-text {
+    font-size: .8em;
+  }
+
+  .philosopher .preview-title {
+    font-size: 1em;
+  }
+
+  .philosopher .preview-text {
+    font-size: .8em;
   }
 
   .showpreview {
     height: 130vh;
   }
 
-  .section__creation,.section__preview {
-    width: 50%;
-  }
-
-  .section__preview {
-    margin-left: 2%;
-  }
-
-  .cookie .preview-title {
-    font-family: 'Cookie';
-    font-size: 1.2em;
-  }
-
-  .cookie .preview-text {
-    font-family: 'arial';
-    font-size: .7em;
-  }/*annie*/  .annie .preview-title {
-    font-family: 'Leckerli One';
-    font-size: .1em;
-    font-weight: 700;
-  }
-
-  .annie .preview-text {
-    font-family: 'Annie Use Your Telescope';
-    font-size: .8em;
-  }/*Philosopher*/  .philosopher .preview-title {
-    font-family: 'Philosopher';
-    font-size: 1em;
-    font-weight: 700;
-  }
-
-  .philosopher .preview-text {
-    font-family: 'Philosopher';
-    font-size: .8em;
-  }
-
-  .preview__skills {
-    margin-top: 30px;
+  .container__photo {
+    width: 70px;
+    height: 70px;
   }
 
   .container__photo .thumb {
@@ -1064,9 +1047,12 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 320px) and (
     height: 70px;
   }
 
-  .container__photo {
-    width: 70px;
-    height: 70px;
+  .preview__skills {
+    margin-top: 30px;
+  }
+
+  .section__preview {
+    margin-left: 2%;
   }
 }
 

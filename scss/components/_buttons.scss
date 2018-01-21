@@ -9,13 +9,13 @@
 }
 
 .button--save, .button--new{
-	background-color: #EAB931;
-	color: #424A5F;
+	background-color: $colorYellow;
+	color: $colorDarkBlue;
+	font-size: 18px;
 	font-weight: bold;
 	border-style: none;
 	border-radius: 5px;
 	cursor: pointer;
-	font-size: 18px;
 	padding: 4px 5px;
 	margin: 7px 0;
 }

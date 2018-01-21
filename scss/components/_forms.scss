@@ -1,5 +1,5 @@
 .h3-form {
-	color: #31B89A;
+	color: $colorSea;
 	text-transform: uppercase;
 	font-size: 20px;
 }
@@ -7,20 +7,17 @@
 	display: none;
 }
 .form-section-header {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	@include flexRowBetween;
 	align-items: center;
 	width: auto;
 	height: auto;
 	border-bottom: 5px;
 }
 .form__container {
-	display: flex;
+	@include flexColumn;
 	flex-wrap: wrap;
-	flex-direction: column;
 	align-self: center;
-	background: #55607F;
+	background: $colorMediumBlue;
 }
 fieldset {
 	border: none;
@@ -30,26 +27,26 @@ fieldset {
 	margin-top: 1.2em;
 }
 .form__personal-data, .form__education, .form__experience,.form__skills {
-	background-color: #55607F;
+	background-color: $colorMediumBlue;
 	padding: 0 35px;
 }
 #container-inputs__personal-data, #container-inputs__experience, #container-inputs__education, #container-inputs__skills {
 	display: none;
 }
-#input-birthdate {
-	color:#757575;
+.input-birthdate {
+	color:$colorMediumGrey;
 }
 .label{
 	font-size: 1em;
 	text-align: center;
-	color: #31B89A;
+	color: $colorSea;
 	margin-top: 0;
 	// padding-top: 1em;
 }
 .class-input, .description, .experience-text, .textarea-aboutme {
 	display: block;
 	border-radius: 5px;
-	background: #E7ECED;
+	background: $colorLightBlue;
 	font-family: inherit;
 	//padding: 5px;
 	// margin: 5px;
@@ -68,11 +65,10 @@ fieldset {
 // }
 .education-dates, .experience-dates {
 	display: inline;
-	color: black;
+	color: $colorBlack;
 	font-size: 14px;
 	@media all and (min-width:622px){
-		display: flex;
-		flex-direction: row;
+		@include flexRow;
 		margin: 15px 0;
 	}
 }
@@ -120,21 +116,20 @@ select{
 }
 .present-button-p  {
 	font-size: 1em;
-	color: #31B89A;
+	color: $colorSea;
 	@media all and (min-width:622px){
 		margin-top: 0;
 		padding-top: 0;
 	}
 }
 
-
 .skills-p{
-	color: white;
+	color: $colorWhite;
   font-size: 1.3em
 }
 
 .line {
-	border: 0.5px solid #E7ECED; // variable
+	border: 0.5px solid $colorLightBlue;
 	display: block;
 	margin-top: 1.5em;
 	margin-bottom: 0.5em;

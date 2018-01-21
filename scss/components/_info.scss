@@ -19,9 +19,9 @@
 }
 
 .title-hero {
-	color: #EAB931; // variable
+	color: $colorYellow;
 	text-align: center;
-	background-color: #424A5F; // variable
+	background-color: $colorDarkBlue;
   font-size: 18px;
 	padding: 20px 5px;
 	margin: 0;
@@ -40,11 +40,9 @@
 }
 
 // INFO STEPS DESIGN CV
-
 .block__info-steps {
 	display: flex;
-	justify-content: space-around;
-	align-items: center;
+	@include aroundCenter;
 	width: auto;
 	padding: 10px;
   @media all and (min-width: 768px) {
@@ -83,13 +81,12 @@
 }
 
 // INSTRUCTIONS
-
 .container__instructions {
 	padding: 3%;
 	text-align: center;
-	background-color: #E7ECED; // variable
+	background-color: $colorLightBlue;
   .container__instructions-paragraph {
-  	color: #424A5F; // variable
+  	color: $colorDarkBlue;
     @media all and (min-width:768px) {
       font-size: 20px;
     }

@@ -4,14 +4,12 @@
 	justify-content: space-between;
 	position: relative;
 	width: 100%;
-	background-color: #31B89A;
-	color: white;
+	background-color: $colorSea;
+	color: $colorWhite;
 }
 .container__footer{
 	width: 100vw;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	@include flexRowBetween;
 }
 .footer__link {
 	text-decoration: none;
@@ -20,6 +18,9 @@
 .footer__list {
 	list-style-type: none;
 	align-self: center;
+	@media all and (min-width:768px) {
+		@include flexRowBetween;
+	}
 }
 .footer__logo {
 	display: block;
@@ -30,15 +31,8 @@
 }
 
 @media all and (min-width:768px) {
-	.footer__list {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
 	.footer__list--element {
 		font-size: 18px;
 		padding-right: 10px;
 	}
-
-
 }
