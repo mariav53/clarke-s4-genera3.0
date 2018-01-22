@@ -147,6 +147,7 @@ main {
 .footer__link {
   text-decoration: none;
   list-style: none;
+  color: white;
 }
 
 .footer__list {

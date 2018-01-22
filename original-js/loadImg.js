@@ -1,7 +1,6 @@
 'use strict';
 
 function archivo(evt) {
-	console.log('hola')
 	var files = evt.target.files; // FileList object
 
 	//Obtenemos la imagen del campo "file".
