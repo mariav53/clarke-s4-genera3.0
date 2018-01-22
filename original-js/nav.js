@@ -1,11 +1,17 @@
 'use strict';
 
-function openClose(idContent) {
-  var burger = document.getElementById(idContent);
-  if (burger.style.display == 'block'){
-			burger.style.display ='none';
-	} else {
-		burger.style.display = 'block';
+var navButton = document.querySelector('.nav__button')
+var navList = document.querySelector('.nav__list')
+var items = document.querySelectorAll('.nav__link');
+	for (var i = 0; i < items.length; i++) {
+		items[i].addEventListener('click', closeNav)
 	}
+
+function openNav() {
+	navList.classList.toggle('hidden');
 }
-// Está on-click hay que pasarlo a normal
+function closeNav() {
+	navList.classList.add('hidden');
+}
+
+navButton.addEventListener('click', openNav);
