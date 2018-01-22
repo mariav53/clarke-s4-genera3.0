@@ -4,21 +4,30 @@
 
 var preview = document.querySelector('.showpreview');
 //Letra
+var ulFonts = document.querySelector('.design-fonts');
 var fonts = document.querySelectorAll('.font');
+
+// function closeDesign() {
+// 	ulFonts.classList.add('hidden');
+// }
 
 function cleanFontClasses() {
   preview.classList.remove('cookie', 'annie', 'philosopher');
 }
 
-function applyFont(event){
+function applyFont(event) {
 	var fontClass = event.currentTarget.getAttribute('data-font-class');
   cleanFontClasses();
   preview.classList.add(fontClass);
+
 }
 
 for (var i = 0; i < fonts.length; i++) {
   fonts[i].addEventListener('click', applyFont);
+  // fonts[i].addEventListener('click', closeDesign);
 }
+
+
 //Colores
 var colours = document.querySelectorAll('.colour');
 
@@ -37,6 +46,7 @@ for (var i = 0; i < colours.length; i++) {
 }
 
 //temas
+
 var themes = document.querySelectorAll('.theme');
 
 function cleanThemeClasses() {
