@@ -1,5 +1,37 @@
 'use strict';
 
+var experienceContainerPreview = document.querySelector('.container__preview--experience');
+
+function printProfessionalExperienceToPreview(){
+	var job = document.getElementById('job1').value;
+	var startJob = document.getElementById('start_month-job1').value + ' ' + document.getElementById('start_year-job1').value;
+	var endJob = document.getElementById('end_month-job1').value + ' ' + document.getElementById('end_year-job1').value;
+	var company = document.getElementById('company1').value;
+	var descriptionJob = document.getElementById('description1').value;
+	var experiencePreview = '<div class="preview__experience preview-text"><div class="container__experience--main-data"><div>' + job + '</div><div>' + startJob + '</div><div>';
+	if (document.getElementById('actualidad-job1').checked) {
+		experiencePreview = experiencePreview + 'Actualmente</div><div>' + company + '</div></div><div class="container__experience--description"><div>' + descriptionJob + '	</div></div></div>';
+	} else {
+		experiencePreview = experiencePreview + endJob + '</div><div>' + company + '</div></div><div class="container__experience--description"><div>' + descriptionJob + '	</div></div></div>';
+	}
+	experienceContainerPreview.innerHTML += experiencePreview;
+
+	document.getElementById("job1").value = '';
+	document.getElementById("start_month-job1").value = 'Enero';
+	document.getElementById("start_year-job1").value = '2000';
+	document.getElementById("end_month-job1").value = 'Enero';
+	document.getElementById("end_year-job1").value = '2000';
+	document.getElementById("company1").value = '';
+	document.getElementById("description1").value = '';
+}
+document.querySelector('.save-experience-button').addEventListener('click',printProfessionalExperienceToPreview);
+
+function deleteExperience(){
+	experienceContainerPreview.innerHTML = '';
+}
+var deleteExperienceButton = document.querySelector('.new-experience-button');
+deleteExperienceButton.addEventListener('click',deleteExperience);
+/*
 // GENERAR NUEVOS ELEMENTOS A PETICIÓN (experience)_______________________
 var idExperienceModifier = 2;
 function addItemExperience() {
@@ -16,3 +48,4 @@ function addItemExperience() {
 
 var newExperienceButton = document.querySelector('.new-experience-button');
 newExperienceButton.addEventListener('click',addItemExperience);
+*/

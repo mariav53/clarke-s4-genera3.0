@@ -15,8 +15,15 @@ function printPersonalDataToPreview() {
 	document.getElementById('preview__rrss--facebook').innerHTML = document.getElementById('input-facebook').value;
 }
 document.querySelector('.save-data-button').addEventListener('click',printPersonalDataToPreview);
+//Ejemplo si quisiéramos poner la función de que se vea en la preview a medida que escribes
+/*
+function printProfessionalExperienceToPreview(){
+	document.getElementById('job-preview-id-1').innerHTML = document.getElementById('job1').value;
+}
+document.getElementById('job1').addEventListener('keyup', printProfessionalExperienceToPreview);
+*/
 
-
+/*
 function printProfessionalExperienceToPreview(event) {
 
 var dataIdValue = event.currentTarget.getAttribute('data-id');
@@ -38,7 +45,7 @@ var dataIdValue = event.currentTarget.getAttribute('data-id');
 }
 document.querySelector('.save-experience-button').addEventListener('click',printProfessionalExperienceToPreview);
 
-
+*/
 function printEducationToPreview(event) {
 
 var dataIdValue = event.currentTarget.getAttribute('data-id');
