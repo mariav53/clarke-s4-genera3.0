@@ -1,14 +1,29 @@
 'use strict';
 // burger
 
-function openClose(idContent) {
-  var burger = document.getElementById(idContent);
-  if (burger.style.display == 'block'){
-			burger.style.display ='none';
-	} else {
-		burger.style.display = 'block';
+// function openClose(idContent) {
+//   var burger = document.getElementById(idContent);
+//   if (burger.style.display == 'block'){
+// 			burger.style.display ='none';
+// 	} else {
+// 		burger.style.display = 'block';
+// 	}
+// }
+var navButton = document.querySelector('.nav__button')
+var navList = document.querySelector('.nav__list')
+var items = document.querySelectorAll('.nav__link');
+	for (var i = 0; i < items.length; i++) {
+		items[i].addEventListener('click', closeNav)
 	}
+
+function openNav (){
+	navList.classList.toggle('hidden');
 }
+function closeNav () {
+	navList.classList.add('hidden');
+}
+
+navButton.addEventListener('click', openNav);
 
 //Elegir estilos para curriculum
 var preview = document.querySelector('.showpreview');

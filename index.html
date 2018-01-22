@@ -14,13 +14,17 @@
 <body>
 	<header>
 		<div class="container__header">
-			<nav class="header__nav">
-				<img src="images/menu-color.png" class="button__nav" onclick="openClose('nav__list')" alt="menu">
-				<ul class="nav__list" id="nav__list">
-					<li class="nav__list__item"><a href="index.html#diseño">Diseño</a></li>
-					<li class="nav__list__item"><a href="index.html#form">Completa tu CV</a></li>
-					<li class="nav__list__item"><a href="index.html#previo">Previsualización</a></li>
+			<div class="container__nav-button">
+				<button type="button" name="button" class="nav__button" id="nav__button"></button>
+				</div>
+				<nav class="header__nav">
+					<div class="container__nav">
+				<ul class="nav__list hidden">
+					<li class="nav__list__item"><a href="index.html#diseño" class="nav__link">Diseño</a></li>
+					<li class="nav__list__item"><a href="index.html#form" class="nav__link">Completa tu CV</a></li>
+					<li class="nav__list__item"><a href="index.html#previo" class="nav__link">Previsualización</a></li>
 				</ul>
+				</div>
 			</nav>
 			<a href="index.html"><div class="header__logo"></div></a>
 		</div>

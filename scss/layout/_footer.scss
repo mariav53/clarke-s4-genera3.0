@@ -14,10 +14,12 @@
 .footer__link {
 	text-decoration: none;
 	list-style: none;
+	color: white;
 }
 .footer__list {
 	list-style-type: none;
 	align-self: center;
+
 	@media all and (min-width:768px) {
 		@include flexRowBetween;
 	}
