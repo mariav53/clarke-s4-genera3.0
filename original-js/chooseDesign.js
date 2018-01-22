@@ -40,10 +40,8 @@ function cleanFontClasses() {
 
 function applyFont(event) {
 	var fontClass = event.currentTarget.getAttribute('data-font-class');
-  console.log('fontClass: ', fontClass);
   cleanFontClasses();
   preview.classList.add(fontClass);
-
 }
 
 for (var i = 0; i < fonts.length; i++) {
