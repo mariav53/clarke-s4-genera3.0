@@ -1,0 +1,38 @@
+/*FOOTER*/
+.section__footer {
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+	width: 100%;
+	background-color: $colorSea;
+	color: $colorWhite;
+}
+.container__footer{
+	width: 100vw;
+	@include flexRowBetween;
+}
+.footer__link {
+	text-decoration: none;
+	list-style: none;
+}
+.footer__list {
+	list-style-type: none;
+	align-self: center;
+	@media all and (min-width:768px) {
+		@include flexRowBetween;
+	}
+}
+.footer__logo {
+	display: block;
+	margin-right: 20px;
+	padding-top: 8px;
+	width: 57px;
+	height: auto;
+}
+
+@media all and (min-width:768px) {
+	.footer__list--element {
+		font-size: 18px;
+		padding-right: 10px;
+	}
+}
