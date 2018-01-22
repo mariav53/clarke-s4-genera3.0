@@ -4,7 +4,7 @@
 	width: 100%;
 	padding: 0;
 	background-color: $colorLightBlue;
-  @media all and (min-width: 1100px) {
+  @media all and (min-width: 1024px) {
     @include flexRow;
     padding: 0 2%;
     background-color: $colorLightBlue;

@@ -67,7 +67,7 @@ fieldset {
 	display: inline;
 	color: $colorBlack;
 	font-size: 14px;
-	@media all and (min-width:622px){
+	@media all and (min-width:768px){
 		@include flexRow;
 		margin: 15px 0;
 	}
@@ -85,7 +85,7 @@ select{
 .date-container-until{
 	display: block;
 	margin: 4px 0;
-	@media all and (min-width:500px){
+	@media all and (min-width:768px){
 		display: flex;
 		flex-direction: row;
 		// height: 19px;
@@ -101,23 +101,23 @@ select{
 	margin-right: 3px;
 }
 #end_month1, #end_year1, #end_month-education1, #end_year-education1 {
-	@media all and (min-width:500px){
+	@media all and (min-width:768px){
 		margin-left: 2px;
 	}
 }
 .actualidad{
 	margin-top: 4px;
-	@media all and (min-width:500px){
+	@media all and (min-width:768px){
 		margin-left: 5px;
 	}
-	@media all and (min-width:622px){
+	@media all and (min-width:768px){
 		margin-top: 0;
 	}
 }
 .present-button-p  {
 	font-size: 1em;
 	color: $colorSea;
-	@media all and (min-width:622px){
+	@media all and (min-width:768px){
 		margin-top: 0;
 		padding-top: 0;
 	}
