@@ -48,13 +48,14 @@
 .container__nav-button .nav__button {
   width: 70px;
   height: 70px;
-  background-image: url(../images/menu-color.png);
+  background-image: url("../images/menu-color.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-style: none;
   background-color: #E7ECED;
   cursor: pointer;
+  outline: none;
 }
 
 .nav__list {
