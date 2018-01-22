@@ -41,7 +41,6 @@
 
 .container__nav-button {
   width: 20%;
-  height: 100%;
   padding-top: 5px;
 }
 
@@ -60,7 +59,7 @@
 
 .nav__list {
   position: absolute;
-  left: -20px;
+  left: -40px;
   top: 80px;
   margin-top: 0;
 }
@@ -569,30 +568,30 @@ select {
   margin-bottom: 5%;
 }/*Cookie-font*/.cookie .preview-title {
   font-family: 'Cookie';
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .cookie .preview-text {
   font-family: 'arial';
-  font-size: 0.50em;
+  font-size: 0.8em;
 }/*Annie-font*/.annie .preview-title {
   font-family: 'Leckerli One';
-  font-size: .8em;
+  font-size: 0.8em;
   font-weight: 700;
 }
 
 .annie .preview-text {
   font-family: 'Annie Use Your Telescope';
-  font-size: .6em;
+  font-size: 0.8em;
 }/*Philosopher-font*/.philosopher .preview-title {
   font-family: 'Philosopher';
-  font-size: .9em;
+  font-size: 0.8em;
   font-weight: 700;
 }
 
 .philosopher .preview-text {
   font-family: 'Philosopher';
-  font-size: .5em;
+  font-size: 0.8em;
 }/*Colour $colorRed $colorDarkGreen $colorLime $colorDarkGrey $colorHeavenBlue $colorPink $colorGrey*//*red-green-lime*/.red-green-lime .preview-title {
   color: #dd5a4b;
   border-bottom: 1px solid #d2de6b;
@@ -974,9 +973,6 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
 
   .actualidad {
     margin-left: 5px;
-  }
-
-  .actualidad {
     margin-top: 0;
   }
 
@@ -986,15 +982,15 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
   }
 
   .cookie .preview-title {
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .cookie .preview-text {
-    font-size: .7em;
+    font-size: 1em;
   }
 
   .annie .preview-title {
-    font-size: 1.3em;
+    font-size: 1em;
   }
 
   .annie .preview-text {
@@ -1002,11 +998,11 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
   }
 
   .philosopher .preview-title {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 
   .philosopher .preview-text {
-    font-size: .9em;
+    font-size: 1em;
   }
 
   .container__experience--description,.container__formation--description {
@@ -1048,15 +1044,15 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
   }
 
   .cookie .preview-title {
-    font-size: 2.2em;
+    font-size: 1.1em;
   }
 
   .cookie .preview-text {
-    font-size: .8em;
+    font-size: 1em;
   }
 
   .annie .preview-title {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
 
   .annie .preview-text {
@@ -1064,11 +1060,11 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
   }
 
   .philosopher .preview-title {
-    font-size: 1.5em;
+    font-size: 1.1em;
   }
 
   .philosopher .preview-text {
-    font-size: .9em;
+    font-size: 1em;
   }
 
   .showpreview {
@@ -1091,6 +1087,13 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
 
   .section__preview {
     margin-left: 2%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container__nav-button .nav__button {
+    width: 50px;
+    height: 50px;
   }
 }
 
