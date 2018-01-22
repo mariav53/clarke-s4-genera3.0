@@ -158,7 +158,7 @@ function archivo(evt) {
 			return function(e) {
 				// Creamos la imagen.
 				trigger.style = "background-image:url(" + e.target.result + ");";
-				document.querySelector(".preview-photo-div").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
+				document.querySelector(".container__photo").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
 			};
 		})(f);
 
