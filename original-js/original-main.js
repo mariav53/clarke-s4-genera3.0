@@ -1,66 +1,5 @@
 'use strict';
-// burger
 
-function openClose(idContent) {
-  var burger = document.getElementById(idContent);
-  if (burger.style.display == 'block'){
-			burger.style.display ='none';
-	} else {
-		burger.style.display = 'block';
-	}
-}
-
-//Elegir estilos para curriculum
-var preview = document.querySelector('.showpreview');
-//Letra
-var fonts = document.querySelectorAll('.font');
-
-function cleanFontClasses() {
-  preview.classList.remove('cookie', 'annie', 'philosopher');
-}
-
-function applyFont(event){
-	var fontClass = event.currentTarget.getAttribute('data-font-class');
-  cleanFontClasses();
-  preview.classList.add(fontClass);
-}
-
-for (var i = 0; i < fonts.length; i++) {
-  fonts[i].addEventListener('click', applyFont);
-}
-//Colores
-var colours = document.querySelectorAll('.colour');
-
-function cleanColourClasses() {
-  preview.classList.remove('red-green-lime', 'black-blue-lime', 'black-pink-grey');
-}
-
-function applyColour(event){
-  var colourClass = event.currentTarget.getAttribute('data-colour-class');
-  cleanColourClasses();
-  preview.classList.add(colourClass);
-}
-
-for (var i = 0; i < colours.length; i++) {
-  colours[i].addEventListener('click', applyColour);
-}
-
-//temas
-var themes = document.querySelectorAll('.theme');
-
-function cleanThemeClasses() {
-  preview.classList.remove('dots', 'stripes', 'zigZag');
-}
-
-function applyTheme(event){
-  var themeClass = event.currentTarget.getAttribute('data-theme-class');
-  cleanThemeClasses();
-  preview.classList.add(themeClass);
-}
-
-for (var i = 0; i < themes.length; i++) {
-  themes[i].addEventListener('click', applyTheme);
-}
 
 //función para desplegar sección
 
@@ -141,32 +80,13 @@ function simularClic(){
 	inputFile.click();
 }
 
-function archivo(evt) {
-	console.log('hola')
-	var files = evt.target.files; // FileList object
 
-	//Obtenemos la imagen del campo "file".
-	for (var i = 0, f; f = files[i]; i++) {
-		//Solo admitimos imágenes.
-		if (!f.type.match('image.*')) {
-			continue;
-		}
 
-		var reader = new FileReader();
 
-		reader.onload = (function(theFile) {
-			return function(e) {
-				// Creamos la imagen.
-				trigger.style = "background-image:url(" + e.target.result + ");";
-				document.querySelector(".preview-photo-div").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
-			};
-		})(f);
 
-		reader.readAsDataURL(f);
-	}
-}
 
-inputFile.addEventListener('change', archivo);
+
+
 
 
 // SECCIÓN GUARDAR DATOS FORMULARIO EN PREVIEW (4FUNCIONES)
