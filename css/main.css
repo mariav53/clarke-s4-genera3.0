@@ -97,7 +97,7 @@ body {
   flex-direction: column;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 main {
@@ -629,7 +629,7 @@ select {
   padding: 8%;
 }
 
-.container__preview {
+.container__preview--intro {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
