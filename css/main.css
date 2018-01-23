@@ -391,6 +391,10 @@ main {
   border-color: #424A5F;
 }
 
+.creation__photo .trigger:hover {
+  cursor: pointer;
+}
+
 .button--open,.button--close {
   height: 20px;
   width: 20px;
@@ -556,9 +560,6 @@ select {
 
 .preview-title {
   text-align: left;
-}
-
-.preview-title {
   margin: 10px 0;
 }
 

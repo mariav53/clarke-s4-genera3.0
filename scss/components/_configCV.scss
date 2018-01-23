@@ -138,5 +138,8 @@
 		background-size: cover;
   	border-radius: 100px;
   	border-color: $colorDarkBlue;
+		&:hover{
+			cursor: pointer;
+		}
   }
 }

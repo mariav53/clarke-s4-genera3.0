@@ -5,6 +5,15 @@
 	},
 	"js": {
 		"src": [
+			"js/nav.js",
+			"js/chooseDesign.js",
+			"js/forms.js",
+			"js/original-main.js",
+			"js/loadImg.js",
+			"js/education.js",
+			"js/experience.js",
+			"js/skills.js",
+			"js/preview.js",
 			"js/main.js"
 		],
 		"dest": "js/"
