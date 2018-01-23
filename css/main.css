@@ -500,9 +500,19 @@ fieldset {
 }
 
 .education-dates,.experience-dates {
-  display: inline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   color: #000000;
   font-size: 14px;
+}
+
+.education-dates select,.experience-dates select {
+  margin-right: 10px;
 }
 
 select {
@@ -512,28 +522,44 @@ select {
 }
 
 .date-container-from,.level {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 4px 0;
+  padding: 0;
+  line-height: 35px;
+}
+
+.date-container-from label,.level label {
+  padding: 0;
 }
 
 .date-container-until {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 4px 0;
+  line-height: 35px;
+}
+
+.date-container-until label {
+  padding: 0;
 }
 
 .from {
   margin-top: 3px;
-  margin-right: 3px;
+  margin-right: 10px;
 }
 
 .until {
   margin-left: 2px;
   margin-top: 3px;
-  margin-right: 3px;
+  margin-right: 10px;
 }
 
 .actualidad {
   margin-top: 4px;
+  padding-left: 15px;
 }
 
 .present-button-p {
@@ -991,17 +1017,10 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin: 15px 0;
   }
 
   .date-container-until {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+    padding-left: 15px;
   }
 
   #end_month1,#end_year1,#end_month-education1,#end_year-education1 {
@@ -1009,7 +1028,6 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
   }
 
   .actualidad {
-    margin-left: 5px;
     margin-top: 0;
   }
 
