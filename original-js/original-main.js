@@ -77,6 +77,6 @@ trigger.addEventListener('click', simularClic);
 
 // función para que simule un clic en input
 
-const simularClic =()=>{
+const simularClic=()=>{
 	inputFile.click();
 }
