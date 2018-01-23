@@ -40,8 +40,8 @@ var dataIdValue = event.currentTarget.getAttribute('data-id');
 		document.getElementById('end_month-job' + dataIdValue).value + ' ' +
 		document.getElementById('end_year-job' + dataIdValue).value;
 	}
-	document.getElementById('place-preview-id' + dataIdValue).innerHTML = document.getElementById('lugar' + dataIdValue).value;
-	document.getElementById('description-preview-id' + dataIdValue).innerHTML = document.getElementById('description' + dataIdValue).value;
+	document.getElementById('place-preview-id' + dataIdValue).innerHTML = document.getElementById('company' + dataIdValue).value;
+	document.getElementById('description-job-preview-id' + dataIdValue).innerHTML = document.getElementById('description-job' + dataIdValue).value;
 }
 document.querySelector('.save-experience-button').addEventListener('click',printProfessionalExperienceToPreview);
 

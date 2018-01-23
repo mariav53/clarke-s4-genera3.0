@@ -10,7 +10,7 @@ function addItemExperience() {
 	document.getElementById('save-experience-button-' + idExperienceModifier).addEventListener('click',printProfessionalExperienceToPreview);
 
 	idExperienceModifier++;
-	añosInput ();
+	añosInput();
 	selectMonths();
 }
 
