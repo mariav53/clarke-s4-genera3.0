@@ -9,7 +9,7 @@ function addItemEducation() {
 	document.getElementById('save-education-button' + idEducationModifier).addEventListener('click',printEducationToPreview);
 
 	idEducationModifier++;
-	añosInput ();
+	anosInput ();
 	selectMonths();
 }
 
