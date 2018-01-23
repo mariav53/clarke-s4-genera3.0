@@ -281,6 +281,7 @@ main {
 }
 
 .creation__design__options-font .img-design,.creation__design__options-colour .img-design,.creation__design__options-theme .img-design {
+  cursor: pointer;
   width: 100px;
   height: 100px;
 }
