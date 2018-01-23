@@ -8,6 +8,7 @@ const openNav = () => {
 	navList.classList.toggle('hidden');
 }
 
+
 const closeNav = () => {
 	navList.classList.add('hidden');
 }
