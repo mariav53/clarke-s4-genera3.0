@@ -13,23 +13,22 @@
 
 <body>
 	<header>
-    <div class="container__header">
-        <div class="container__nav-button">
-            <button type="button" name="button" class="nav__button" id="nav__button"></button>
-        </div>
-        <nav class="header__nav">
-          <div class="container__nav">
-		        <ul class="nav__list hidden">
-		            <li class="nav__list__item"><a href="index.html#design" class="nav__link">Diseño</a></li>
-		            <li class="nav__list__item"><a href="index.html#creation" class="nav__link">Completa tu CV</a></li>
-		            <li class="nav__list__item"><a href="index.html#preview" class="nav__link">Previsualización</a></li>
-		        </ul>
-        </div>
-    	</nav>
-    	<a href="index.html"><div class="header__logo"></div></a>
-    </div>
-  </header>
-
+		<div class="container__header">
+			<div class="container__nav-button">
+				<button type="button" name="button" class="nav__button" id="nav__button"></button>
+			</div>
+			<nav class="header__nav">
+				<div class="container__nav">
+					<ul class="nav__list hidden">
+						<li class="nav__list__item"><a href="index.html#diseño" class="nav__link">Diseño</a></li>
+						<li class="nav__list__item"><a href="index.html#form" class="nav__link">Completa tu CV</a></li>
+						<li class="nav__list__item"><a href="index.html#previo" class="nav__link">Previsualización</a></li>
+					</ul>
+				</div>
+			</nav>
+			<a href="index.html"><div class="header__logo"></div></a>
+		</div>
+	</header>
 	<main>
 		<div class="hero">
 			<img class="hero__img-mobile" src="images/cover_mobile2.png" alt="Imagen de portada movil">
@@ -68,7 +67,7 @@
 							<li class="creation__design__options-font">
 								<img class="img-design" src="images/text.svg" title="fuente" alt="fuentes">
 								<!-- hidden -->
-								<ul class="design-fonts">
+								<ul class="design-fonts hidden">
 									<li class="font" data-font-class="cookie"><h3>Cookie</h3></li>
 									<li class="font" data-font-class="annie"><h3>Annie</h3></li>
 									<li class="font" data-font-class="philosopher"><h3>Philosopher</h3></li>
@@ -77,7 +76,7 @@
 							<li class="creation__design__options-colour">
 								<img class="img-design" src="images/paint-palette.svg" title="color" alt="color">
 								<!-- hidden -->
-								<ul class="design-colours">
+								<ul class="design-colours hidden">
 									<li class="colour" data-colour-class="red-green-lime">
 										<div class="red"></div>
 										<div class="green"></div>
@@ -98,10 +97,10 @@
 							<li class="creation__design__options-theme">
 								<img class="img-design" src="images/menu.svg" title="estilo" alt="estilo">
 								<!-- hidden -->
-								<ul class="design-themes">
-									<li class="theme" data-theme-class="dots"><h4>Dots</h4></li>
-									<li class="theme" data-theme-class="stripes">Stripes</li>
-									<li class="theme" data-theme-class="zigZag">Zig Zag</li>
+								<ul class="design-themes hidden">
+									<li class="theme" data-theme-class="dots"><h3>Dots</h3></li>
+									<li class="theme" data-theme-class="stripes"><h3>Stripes</h3></li>
+									<li class="theme" data-theme-class="zigZag"><h3>Zig Zag</h3></li>
 								</ul>
 							</li>
 						</ul>
@@ -244,6 +243,7 @@
 								<hr class="line">
 							</fieldset>
 
+
 							<!-- SKILLS -->
 							<fieldset class="form__skills">
 								<legend class="legend">Habilidades</legend>
@@ -372,10 +372,23 @@
 						</div>
 						<div class="preview__experience preview-text">
 							<div class="container__experience--main-data">
-								<div><span id="job-preview-id-1">Social Media</span></div>
-								<div><span id="from-job-preview-id1">11/2016</span></div>
-								<div><span id="until-job-preview-id1">09/2017</span></div>
-								<div><span id="place-preview-id1">Swing Swing</span></div>
+								<div class="jobAndDate">
+									<div>
+										<span id="job-preview-id-1">Social Media</span>
+									</div>
+									<div class="joinDate">
+										<div>
+											<span id="from-job-preview-id1">11/2016</span>
+										</div>
+										<div>
+											<span id="until-job-preview-id1">09/2017</span>
+										</div>
+									</div>
+								</div>
+
+								<div>
+									<span id="place-preview-id1">Swing Swing</span>
+								</div>
 							</div>
 							<div class="container__experience--description">
 								<div><span id="description-job-preview-id1">Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.</span>
@@ -384,13 +397,27 @@
 						</div>
 						<div class="preview__experience preview-text">
 							<div class="container__experience--main-data">
-								<div><span id="job-preview-id-2"></span></div>
-								<div><span id="from-job-preview-id2"></span></div>
-								<div><span id="until-job-preview-id2"></span></div>
-								<div><span id="place-preview-id2"></span></div>
+								<div class="jobAndDate">
+									<div>
+										<span id="job-preview-id-2"></span>
+									</div>
+									<div class="joinDate">
+										<div>
+											<span id="from-job-preview-id2"></span>
+										</div>
+										<div>
+											<span id="until-job-preview-id2"></span>
+										</div>
+									</div>
+								</div>
+								<div>
+									<span id="place-preview-id2"></span>
+								</div>
 							</div>
 							<div class="container__experience--description">
-								<div><span id="description-job-preview-id2"></span></div>
+								<div>
+									<span id="description-job-preview-id2"></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -401,10 +428,22 @@
 						</div>
 						<div class="preview__formation preview-text">
 							<div class="container__formation--main-data">
-								<div><span id="titulo-preview-id1">Front-end</span></div>
-								<div><span id="from-education-preview-id1">10/2017</span></div>
-								<div><span id="until-education-preview-id1">Actualidad</span></div>
-								<div><span id="centro-id1">Adalab</span></div>
+								<div class="jobAndDate">
+									<div>
+										<span id="titulo-preview-id1">Front-end</span>
+									</div>
+									<div class="joinDate">
+										<div>
+											<span id="from-education-preview-id1">10/2017</span>
+										</div>
+										<div>
+											<span id="until-education-preview-id1">Actualidad</span>
+										</div>
+									</div>
+								</div>
+								<div>
+									<span id="centro-id1">Adalab</span>
+								</div>
 							</div>
 							<div class="container__formation--description">
 								<div><span id="description-education-preview-id1">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
@@ -412,13 +451,26 @@
 						</div>
 						<div class="preview__formation preview-text">
 							<div class="container__formation--main-data">
-								<div><span id="titulo-preview-id2"></span></div>
-								<div><span id="from-education-preview-id2"></span></div>
-								<div><span id="until-education-preview-id2"></span></div>
-								<div><span id="centro-id2"></span></div>
-							</div>
+								<div class="jobAndDate">
+									<div>
+										<span id="titulo-preview-id2"></span>
+									</div>
+									<div class="joinDate">
+										<div>
+											<span id="from-education-preview-id2"></span>
+										</div>
+										<div>
+											<span id="until-education-preview-id2"></span>
+										</div>
+									</div>
+								</div>
+								<div>
+									<span id="centro-id2"></span>
+								</div>
 							<div class="container__formation--description">
-								<div><span id="description-education-preview-id2"></span></div>
+								<div>
+									<span id="description-education-preview-id2"></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -427,23 +479,29 @@
 						<div class="preview__skills preview-text">
 							<div class="preview__skills--languages">
 								<img src="images/speak.png" alt="talk-icon" class="talk-icon">
-								<div class="skills__language--select"><span id="language-name1-preview-id"></span><span> | </span><span id="language-level1-preview-id"></span>
-								</div>
-								<div class="skills__language--select"><span id="language-name2-preview-id"></span><span> | </span><span id="language-level2-preview-id"></span>
+								<div class="content__skills">
+									<div class="skills__language--select"><span id="language-name1-preview-id"> </span><span id="language-level1-preview-id"></span>
+									</div>
+									<div class="skills__language--select"><span id="language-name2-preview-id"></span><span id="language-level2-preview-id"></span>
+									</div>
 								</div>
 							</div>
 							<div class="preview__skills--it">
 								<img src="images/computer-monitor-and-mouse.png" alt="it-icon" class="it-icon">
-								<div class="skills__it--select"><span id="it-name1-preview-id"></span><span> | </span><span id="it-level1-preview-id"></span>
-								</div>
-								<div class="skills__it--select"><span id="it-name2-preview-id"></span><span> | </span><span id="it-level2-preview-id"></span>
+								<div class="content__skills">
+									<div class="skills__it--select"><span id="it-name1-preview-id"></span><span id="it-level1-preview-id"></span>
+									</div>
+									<div class="skills__it--select"><span id="it-name2-preview-id"></span><span id="it-level2-preview-id"></span>
+									</div>
 								</div>
 							</div>
 							<div class="preview__skills--bonus">
 								<img src="images/settings.png" alt="bonus-icon" class="bonus-icon">
-								<div class="skills__bonus--select"><span id="skill-element1-preview-id"></span>
-								</div>
-								<div class="skills__bonus--select"><span id="skill-element2-preview-id"></span>
+								<div class="content__skills">
+									<div class="skills__bonus--select"><span id="skill-element1-preview-id"></span>
+									</div>
+									<div class="skills__bonus--select"><span id="skill-element2-preview-id"></span>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -455,12 +513,12 @@
 
 	<footer class="section__footer">
 		<div class="container__footer">
-		<ul class="footer__list">
-			<a href="avisolegal.html" class="footer__link"><li class="footer__list--element">Aviso legal</li></a>
-			<a href="" class="footer__link"><li class="footer__list--element">Contacto</li></a>
-			<a href="index.html" class="footer__link"> <li class="footer__list--element">Generatrix &copy; 2017</li></a>
-		</ul>
-		<a href="index.html">
+			<ul class="footer__list">
+				<a href="avisolegal.html" class="footer__link"><li class="footer__list--element">Aviso legal</li></a>
+				<a href="" class="footer__link"><li class="footer__list--element">Contacto</li></a>
+				<a href="index.html" class="footer__link"> <li class="footer__list--element">Generatrix &copy; 2017</li></a>
+			</ul>
+			<a href="index.html">
 				<img class="footer__logo" src="images/logocorto.png"  alt="logo-Generatrix"></a>
 			</div>
 		</footer>

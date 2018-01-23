@@ -6,7 +6,7 @@ body {
 	margin: 0;
   padding: 0;
 	width: 100%;
-	@include flexColumn;
+	@include flexColumn();
 	box-sizing: border-box;
 	font-family: $fontMain;
 }

@@ -7,14 +7,14 @@
 	display: none;
 }
 .form-section-header {
-	@include flexRowBetween;
+	@include flexRowBetween();
 	align-items: center;
 	width: auto;
 	height: auto;
 	border-bottom: 5px;
 }
 .form__container {
-	@include flexColumn;
+	@include flexColumn();
 	flex-wrap: wrap;
 	align-self: center;
 	background: $colorMediumBlue;
@@ -64,41 +64,59 @@ fieldset {
 // 	/*NECESARIO porque si no se descuajeringa la caja y también cambia el tamaña y la fuente.*/
 // }
 .education-dates, .experience-dates {
-	display: inline;
+	display: flex;
+	flex-direction: column;
+	// align-items: center;
+	// justify-content: flex-start;
 	color: $colorBlack;
 	font-size: 14px;
+	select{
+		margin-right: 10px;
+	}
 	@media all and (min-width:768px){
-		@include flexRow;
-		margin: 15px 0;
+		@include flexRow();
 	}
 }
 select{
 	border: none;
 	padding: 3px;
-	    width: 67px;
+	width: 67px;
 }
 
-.date-container-from, .level{
-	display: block;
+.date-container-from,
+.level{
+	display: flex;
 	margin: 4px 0;
+	padding:0;
+	line-height: 35px;
+	label{
+		padding:0;
+	}
+	@media all and (min-width:768px){
+		// width: 100%;
+	}
 }
 .date-container-until{
-	display: block;
+	display: flex;
 	margin: 4px 0;
+	line-height: 35px;
+
+	label{
+		padding:0;
+	}
 	@media all and (min-width:768px){
-		display: flex;
-		flex-direction: row;
-		// height: 19px;
+		padding-left: 15px;
+		// width: 100%;
 	}
 }
 .from {
 	margin-top: 3px;
-	margin-right: 3px;
+	margin-right: 10px;
 }
 .until {
 	margin-left: 2px;
 	margin-top: 3px;
-	margin-right: 3px;
+	margin-right: 10px;
 }
 #end_month1, #end_year1, #end_month-education1, #end_year-education1 {
 	@media all and (min-width:768px){
@@ -107,10 +125,10 @@ select{
 }
 .actualidad{
 	margin-top: 4px;
+	padding-left: 15px;
 	@media all and (min-width:768px){
-		margin-left: 5px;
 			margin-top: 0;
-	}	
+	}
 }
 .present-button-p  {
 	font-size: 1em;

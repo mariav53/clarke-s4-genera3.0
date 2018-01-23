@@ -1,6 +1,7 @@
 /*PREVIEW*/
 
 /*ELECCIÓN DE DISEÑO*/
+
 .preview__title, .creation__title, .label {
 	text-align: center;
 	color: $colorSea;
@@ -30,10 +31,10 @@
 .cookie .preview-text{
 	font-family: 'arial';
 	font-size: 0.8em;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size: 1em;
 	}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1em;
 	}
 }
@@ -42,20 +43,20 @@
 	font-family: 'Leckerli One';
 	font-size: 0.8em;
 	font-weight: 700;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size:1em;
 		}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1.1em;
 		}
 }
 .annie .preview-text{
 	font-family: 'Annie Use Your Telescope';
 	font-size: 0.8em;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size: 1em;
 		}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1em;
 		}
 }
@@ -64,20 +65,20 @@
 	font-family: 'Philosopher';
 	font-size: 0.8em;
 	font-weight: 700;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size: 1em;
 		}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1.1em;
 		}
 }
 .philosopher .preview-text{
 	font-family: 'Philosopher';
 	font-size: 0.8em;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size:  1em;
 		}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1em;
 		}
 }
@@ -108,166 +109,173 @@
 }
 
 /*Temas*/
-.dots.showpreview {
-	background-image: url("../images/themes/dots.png");
+.showpreview.dots {
+	background-image: url($pathImages + 'themes/dots.png');
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: auto;
+	padding: 120px 60px;
 }
-.stripes.showpreview {
-	background-image: url("../images/themes/stripes.png");
-	background-size: contain;
+.showpreview.stripes {
+	background-image: url($pathImages + 'themes/stripes.png');
+	background-position: 0 0;
+	// background-size: 100%;
+	padding: 70px 60px 190px;
+	background-repeat: repeat-y;
+	height: auto;
+
 }
-.zigZag.showpreview {
-	background-image: url("../images/themes/zigZag.png");
+.showpreview.zigZag {
+	background-image: url($pathImages + 'themes/zigZag.png');
+	// background-size: 100%;
+  padding: 100px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	height: auto;
 }
 /*MAQUETACIÓN PREVIEW*/
 
 .showpreview {
 	background-color: $colorWhite;
-	@include backgroundCenter;
+	@include backgroundCenter();
 	background-size: cover;
-	@include flexColumn;
-	height: 80vh;
-	padding: 8%;
-	@media all and (min-width:1024px) {
-		height: 130vh;
-	}
+	@include flexColumn();
+	height: auto;
 }
 
 .container__preview--intro {
-	@include flexRow;
-	justify-content: space-around;
+	@include flexRow();
 	align-content: flex-start;
-	height: 80px;
+	height: auto;
 }
-
+.thumb {
+	width: 100%;
+	width: 60px;
+	border-radius: 100px;
+	height: 60px;
+	@media all and (min-width: 768px) {
+		width: 70px;
+		height: 70px;
+	}
+}
 .container__preview--photo {
-	width: 25%;
+	margin-right: 30px;
+	position: relative;
 }
 .container__photo {
-	margin-top: 12%;
 	width: 60px;
 	height: 60px;
 	background-color: $colorSea;
 	border-radius: 100px;
-	@media all and (min-width:1024px) {
+	@media all and (min-width:768px) {
 		width: 70px;
 		height: 70px;
 	}
 }
+
 .container__preview--personal-data {
-	@include flexRow;
-	justify-content: space-between;
-	align-content: flex-start;
-	padding: 0 10px;
-	width: 80%;
+	@include flexColumn();
+	justify-content: center;
+	@media all and (min-width: 768px) {
+		@include flexRow();
+	}
 }
+
 .container__personal-data {
-	/*background-color: $colorYellow;*/
-	width: 32%;
-	// height: 50px;
-	margin-top: 10px;
-	@include flexColumnContentCenter;
-	padding-top: 10px;
+	@include flexColumn();
+	margin-right: 40px;
+	text-align: justify;
 }
 
 .container__direction {
-	width: 60%;
-	height: 50px;
-	/*background-color: $colorYellow;*/
-	@include flexColumnContentCenter;
-	padding-top: 10px;
-	padding-left: 10px;
-	text-align: right;
-	padding-top: 10px;
-	margin-top: 10px;
-}
-
-.container__photo .thumb {
-	width: 100%;
-	width: 60px;
-	border-radius: 100px;
-	height: 60px;
-	@media all and (min-width:1024px) {
-		width: 70px;
-		height: 70px;
-	}
+@include flexColumn();
 }
 
 .preview-data {
-	@include flexColumn;
+	@include flexColumn();
 	width: 60%;
 }
 
 .container__preview--summary{
+	@include flexColumn();
 	width: 100%;
-	margin: 10px;
 }
 .container__summary {
-	@include flexRow;
-	justify-content: space-around;
-	align-content: flex-start;
-	margin-top: 10px;
+	margin-top: 5px;
+	@include flexColumn();
+	justify-content: center;
+	@media all and (min-width: 768px) {
+		@include flexRow();
+	}
 }
 .preview__summary {
-	width: 60%;
-	height: auto;
-	text-align: left;
-	padding-left: 5px;
+	@include flexColumn();
+	margin-right: 20px;
+	text-align: justify;
 }
 .container__preview--rrss {
-	width: 30%;
-	text-align: right;
+	@include flexColumn();
 }
-.preview__experience, .preview__formation {
-	@include flexColumn;
-	margin-top: 10px;
+
+.preview__experience,
+.preview__formation {
+	margin-top: 5px;
+	@include flexColumn();
+}
+.preview__formation {
+	margin-bottom: 10px;
 }
 .formation__title, .summary__title, .experience__title {
 	margin: 0;
 }
-.container__experience--main-data, .container__formation--main-data {
-	@include flexRowBetween;
-	height: 15px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
+.container__experience--main-data,
+.container__formation--main-data {
+	@include flexColumn();
+	width: 100%;
 }
-.container__experience--description, .container__formation--description {
-	// height: 20px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
+.jobAndDate {
+	@include flexRow();
+	justify-content: space-between;
+}
+.joinDate {
+	width: 30%;
+	@include flexRow();
+	justify-content: space-between;
+}
+.container__experience--description,
+.container__formation--description {
+	width: 100%;
 	text-align: justify;
-	@media all and (min-width:768px) {
-		margin-top: 25px;
-	}
 }
 
 .preview__skills {
-	@include flexRowBetween;
-	height: 40px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
-	@media all and (min-width:768px) {
-		margin-top: 50px;
-	}
-	@media all and (min-width:1024px) {
-		margin-top: 30px;
-	}
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
 }
-.preview__skills--languages, .preview__skills--it, .preview__skills--bonus {
-	@include flexRowBetween;
+.preview__skills--languages,
+.preview__skills--it,
+.preview__skills--bonus {
+	padding: 15px 30px;
+	@include flexRowVerticalcenter();
 }
+
+.content__skills {
+	@include flexColumn();
+	}
 .talk-icon, .it-icon, .bonus-icon {
 	width: 30px;
 	height: 30px;
 }
 .skills__language--select, .skills__it--select, .skills__bonus--select {
-	width: 90%;
+	width: 100%;
 	padding: 0 10px;
+
 }
-@media all and (min-width:1024px) {
-	.section__preview {
+.section__preview {
+	@media all and (min-width:1024px) {
 		margin-left: 2%;
 	}
 }
