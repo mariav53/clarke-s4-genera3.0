@@ -58,11 +58,11 @@
 	display: block;
 	width: 80px;
 	height: 60px;
-	margin: 8px auto auto;
+	margin: 8px auto 10px;
 	filter: opacity(0.3);
   @media all and (min-width:768px) {
     height:120px;
-    margin: auto;
+    margin: 8px auto 10px;
     width: auto;
   }
   .span-step {

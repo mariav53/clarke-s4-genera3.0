@@ -121,7 +121,7 @@
 .showpreview.stripes {
 	background-image: url($pathImages + 'themes/stripes.png');
 	background-position: 0 0;
-	background-size: 100%;
+	// background-size: 100%;
 	padding: 70px 60px 190px;
 	background-repeat: repeat-y;
 	height: auto;
@@ -129,10 +129,11 @@
 }
 .showpreview.zigZag {
 	background-image: url($pathImages + 'themes/zigZag.png');
-	background-size: 100%;
+	// background-size: 100%;
   padding: 100px;
 	background-repeat: no-repeat;
 	background-position: 0 0;
+	height: auto;
 }
 /*MAQUETACIÓN PREVIEW*/
 
@@ -149,9 +150,18 @@
 	align-content: flex-start;
 	height: auto;
 }
-
+.thumb {
+	width: 100%;
+	width: 60px;
+	border-radius: 100px;
+	height: 60px;
+	@media all and (min-width: 768px) {
+		width: 70px;
+		height: 70px;
+	}
+}
 .container__preview--photo {
-	width: 25%;
+	margin-right: 30px;
 	position: relative;
 }
 .container__photo {
@@ -159,49 +169,28 @@
 	height: 60px;
 	background-color: $colorSea;
 	border-radius: 100px;
-	@media all and (min-width:1024px) {
+	@media all and (min-width:768px) {
 		width: 70px;
 		height: 70px;
 	}
 }
+
 .container__preview--personal-data {
 	@include flexColumn();
-	width: 100%;
-	margin-left: 30px;
+	justify-content: center;
 	@media all and (min-width: 768px) {
 		@include flexRow();
-		margin-left: 0;
-	}
-	@media all and (min-width: 1024px) {
-		margin-left: 15px;
 	}
 }
+
 .container__personal-data {
-	// width: 32%;
-	// margin-top: 10px;
-	// @include flexColumnContentCenter;
-	// padding-top: 10px;
+	@include flexColumn();
+	margin-right: 40px;
+	text-align: justify;
 }
 
 .container__direction {
-	margin-left: 0;
-	@media all and (min-width: 768px) {
-		margin-left: 30px;
-	}
-	@media all and (min-width: 1024px) {
-		margin-left: 25px;
-	}
-}
-
-.container__photo .thumb {
-	width: 100%;
-	width: 60px;
-	border-radius: 100px;
-	height: 60px;
-	@media all and (min-width: 768px) {
-		width: 70px;
-		height: 70px;
-	}
+@include flexColumn();
 }
 
 .preview-data {
@@ -212,86 +201,83 @@
 .container__preview--summary{
 	@include flexColumn();
 	width: 100%;
-	// margin: 10px;
 }
 .container__summary {
-	@include flexColumn();
 	margin-top: 5px;
-	width: 100%;
-}
-.preview__summary {
-	width: 100%;
-	height: auto;
-	text-align: left;
-	margin-bottom: 5px;
-
-}
-.container__preview--rrss {
-	width: 100%;
-	@media (min-width: 768px) and (max-width: 1024px) {
-		margin-left: 30px;
+	@include flexColumn();
+	justify-content: center;
+	@media all and (min-width: 768px) {
+		@include flexRow();
 	}
 }
-
-
-.preview__experience, .preview__formation {
+.preview__summary {
 	@include flexColumn();
+	margin-right: 20px;
+	text-align: justify;
+}
+.container__preview--rrss {
+	@include flexColumn();
+}
+
+.preview__experience,
+.preview__formation {
 	margin-top: 5px;
+	@include flexColumn();
+}
+.preview__formation {
+	margin-bottom: 10px;
 }
 .formation__title, .summary__title, .experience__title {
 	margin: 0;
 }
-.container__experience--main-data, .container__formation--main-data {
+.container__experience--main-data,
+.container__formation--main-data {
 	@include flexColumn();
-
-	// @include flexRowBetween();
-	// height: 15px;
-	// width: 95%;
-	// padding-left: 10px;
-	// padding-right: 10px;
+	width: 100%;
+}
+.jobAndDate {
+	@include flexRow();
+	justify-content: space-between;
 }
 .joinDate {
+	width: 30%;
 	@include flexRow();
-	width: 100%;
-	justify-content: space-around;
-
+	justify-content: space-between;
 }
-.container__experience--description, .container__formation--description {
-	// height: 20px;
+.container__experience--description,
+.container__formation--description {
 	width: 100%;
-
 	text-align: justify;
-	@media all and (min-width: 768px) {
-		margin-top: 25px;
-	}
 }
 
 .preview__skills {
-	@include flexRowBetween();
-	height: 40px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
-	@media all and (min-width: 768px) {
-		margin-top: 50px;
-	}
-	@media all and (min-width: 1024px) {
-		margin-top: 30px;
-	}
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+
 }
-.preview__skills--languages, .preview__skills--it, .preview__skills--bonus {
-	// @include flexRowBetween;
+.preview__skills--languages,
+.preview__skills--it,
+.preview__skills--bonus {
+	padding: 15px 30px;
+	@include flexRowVerticalcenter();
 }
+
+.content__skills {
+	@include flexColumn();
+	}
 .talk-icon, .it-icon, .bonus-icon {
 	width: 30px;
 	height: 30px;
 }
 .skills__language--select, .skills__it--select, .skills__bonus--select {
-	width: 90%;
+	width: 100%;
 	padding: 0 10px;
+
 }
-@media all and (min-width:1024px) {
-	.section__preview {
+.section__preview {
+	@media all and (min-width:1024px) {
 		margin-left: 2%;
 	}
 }

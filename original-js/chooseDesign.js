@@ -6,6 +6,7 @@
 // MENU OPEN-CLOSE STYLES
 
 /* Con nextElementSibling al hacer 'click' sobre imagen (.img-design) se selecciona el elemento hermano(ul: design-fonts, design-colours o design-themes)*/
+
 var preview = document.querySelector('.showpreview');
 var selectImg= document.querySelectorAll('.img-design');
 var listAllUl =  document.querySelectorAll('.creation__design__options li ul');
