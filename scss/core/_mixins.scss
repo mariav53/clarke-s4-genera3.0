@@ -1,36 +1,36 @@
-@mixin flexColumn {
+@mixin flexColumn() {
 	display: flex;
 	flex-direction: column;
 }
-@mixin flexColumnContentCenter {
+@mixin flexColumnContentCente() {
 	display: flex;
 	flex-direction: column;
 	align-content: center;
 }
-@mixin flexRow {
+@mixin flexRow() {
 	display: flex;
 	flex-direction: row;
 }
-@mixin flexRowVerticalcenter {
+@mixin flexRowVerticalcenter() {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
-@mixin flexRowBetween {
+@mixin flexRowBetween() {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
-@mixin aroundCenter {
+@mixin aroundCenter() {
 	justify-content: space-around;
 	align-items: center;
 }
-@mixin flexCenterCenter {
+@mixin flexCenterCenter() {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-@mixin backgroundCenter {
+@mixin backgroundCenter() {
 	background-repeat: no-repeat;
 	background-position: center center;
 }

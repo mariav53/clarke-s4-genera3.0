@@ -7,14 +7,14 @@
 	display: none;
 }
 .form-section-header {
-	@include flexRowBetween;
+	@include flexRowBetween();
 	align-items: center;
 	width: auto;
 	height: auto;
 	border-bottom: 5px;
 }
 .form__container {
-	@include flexColumn;
+	@include flexColumn();
 	flex-wrap: wrap;
 	align-self: center;
 	background: $colorMediumBlue;
@@ -68,7 +68,7 @@ fieldset {
 	color: $colorBlack;
 	font-size: 14px;
 	@media all and (min-width:768px){
-		@include flexRow;
+		@include flexRow();
 		margin: 15px 0;
 	}
 }
@@ -110,7 +110,7 @@ select{
 	@media all and (min-width:768px){
 		margin-left: 5px;
 			margin-top: 0;
-	}	
+	}
 }
 .present-button-p  {
 	font-size: 1em;

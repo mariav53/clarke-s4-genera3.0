@@ -1,6 +1,7 @@
 /*PREVIEW*/
 
 /*ELECCIÓN DE DISEÑO*/
+
 .preview__title, .creation__title, .label {
 	text-align: center;
 	color: $colorSea;
@@ -32,10 +33,10 @@
 .cookie .preview-text{
 	font-family: 'arial';
 	font-size: 0.8em;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size: 1em;
 	}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1em;
 	}
 }
@@ -44,20 +45,20 @@
 	font-family: 'Leckerli One';
 	font-size: 0.8em;
 	font-weight: 700;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size:1em;
 		}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1.1em;
 		}
 }
 .annie .preview-text{
 	font-family: 'Annie Use Your Telescope';
 	font-size: 0.8em;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size: 1em;
 		}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1em;
 		}
 }
@@ -66,20 +67,20 @@
 	font-family: 'Philosopher';
 	font-size: 0.8em;
 	font-weight: 700;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size: 1em;
 		}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1.1em;
 		}
 }
 .philosopher .preview-text{
 	font-family: 'Philosopher';
 	font-size: 0.8em;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		font-size:  1em;
 		}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		font-size: 1em;
 		}
 }
@@ -110,42 +111,50 @@
 }
 
 /*Temas*/
-.dots.showpreview {
-	background-image: url("../images/themes/dots.png");
+.showpreview.dots {
+	background-image: url($pathImages + 'themes/dots.png');
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: auto;
+	padding: 120px 60px;
 }
-.stripes.showpreview {
-	background-image: url("../images/themes/stripes.png");
-	background-size: contain;
+.showpreview.stripes {
+	background-image: url($pathImages + 'themes/stripes.png');
+	background-position: 0 0;
+	background-size: 100%;
+	padding: 70px 60px 190px;
+	background-repeat: repeat-y;
+	height: auto;
+
 }
-.zigZag.showpreview {
-	background-image: url("../images/themes/zigZag.png");
+.showpreview.zigZag {
+	background-image: url($pathImages + 'themes/zigZag.png');
+	background-size: 100%;
+  padding: 100px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
 }
 /*MAQUETACIÓN PREVIEW*/
 
 .showpreview {
 	background-color: $colorWhite;
-	@include backgroundCenter;
+	@include backgroundCenter();
 	background-size: cover;
-	@include flexColumn;
-	height: 80vh;
-	padding: 8%;
-	@media all and (min-width:1024px) {
-		height: 130vh;
-	}
+	@include flexColumn();
+	height: auto;
 }
 
 .container__preview--intro {
-	@include flexRow;
-	justify-content: space-around;
+	@include flexRow();
 	align-content: flex-start;
-	height: 80px;
+	height: auto;
 }
 
 .container__preview--photo {
 	width: 25%;
+	position: relative;
 }
 .container__photo {
-	margin-top: 12%;
 	width: 60px;
 	height: 60px;
 	background-color: $colorSea;
@@ -156,31 +165,32 @@
 	}
 }
 .container__preview--personal-data {
-	@include flexRow;
-	justify-content: space-between;
-	align-content: flex-start;
-	padding: 0 10px;
-	width: 80%;
+	@include flexColumn();
+	width: 100%;
+	margin-left: 30px;
+	@media all and (min-width: 768px) {
+		@include flexRow();
+		margin-left: 0;
+	}
+	@media all and (min-width: 1024px) {
+		margin-left: 15px;
+	}
 }
 .container__personal-data {
-	/*background-color: $colorYellow;*/
-	width: 32%;
-	// height: 50px;
-	margin-top: 10px;
-	@include flexColumnContentCenter;
-	padding-top: 10px;
+	// width: 32%;
+	// margin-top: 10px;
+	// @include flexColumnContentCenter;
+	// padding-top: 10px;
 }
 
 .container__direction {
-	width: 60%;
-	height: 50px;
-	/*background-color: $colorYellow;*/
-	@include flexColumnContentCenter;
-	padding-top: 10px;
-	padding-left: 10px;
-	text-align: right;
-	padding-top: 10px;
-	margin-top: 10px;
+	margin-left: 0;
+	@media all and (min-width: 768px) {
+		margin-left: 30px;
+	}
+	@media all and (min-width: 1024px) {
+		margin-left: 25px;
+	}
 }
 
 .container__photo .thumb {
@@ -188,77 +198,89 @@
 	width: 60px;
 	border-radius: 100px;
 	height: 60px;
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 768px) {
 		width: 70px;
 		height: 70px;
 	}
 }
 
 .preview-data {
-	@include flexColumn;
+	@include flexColumn();
 	width: 60%;
 }
 
 .container__preview--summary{
+	@include flexColumn();
 	width: 100%;
-	margin: 10px;
+	// margin: 10px;
 }
 .container__summary {
-	@include flexRow;
-	justify-content: space-around;
-	align-content: flex-start;
-	margin-top: 10px;
+	@include flexColumn();
+	margin-top: 5px;
+	width: 100%;
 }
 .preview__summary {
-	width: 60%;
+	width: 100%;
 	height: auto;
 	text-align: left;
-	padding-left: 5px;
+	margin-bottom: 5px;
+
 }
 .container__preview--rrss {
-	width: 30%;
-	text-align: right;
+	width: 100%;
+	@media (min-width: 768px) and (max-width: 1024px) {
+		margin-left: 30px;
+	}
 }
+
+
 .preview__experience, .preview__formation {
-	@include flexColumn;
-	margin-top: 10px;
+	@include flexColumn();
+	margin-top: 5px;
 }
 .formation__title, .summary__title, .experience__title {
 	margin: 0;
 }
 .container__experience--main-data, .container__formation--main-data {
-	@include flexRowBetween;
-	height: 15px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
+	@include flexColumn();
+
+	// @include flexRowBetween();
+	// height: 15px;
+	// width: 95%;
+	// padding-left: 10px;
+	// padding-right: 10px;
+}
+.joinDate {
+	@include flexRow();
+	width: 100%;
+	justify-content: space-around;
+
 }
 .container__experience--description, .container__formation--description {
 	// height: 20px;
-	width: 95%;
-	padding-left: 10px;
-	padding-right: 10px;
+	width: 100%;
+
 	text-align: justify;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		margin-top: 25px;
 	}
 }
 
 .preview__skills {
-	@include flexRowBetween;
+	@include flexRowBetween();
 	height: 40px;
 	width: 95%;
 	padding-left: 10px;
 	padding-right: 10px;
-	@media all and (min-width:768px) {
+	@media all and (min-width: 768px) {
 		margin-top: 50px;
 	}
-	@media all and (min-width:1024px) {
+	@media all and (min-width: 1024px) {
 		margin-top: 30px;
 	}
 }
 .preview__skills--languages, .preview__skills--it, .preview__skills--bonus {
-	@include flexRowBetween;
+	// @include flexRowBetween;
 }
 .talk-icon, .it-icon, .bonus-icon {
 	width: 30px;

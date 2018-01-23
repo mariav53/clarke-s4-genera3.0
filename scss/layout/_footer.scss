@@ -9,7 +9,7 @@
 }
 .container__footer{
 	width: 100vw;
-	@include flexRowBetween;
+	@include flexRowBetween();
 }
 .footer__link {
 	text-decoration: none;
@@ -21,7 +21,7 @@
 	align-self: center;
 
 	@media all and (min-width:768px) {
-		@include flexRowBetween;
+		@include flexRowBetween();
 	}
 }
 .footer__logo {

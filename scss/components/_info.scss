@@ -39,7 +39,7 @@
 // INFO STEPS DESIGN CV
 .block__info-steps {
 	display: flex;
-	@include aroundCenter;
+	@include aroundCenter();
 	width: auto;
 	padding: 10px;
   @media all and (min-width: 768px) {

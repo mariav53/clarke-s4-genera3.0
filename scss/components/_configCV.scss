@@ -1,5 +1,5 @@
 .block__cv {
-	@include flexColumn;
+	@include flexColumn();
 	justify-content: space-around;
 	width: 100%;
 	padding: 0;
@@ -17,7 +17,7 @@
 	background-color: $colorSea;
 	height: 126px;
 	width: 100%;
-	@include flexCenterCenter;
+	@include flexCenterCenter();
   .creation__design__options {
   	position: relative;
   	list-style: none;
@@ -60,7 +60,7 @@
 .font,
 .colour,
 .theme {
-	@include flexCenterCenter;
+	@include flexCenterCenter();
 	width: 100px;
 	height: 40px;
 	background-color: $colorDarkBlue;
@@ -124,8 +124,8 @@
 .creation__photo {
 	padding: 3%;
 	background-color: $colorLightBlue;
-	@include flexRow;
-	@include aroundCenter;
+	@include flexRow();
+	@include aroundCenter();
   .selection-image {
   	display: none;
   }
@@ -134,7 +134,7 @@
   	width: 100px;
   	height: 100px;
   	background-color: $colorDarkBlue;
-  	@include backgroundCenter;
+  	@include backgroundCenter();
 		background-size: cover;
   	border-radius: 100px;
   	border-color: $colorDarkBlue;
