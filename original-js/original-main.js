@@ -5,29 +5,29 @@
 
 //función para desplegar sección
 // desplegables sin onclick
-var botones = document.querySelectorAll('.button--open');
-function desplegable(event){
+const botones = document.querySelectorAll('.button--open');
+const desplegable =(event)=>{
 	// llamo al evento
 	// currentTarget coge el elemento (en este caso un boton) que dispara el evento. Le ponemos data-plus porque queremos que busque la id del elemento que tiene que mostrar
-	var plusId = event.currentTarget.getAttribute('data-idDesplegar');
+	const plusId = event.currentTarget.getAttribute('data-idDesplegar');
 	// data-plus: identificador del elemento, que queremos que se replique en el resto de elementos
 	// hacemos una variable para crear el selector, event.currentTarget es el elemento que dispara el evento (hacer click)
-	var cuadro = document.getElementById(plusId);
+	const cuadro = document.getElementById(plusId);
 	if (cuadro.style.display == 'block'){
 		cuadro.style.display = 'none';
 	} else {
 		cuadro.style.display = 'block';
 	}
 }
-for (i=0; i<botones.length; i++){
-	botones[i].addEventListener('click', desplegable);
+for (const allButtons of botones){
+	allButtons.addEventListener('click', desplegable);
 }
 
 //función para meses
-function selectMonths() {
-	var options = '';
-	var months = document.querySelectorAll('.month');
-  var meses = [
+const selectMonths =() => {
+	let options = '';
+	const months = document.querySelectorAll('.month');
+  const meses = [
     "Enero",
     "Febrero",
     "Marzo",
@@ -43,41 +43,40 @@ function selectMonths() {
     "Diciembre"
   ];
 
-  for (var i = 0; i < meses.length; i++){
-    options += '<option>' + meses[i]+ '</option>';
+  for ( const allMonths of meses){
+    options += `<option>${allMonths}</option>`;
 }
-var monthsAll = document.querySelectorAll('.month');
-for (var i = 0; i < monthsAll.length; i++) {
-	monthsAll[i].innerHTML = options;
+const monthsAll = document.querySelectorAll('.month');
+for (const listMonth of monthsAll) {
+	listMonth.innerHTML = options;
 };
 }
 selectMonths();
 
 
 //función para años
+const anosInput = () =>{
+const years = 2018;
+let selectYear = '';
 
-function añosInput () {
-var years = 2018;
-var selectYear = '';
-
-for (var i=1950; i<years; i++) {
-  selectYear = selectYear + '<option>' + (i) + '</option>';
+for (i = 1950; i<years; i++) {
+selectYear = selectYear + '<option>' + (i)+ '</option>';
 }
-var yearsAll = document.querySelectorAll('.year');
-for (var i = 0; i < yearsAll.length; i++) {
-	yearsAll[i].innerHTML = selectYear;
+const yearsAll = document.querySelectorAll('.year');
+for (const listYears of yearsAll) {
+	listYears.innerHTML = selectYear;
 };
 }
-añosInput ();
+anosInput ();
 
-var inputFile = document.querySelector('#files');
-var trigger = document.querySelector('.trigger');
+const inputFile = document.querySelector('#files');
+const trigger = document.querySelector('.trigger');
 
 // hacemos clic en trigger y llamamos a la funcion
 trigger.addEventListener('click', simularClic);
 
 // función para que simule un clic en input
 
-function simularClic(){
+const simularClic =()=>{
 	inputFile.click();
 }
