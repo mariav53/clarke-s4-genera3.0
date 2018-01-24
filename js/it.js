@@ -17,7 +17,7 @@ newItButton.addEventListener('click',addItemIt);
 //PINTAR IT EN PREVIEW
 const printItToPreview =(event)=> {
 	const dataIdValue = event.currentTarget.getAttribute('data-id');
-	document.getElementById('it-name' + dataIdValue + '-preview-id').innerHTML = document.getElementById('it-name' + dataIdValue).value;
-	document.getElementById('it-level' + dataIdValue + '-preview-id').innerHTML = document.getElementById('it-level' + dataIdValue).value;
+	document.getElementById('it-name' + dataIdValue + '-preview-id').innerHTML = document.getElementById('it-name' + dataIdValue).value + '  |  '+document.getElementById('it-level' + dataIdValue).value;
+	// document.getElementById('it-level' + dataIdValue + '-preview-id').innerHTML = document.getElementById('it-level' + dataIdValue).value;
 }
 document.querySelector('.save-it-button').addEventListener('click',printItToPreview);

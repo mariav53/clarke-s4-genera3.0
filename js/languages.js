@@ -17,9 +17,12 @@ const newLanguageButton = document.querySelector('.new-language-button');
 newLanguageButton.addEventListener('click',addItemLanguage);
 
 //PINTAR IDIOMA EN PREVIEW
+
+
 const printLanguagesToPreview =(event)=> {
 	const dataIdValue = event.currentTarget.getAttribute('data-id');
-	document.getElementById('language-name' + dataIdValue + '-preview-id').innerHTML = document.getElementById('language-name' + dataIdValue).value;
-	document.getElementById('language-level' + dataIdValue + '-preview-id').innerHTML = document.getElementById('language-level' + dataIdValue).value;
+	document.getElementById('language-name' + dataIdValue + '-preview-id').innerHTML = document.getElementById('language-name' + dataIdValue).value+ '  |  ' +document.getElementById('language-level' + dataIdValue).value;
+	//
+	// document.getElementById('language-level' + dataIdValue + '-preview-id').innerHTML = document.getElementById('language-level' + dataIdValue).value;
 }
 document.querySelector('.save-languages-button').addEventListener('click',printLanguagesToPreview);

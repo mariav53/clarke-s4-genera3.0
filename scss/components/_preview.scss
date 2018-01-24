@@ -245,7 +245,7 @@
 	justify-content: space-between;
 }
 .joinDate {
-	width: 30%;
+	width: auto;
 	@include flexRow();
 	justify-content: space-between;
 }
@@ -287,4 +287,8 @@
 	@media all and (min-width:768px) {
 		margin-left: 2%;
 	}
+}
+
+.from-date-preview{
+	padding-right: 4px;
 }
