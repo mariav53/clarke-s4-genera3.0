@@ -228,6 +228,13 @@
 .formation__title, .summary__title, .experience__title {
 	margin: 0;
 }
+#titulo-preview-id1,
+#titulo-preview-id2,
+#job-preview-id-1,
+#job-preview-id-2 {
+	font-weight: bold;
+}
+
 .container__experience--main-data,
 .container__formation--main-data {
 	@include flexColumn();
@@ -249,16 +256,18 @@
 }
 
 .preview__skills {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: center;
+	@include flexColumn();
+		@media all and (min-width:768px) {
+			@include flexRow();
+			justify-content: space-between;
+		}
+
 
 }
 .preview__skills--languages,
 .preview__skills--it,
 .preview__skills--bonus {
-	padding: 15px 30px;
+	padding: 15px 0;
 	@include flexRowVerticalcenter();
 }
 
@@ -275,7 +284,7 @@
 
 }
 .section__preview {
-	@media all and (min-width:1024px) {
+	@media all and (min-width:768px) {
 		margin-left: 2%;
 	}
 }
