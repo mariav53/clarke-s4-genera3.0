@@ -17,3 +17,25 @@ function addItemExperience() {
 
 var newExperienceButton = document.querySelector('.new-experience-button');
 newExperienceButton.addEventListener('click',addItemExperience);
+
+//PINTARLO EN EL HTML (experience)
+function printProfessionalExperienceToPreview(event) {
+
+var dataIdValue = event.currentTarget.getAttribute('data-id');
+
+	document.getElementById('job-preview-id-' + dataIdValue).innerHTML = document.getElementById('job' + dataIdValue).value;
+	document.getElementById('from-job-preview-id' + dataIdValue).innerHTML =
+	document.getElementById('start_month-job' + dataIdValue).value + ' ' +
+	document.getElementById('start_year-job' + dataIdValue).value;
+	if (document.getElementById('actualidad-job' + dataIdValue).checked) {
+		document.getElementById('until-job-preview-id' + dataIdValue).innerHTML = 'Actualmente';
+	}
+	else {
+		document.getElementById('until-job-preview-id' + dataIdValue).innerHTML =
+		document.getElementById('end_month-job' + dataIdValue).value + ' ' +
+		document.getElementById('end_year-job' + dataIdValue).value;
+	}
+	document.getElementById('place-preview-id' + dataIdValue).innerHTML = document.getElementById('company' + dataIdValue).value;
+	document.getElementById('description-job-preview-id' + dataIdValue).innerHTML = document.getElementById('description-job' + dataIdValue).value;
+}
+document.querySelector('.save-experience-button').addEventListener('click',printProfessionalExperienceToPreview);
