@@ -56,7 +56,7 @@ const yearsInput = () =>{
 const years = 2018;
 let selectYear = '';
 
-for (i = 1950; i<years; i++) {
+for (let i = 1950; i<years; i++) {
 selectYear = selectYear + '<option>' + (i)+ '</option>';
 }
 
@@ -65,4 +65,4 @@ const yearsAll = document.querySelectorAll('.year');
 		listYears.innerHTML = selectYear;
 	};
 }
-yearsInput ();
+yearsInput();
