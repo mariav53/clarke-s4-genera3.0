@@ -1,7 +1,7 @@
 'use strict';
 
 // SECCIÓN GUARDAR DATOS FORMULARIO EN PREVIEW (4FUNCIONES)
-function printPersonalDataToPreview() {
+const printPersonalDataToPreview =()=> {
  	document.getElementById('personal-data--name').innerHTML = document.getElementById('input-name').value;
 	document.getElementById('personal-data--surname').innerHTML = document.getElementById('input-surname').value;
 	document.getElementById('personal-data--job').innerHTML = document.getElementById('input-profession').value;
