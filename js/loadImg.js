@@ -1,7 +1,7 @@
 'use strict';
 
-function photoFile(evt) {
-	var files = evt.target.files; // FileList object
+const photoFile =(evt)=> {
+	const files = evt.target.files; // FileList object
 
 	//Obtenemos la imagen del campo "file".
 	for (var i = 0, f; f = files[i]; i++) {
@@ -9,9 +9,9 @@ function photoFile(evt) {
 		if (!f.type.match('image.*')) {
 			continue;
 		}
-		var reader = new FileReader();
-		reader.onload = (function(theFile) {
-			return function(e) {
+		const reader = new FileReader();
+		reader.onload = ((theFile)=> {
+			return (e)=> {
 				// Creamos la imagen.
 				trigger.style = "background-image:url(" + e.target.result + ");";
 				document.querySelector(".container__photo").innerHTML = ['<img class="thumb" src="', e.target.result,'" title="', escape(theFile.name), '"/>'].join('');
