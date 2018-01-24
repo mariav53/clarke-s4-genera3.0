@@ -12,8 +12,10 @@
 			"js/loadImg.js",
 			"js/education.js",
 			"js/experience.js",
+			"js/languages.js",
+			"js/it.js",
 			"js/skills.js",
-			"js/preview.js",
+			"js/personal-data.js",
 			"js/main.js"
 		],
 		"dest": "js/"
