@@ -7,18 +7,17 @@
 
 /* Con nextElementSibling al hacer 'click' sobre imagen (.img-design) se selecciona el elemento hermano(ul: design-fonts, design-colours o design-themes)*/
 
-var preview = document.querySelector('.showpreview');
-var selectImg= document.querySelectorAll('.img-design');
-var listAllUl =  document.querySelectorAll('.creation__design__options li ul');
+const preview = document.querySelector('.showpreview');
+const selectImg= document.querySelectorAll('.img-design');
+const allListElement =  document.querySelectorAll('.creation__design__options li ul');
 
 
-function openCloseStyles() {
+const openCloseStyles = (event) => {
 
-  var nextUl = this.nextElementSibling;
-
+  const nextUl = event.target.nextElementSibling;
   if (nextUl.classList.contains('hidden')) {
-    for (var i = 0; i < listAllUl.length; i++) {
-      listAllUl[i].classList.add('hidden');
+    for (const selectList of allListElement) {
+      selectList.classList.add('hidden');
     }
     nextUl.classList.remove('hidden');
   } else {
@@ -26,62 +25,63 @@ function openCloseStyles() {
   }
 }
 
-for (var i = 0; i < selectImg.length; i++) {
-  selectImg[i].addEventListener('click', openCloseStyles);
+for (const clickImg of selectImg) {
+  clickImg.addEventListener('click', openCloseStyles);
 }
+
 
 
 // APPLY FONTS
 
-var fonts = document.querySelectorAll('.font');
+const fonts = document.querySelectorAll('.font');
 
-function cleanFontClasses() {
+const cleanFontClasses = () => {
   preview.classList.remove('cookie', 'annie', 'philosopher');
 }
 
-function applyFont(event) {
-	var fontClass = event.currentTarget.getAttribute('data-font-class');
+const applyFont = (event) => {
+	const fontClass = event.currentTarget.getAttribute('data-font-class');
   cleanFontClasses();
   preview.classList.add(fontClass);
 }
 
-for (var i = 0; i < fonts.length; i++) {
-  fonts[i].addEventListener('click', applyFont);
+for (const fontList of fonts) {
+  fontList.addEventListener('click', applyFont);
 }
 
 
 // APLLY COLOURS
 
-var colours = document.querySelectorAll('.colour');
+const colours = document.querySelectorAll('.colour');
 
-function cleanColourClasses() {
+const cleanColourClasses = () => {
   preview.classList.remove('red-green-lime', 'black-blue-lime', 'black-pink-grey');
 }
 
-function applyColour(event){
-  var colourClass = event.currentTarget.getAttribute('data-colour-class');
+const applyColour = (event) => {
+  const colourClass = event.currentTarget.getAttribute('data-colour-class');
   cleanColourClasses();
   preview.classList.add(colourClass);
 }
 
-for (var i = 0; i < colours.length; i++) {
-  colours[i].addEventListener('click', applyColour);
+for (const colourList of colours) {
+  colourList.addEventListener('click', applyColour);
 }
 
 // APPLY THEMES
 
-var themes = document.querySelectorAll('.theme');
+const themes = document.querySelectorAll('.theme');
 
-function cleanThemeClasses() {
+const cleanThemeClasses = () => {
   preview.classList.remove('dots', 'stripes', 'zigZag');
 }
 
-function applyTheme(event){
-  var themeClass = event.currentTarget.getAttribute('data-theme-class');
+const applyTheme = (event) => {
+  const themeClass = event.currentTarget.getAttribute('data-theme-class');
   cleanThemeClasses();
   preview.classList.add(themeClass);
 }
 
-for (var i = 0; i < themes.length; i++) {
-  themes[i].addEventListener('click', applyTheme);
+for (const themeList of themes) {
+  themeList.addEventListener('click', applyTheme);
 }
