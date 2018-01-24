@@ -8,7 +8,7 @@
 			"js/nav.js",
 			"js/chooseDesign.js",
 			"js/forms.js",
-			"js/original-main.js",
+			"js/commons.js",
 			"js/loadImg.js",
 			"js/education.js",
 			"js/experience.js",
