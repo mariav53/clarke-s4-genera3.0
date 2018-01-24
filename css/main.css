@@ -476,6 +476,24 @@ fieldset {
   display: none;
 }
 
+.container-birthdate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.container-birthdate .label-birthdate {
+  width: 50%;
+  text-align: left;
+}
+
 .input-birthdate {
   color: #757575;
 }
@@ -501,37 +519,37 @@ fieldset {
 }
 
 .education-dates,.experience-dates {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   color: #000000;
   font-size: 14px;
 }
 
 .education-dates select,.experience-dates select {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 select {
   border: none;
   padding: 3px;
-  width: 67px;
+  width: 50px;
 }
 
-.date-container-from,.level {
+.level {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 4px 0;
   padding: 0;
-  line-height: 35px;
 }
 
-.date-container-from label,.level label {
+.date-container-from {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 4px 0;
+  padding: 0;
+}
+
+.date-container-from label {
   padding: 0;
 }
 
@@ -540,7 +558,6 @@ select {
   display: -ms-flexbox;
   display: flex;
   margin: 4px 0;
-  line-height: 35px;
 }
 
 .date-container-until label {
@@ -560,7 +577,7 @@ select {
 
 .actualidad {
   margin-top: 4px;
-  padding-left: 15px;
+  padding-left: 5px;
 }
 
 .present-button-p {
@@ -822,6 +839,10 @@ select {
   margin: 0;
 }
 
+#titulo-preview-id1,#titulo-preview-id2,#job-preview-id-1,#job-preview-id-2 {
+  font-weight: bold;
+}
+
 .container__experience--main-data,.container__formation--main-data {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -869,18 +890,14 @@ select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .preview__skills--languages,.preview__skills--it,.preview__skills--bonus {
-  padding: 15px 30px;
+  padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1020,8 +1037,22 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
     flex-direction: row;
   }
 
+  .level {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .date-container-from {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
   .date-container-until {
-    padding-left: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   #end_month1,#end_year1,#end_month-education1,#end_year-education1 {
@@ -1090,6 +1121,23 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
     -ms-flex-direction: row;
     flex-direction: row;
   }
+
+  .preview__skills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .section__preview {
+    margin-left: 2%;
+  }
 }
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
@@ -1143,10 +1191,6 @@ font-family: 'Philosopher', sans-serif;*/@media all and (min-width: 768px) {
 
   .philosopher .preview-text {
     font-size: 1em;
-  }
-
-  .section__preview {
-    margin-left: 2%;
   }
 }
 
