@@ -18,7 +18,8 @@ for (const itemsNAv of items) {
 }
 navButton.addEventListener('click', openNav);
 
-
-// for (var i = 0; i < items.length; i++) {
-// 	items[i].addEventListener('click', closeNav);
-// }
+window.addEventListener('mouseup',(event)=>{
+  if (event.target != navList){
+	 closeNav();
+		}
+});
