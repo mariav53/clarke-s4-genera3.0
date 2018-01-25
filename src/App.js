@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
-import Cover from './images/cover_mobile2.png';
+import CoverMobile from './images/cover_mobile2.png';
+import CoverDesktop from './images/desktop.png';
+import IconDesign from './images/designer.svg';
+import IconWrite from './images/writing.svg';
+import IconDownload from './images/download.svg';
+import ButtonFont from './images/text.svg';
+import ButtonPalette from './images/paint-palette.svg';
+import ButtonTheme from './images/menu.svg';
+import ButtonArrow from './images/arrow.png';
+import IconLanguage from './images/speak.png'
+import IconIt from './images/computer-monitor-and-mouse.png';
+import IconSkills from './images/settings.png';
+import LogoSmall from './images/logocorto.png'
 
 import './scss/main.css';
 
@@ -26,22 +38,22 @@ class App extends Component {
 				</header>
 				<main>
 					<div class="hero">
-						<img class="hero__img-mobile" src={Cover} alt="Imagen de portada movil" />
-						<img class="hero__img-desktop" src="images/desktop.png" alt="Imagen de portada escritorio" />
+						<img class="hero__img-mobile" src={CoverMobile} alt="Imagen de portada movil" />
+						<img class="hero__img-desktop" src={CoverDesktop} alt="Imagen de portada escritorio" />
 					</div>
 					<h1 class="title-hero">Diseña tu CV sin perder tiempo</h1>
 					<section class="block__info">
 						<div class="block__info-steps">
 							<div class="step">
-								<img class="img-step" src="images/designer.svg" alt="Elige tu diseño" />
+								<img class="img-step" src={IconDesign} alt="Elige tu diseño" />
 								<span class="span-step">Elige tu diseño</span>
 							</div>
 							<div class="step">
-								<img class="img-step" src="images/writing.svg" alt="Introduce tus datos" />
+								<img class="img-step" src={IconWrite} alt="Introduce tus datos" />
 								<span class="span-step">Introduce tus datos</span>
 							</div>
 							<div class="step">
-								<img class="img-step" src="images/download.svg" alt="Obtén tu CV personalizado" />
+								<img class="img-step" src={IconDownload} alt="Obtén tu CV personalizado" />
 								<span class="span-step">Obtén tu CV</span>
 							</div>
 						</div>
@@ -52,7 +64,6 @@ class App extends Component {
 						</div>
 					</section>
 
-				//DESIGN SECTION
 					<section class="block__cv" id="design">
 						<section class="section__creation">
 							<h2 class="creation__title">Configura tu currículum</h2>
@@ -60,8 +71,8 @@ class App extends Component {
 								<section class="creation__design">
 									<ul class="creation__design__options">
 										<li class="creation__design__options-font">
-											<img class="img-design" src="images/text.svg" title="fuente" alt="fuentes" />
-								//hidden
+											<img class="img-design" src={ButtonFont} title="fuente" alt="fuentes" />
+
 											<ul class="design-fonts hidden">
 												<li class="font" data-font-class="cookie"><h3>Cookie</h3></li>
 												<li class="font" data-font-class="annie"><h3>Annie</h3></li>
@@ -69,8 +80,8 @@ class App extends Component {
 											</ul>
 										</li>
 										<li class="creation__design__options-colour">
-											<img class="img-design" src="images/paint-palette.svg" title="color" alt="color" />
-								//hidden
+											<img class="img-design" src={ButtonPalette} title="color" alt="color" />
+
 											<ul class="design-colours hidden">
 												<li class="colour" data-colour-class="red-green-lime">
 													<div class="red"></div>
@@ -90,8 +101,8 @@ class App extends Component {
 											</ul>
 										</li>
 										<li class="creation__design__options-theme">
-											<img class="img-design" src="images/menu.svg" title="estilo" alt="estilo" />
-								// hidden
+											<img class="img-design" src={ButtonTheme} title="estilo" alt="estilo" />
+
 											<ul class="design-themes hidden">
 												<li class="theme" data-theme-class="dots"><h3>Dots</h3></li>
 												<li class="theme" data-theme-class="stripes"><h3>Stripes</h3></li>
@@ -100,7 +111,7 @@ class App extends Component {
 										</li>
 									</ul>
 								</section>
-						//ADD FILES
+
 								<section class="creation__photo">
 									<h3 class="label" for="files">Sube tu foto</h3>
 									<input class="selection-image" type="file" id="files" name="files[]" />
@@ -108,17 +119,17 @@ class App extends Component {
 								</section>
 								<section class="creation__form" id="form">
 									<form class="form__container" action="index.html" method="post">
-					//PERSONAL DATA
+
 										<fieldset class="form__personal-data">
 											<legend class="legend">Datos personales</legend>
 											<div class="form-section-header">
 												<h3 class="h3-form">Datos personales</h3>
-												//botones colapsable
+
 												<div class="form-section-button">
-													<img src="images/arrow.png" id='button--open' class="button--open" alt="abrir" data-idDesplegar="container-inputs__personal-data" />
+													<img src={ButtonArrow} id='button--open' class="button--open" alt="abrir" data-idDesplegar="container-inputs__personal-data" />
 												</div>
 											</div>
-						//oculto
+
 											<div id="container-inputs__personal-data">
 												<input class="class-input" id="input-name" type="text" name="name" placeholder="Nombre*" required />
 												<input class="class-input" id="input-surname" type="text" name="surname" placeholder="Apellidos*" required />
@@ -143,17 +154,17 @@ class App extends Component {
 											<hr class="line" />
 										</fieldset>
 
-						//EXPERIENCE
+
 										<fieldset class="form__experience">
 											<legend class="legend">Experiencia</legend>
 											<div class="form-section-header">
 												<h3 class="h3-form">Experiencia Profesional</h3>
-												//botones colapsable
+
 												<div class="form-section-buttons">
-													<img src="images/arrow.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__experience" alt="abrir" />
+													<img src={ButtonArrow} id='button--open' class="button--open" data-idDesplegar="container-inputs__experience" alt="abrir" />
 												</div>
 											</div>
-					//oculto
+
 											<div id="container-inputs__experience">
 												<div class="experience-element" id="experience-element">
 
@@ -188,17 +199,17 @@ class App extends Component {
 											<hr class="line" />
 										</fieldset>
 
-				//EDUCATION
+
 										<fieldset class="form__education">
 											<legend class="legend">Formación</legend>
 											<div class="form-section-header">
 												<h3 class="h3-form">Formación</h3>
-												//botones colapsable
+
 												<div class="form-section-buttons">
-													<img src="images/arrow.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__education" alt="abrir" />
+													<img src={ButtonArrow} id='button--open' class="button--open" data-idDesplegar="container-inputs__education" alt="abrir" />
 												</div>
 											</div>
-					//oculto
+
 											<div id="container-inputs__education">
 												<div class="education-element" id="education-element">
 													<label class="label" for="titulo"></label>
@@ -234,19 +245,17 @@ class App extends Component {
 											</div>
 											<hr class="line" />
 										</fieldset>
-
-
-					//SKILLS
+										
 										<fieldset class="form__skills">
 											<legend class="legend">Habilidades</legend>
 											<div class="form-section-header">
 												<h3 class="h3-form">Habilidades</h3>
-												//botones colapsable
+
 												<div class="form-section-buttons">
-													<img src="images/arrow.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__skills" alt="abrir"/>
+													<img src={ButtonArrow} id='button--open' class="button--open" data-idDesplegar="container-inputs__skills" alt="abrir"/>
 												</div>
 											</div>
-					//oculto
+
 											<div id="container-inputs__skills">
 												<div class="skills"> //OJO CON ESTE DIV
 													<div class="languages">
@@ -296,13 +305,13 @@ class App extends Component {
 											<hr class="line" />
 										</fieldset>
 									</form>
-								</section>	//Cierra creation__form
-							</div>	//Cierra container__creation
-					</section>	//Cierra section__creation
+								</section>
+							</div>
+					</section>
 
 					<section class="section__preview" id="preview">
 						<h2 class="preview__title"> Previsualización </h2>
-				//DATOS PERSONALES + IMAGEN
+
 						<div class="showpreview dots philosopher black-pink-grey">
 							<div class="container__preview--intro preview-div">
 								<div class="container__preview--photo">
@@ -333,7 +342,7 @@ class App extends Component {
 									</div>
 								</div>
 
-				//EXTRACTO + RRSS
+
 								<div class="container__preview--summary">
 									<div class="preview-title">
 										<h3 class="summary__title">Extracto</h3>
@@ -352,7 +361,7 @@ class App extends Component {
 									</div>
 								</div>
 
-							//EXPERIENCIA
+
 								<div class="container__preview--experience preview-div">
 									<div class="preview-title">
 										<h3 class="experience__title">Experiencia profesional</h3>
@@ -408,7 +417,7 @@ class App extends Component {
 										</div>
 									</div>
 								</div>
-				//FORMACIÓN
+
 								<div class="container__preview--formation preview-div">
 									<div class="preview-title">
 										<h3 class="formation__title">Formación</h3>
@@ -462,11 +471,11 @@ class App extends Component {
 										</div>
 									</div>
 								</div>
-					//HABILIDADES
+
 									<div class="container__preview--skills">
 										<div class="preview__skills preview-text">
 											<div class="preview__skills--languages">
-												<img src="images/speak.png" alt="talk-icon" class="talk-icon" />
+												<img src={IconLanguage} alt="talk-icon" class="talk-icon" />
 												<div class="content__skills">
 													<div class="skills__language--select"><span id="language-name1-preview-id"> </span><span id="language-level1-preview-id"></span>
 													</div>
@@ -475,7 +484,7 @@ class App extends Component {
 												</div>
 											</div>
 											<div class="preview__skills--it">
-												<img src="images/computer-monitor-and-mouse.png" alt="it-icon" class="it-icon" />
+												<img src={IconIt} alt="it-icon" class="it-icon" />
 												<div class="content__skills">
 													<div class="skills__it--select"><span id="it-name1-preview-id"></span><span id="it-level1-preview-id"></span>
 													</div>
@@ -484,7 +493,7 @@ class App extends Component {
 												</div>
 											</div>
 											<div class="preview__skills--bonus">
-												<img src="images/settings.png" alt="bonus-icon" class="bonus-icon" />
+												<img src={IconSkills} alt="bonus-icon" class="bonus-icon" />
 												<div class="content__skills">
 													<div class="skills__bonus--select"><span id="skill-element1-preview-id"></span>
 													</div>
@@ -494,13 +503,13 @@ class App extends Component {
 											</div>
 										</div>
 									</div>
-									//End of SKILLS
+
 								</div>
-								 //End of show-preview
+
 							</section>
-							 //End of section__preview
+
 						</section>
-						//End of block__cv
+
 					</main>
 					<footer class="section__footer">
 						<div class="container__footer">
@@ -510,7 +519,7 @@ class App extends Component {
 							<a href="index.html" class="footer__link"> <li class="footer__list--element">Generatrix &copy; 2017</li></a>
 						</ul>
 						<a href="index.html">
-						<img class="footer__logo" src="images/logocorto.png"  alt="logo-Generatrix" /></a>
+						<img class="footer__logo" src={LogoSmall} alt="logo-Generatrix" /></a>
 					</div>
 				</footer>
 			</div>
