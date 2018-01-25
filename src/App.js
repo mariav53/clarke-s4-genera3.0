@@ -107,7 +107,7 @@ class App extends Component {
 								</section>
 								<section class="creation__form" id="form">
 									<form class="form__container" action="index.html" method="post">
-										<!-- PERSONAL DATA -->
+					//					<!-- PERSONAL DATA -->
 										<fieldset class="form__personal-data">
 											<legend class="legend">Datos personales</legend>
 											<div class="form-section-header">
@@ -247,7 +247,7 @@ class App extends Component {
 											</div>
 					//						<!--oculto-->
 											<div id="container-inputs__skills">
-												<div class="skills"><!--OJO CON ESTE DIV-->
+												<div class="skills"> //<!--OJO CON ESTE DIV-->
 													<div class="languages">
 														<p class="skills-p">Idiomas</p>
 														<div class="language-element">
