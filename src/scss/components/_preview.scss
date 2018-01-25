@@ -1,0 +1,294 @@
+/*PREVIEW*/
+
+/*ELECCIÓN DE DISEÑO*/
+
+.preview__title, .creation__title, .label {
+	text-align: center;
+	color: $colorSea;
+	margin-top: 0;
+	padding-top: 1em;
+}
+.preview-title{
+	text-align: left;
+	margin: 10px 0;
+}
+.preview-theme {
+	position: relative;
+	font-size: 80%;
+	margin-bottom: 5%;
+}
+/*Cookie-font*/
+.cookie .preview-title{
+	font-family: 'Cookie';
+	font-size: 0.8em;
+	@media all and (min-width: 768px) {
+			font-size: 1em;
+		}
+	@media all and (min-width: 1024px) {
+			font-size: 1.1em;
+		}
+}
+.cookie .preview-text{
+	font-family: 'arial';
+	font-size: 0.8em;
+	@media all and (min-width: 768px) {
+		font-size: 1em;
+	}
+	@media all and (min-width: 1024px) {
+		font-size: 1em;
+	}
+}
+/*Annie-font*/
+.annie .preview-title{
+	font-family: 'Leckerli One';
+	font-size: 0.8em;
+	font-weight: 700;
+	@media all and (min-width: 768px) {
+		font-size:1em;
+		}
+	@media all and (min-width: 1024px) {
+		font-size: 1.1em;
+		}
+}
+.annie .preview-text{
+	font-family: 'Annie Use Your Telescope';
+	font-size: 0.8em;
+	@media all and (min-width: 768px) {
+		font-size: 1em;
+		}
+	@media all and (min-width: 1024px) {
+		font-size: 1em;
+		}
+}
+/*Philosopher-font*/
+.philosopher .preview-title{
+	font-family: 'Philosopher';
+	font-size: 0.8em;
+	font-weight: 700;
+	@media all and (min-width: 768px) {
+		font-size: 1em;
+		}
+	@media all and (min-width: 1024px) {
+		font-size: 1.1em;
+		}
+}
+.philosopher .preview-text{
+	font-family: 'Philosopher';
+	font-size: 0.8em;
+	@media all and (min-width: 768px) {
+		font-size:  1em;
+		}
+	@media all and (min-width: 1024px) {
+		font-size: 1em;
+		}
+}
+/*Colour $colorRed $colorDarkGreen $colorLime $colorDarkGrey $colorHeavenBlue $colorPink $colorGrey*/
+/*red-green-lime*/
+.red-green-lime .preview-title {
+	color: $colorRed;
+	border-bottom: 1px solid $colorLime;
+}
+.red-green-lime .preview-text {
+	color: $colorDarkGreen;
+}
+/*black-blue-lime*/
+.black-blue-lime .preview-title {
+	color: $colorHeavenBlue;
+	border-bottom: 1px solid $colorLime;
+}
+.black-blue-lime .preview-text {
+	color: $colorDarkGrey;
+}
+/*lack-pink-grey*/
+.black-pink-grey .preview-title {
+	color: $colorDarkGrey;
+	border-bottom: 1px solid $colorPink;
+}
+.black-pink-grey .preview-text {
+	color: $colorGrey;
+}
+
+/*Temas*/
+.showpreview.dots {
+	background-image: url($pathImages + 'themes/dots.png');
+	background-position: 0 0;
+	background-repeat: repeat-x;
+	height: auto;
+	padding: 120px 60px;
+}
+.showpreview.stripes {
+	background-image: url($pathImages + 'themes/stripes.png');
+	background-position: 0 0;
+	// background-size: 100%;
+	padding: 70px 60px 190px;
+	background-repeat: repeat-y;
+	height: auto;
+
+}
+.showpreview.zigZag {
+	background-image: url($pathImages + 'themes/zigZag.png');
+	// background-size: 100%;
+  padding: 100px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	height: auto;
+}
+/*MAQUETACIÓN PREVIEW*/
+
+.showpreview {
+	background-color: $colorWhite;
+	@include backgroundCenter();
+	background-size: cover;
+	@include flexColumn();
+	height: auto;
+}
+
+.container__preview--intro {
+	@include flexRow();
+	align-content: flex-start;
+	height: auto;
+}
+.thumb {
+	width: 100%;
+	width: 60px;
+	border-radius: 100px;
+	height: 60px;
+	@media all and (min-width: 768px) {
+		width: 70px;
+		height: 70px;
+	}
+}
+.container__preview--photo {
+	margin-right: 30px;
+	position: relative;
+}
+.container__photo {
+	width: 60px;
+	height: 60px;
+	background-color: $colorSea;
+	border-radius: 100px;
+	@media all and (min-width:768px) {
+		width: 70px;
+		height: 70px;
+	}
+}
+
+.container__preview--personal-data {
+	@include flexColumn();
+	justify-content: center;
+	@media all and (min-width: 768px) {
+		@include flexRow();
+	}
+}
+
+.container__personal-data {
+	@include flexColumn();
+	margin-right: 40px;
+	text-align: justify;
+}
+
+.container__direction {
+@include flexColumn();
+}
+
+.preview-data {
+	@include flexColumn();
+	width: 60%;
+}
+
+.container__preview--summary{
+	@include flexColumn();
+	width: 100%;
+}
+.container__summary {
+	margin-top: 5px;
+	@include flexColumn();
+	justify-content: center;
+	@media all and (min-width: 768px) {
+		@include flexRow();
+	}
+}
+.preview__summary {
+	@include flexColumn();
+	margin-right: 20px;
+	text-align: justify;
+}
+.container__preview--rrss {
+	@include flexColumn();
+}
+
+.preview__experience,
+.preview__formation {
+	margin-top: 5px;
+	@include flexColumn();
+}
+.preview__formation {
+	margin-bottom: 10px;
+}
+.formation__title, .summary__title, .experience__title {
+	margin: 0;
+}
+#titulo-preview-id1,
+#titulo-preview-id2,
+#job-preview-id-1,
+#job-preview-id-2 {
+	font-weight: bold;
+}
+
+.container__experience--main-data,
+.container__formation--main-data {
+	@include flexColumn();
+	width: 100%;
+}
+.jobAndDate {
+	@include flexRow();
+	justify-content: space-between;
+}
+.joinDate {
+	width: auto;
+	@include flexRow();
+	justify-content: space-between;
+}
+.container__experience--description,
+.container__formation--description {
+	width: 100%;
+	text-align: justify;
+}
+
+.preview__skills {
+	@include flexColumn();
+		@media all and (min-width:768px) {
+			@include flexRow();
+			justify-content: space-between;
+		}
+
+
+}
+.preview__skills--languages,
+.preview__skills--it,
+.preview__skills--bonus {
+	padding: 15px 0;
+	@include flexRowVerticalcenter();
+}
+
+.content__skills {
+	@include flexColumn();
+	}
+.talk-icon, .it-icon, .bonus-icon {
+	width: 30px;
+	height: 30px;
+}
+.skills__language--select, .skills__it--select, .skills__bonus--select {
+	width: 100%;
+	padding: 0 10px;
+
+}
+.section__preview {
+	@media all and (min-width:768px) {
+		margin-left: 2%;
+	}
+}
+
+.from-date-preview{
+	padding-right: 4px;
+}

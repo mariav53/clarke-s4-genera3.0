@@ -5,7 +5,7 @@ import './App.css';
 class App extends Component {
   render() {
     return (
-			<body>
+			<div>
 				<header>
 					<div class="container__header">
 						<div class="container__nav-button">
@@ -302,26 +302,26 @@ class App extends Component {
 									</form>
 								</section>	<!--Cierra creation__form-->
 							</div>	<!--Cierra container__creation-->
-						</section>	<!--Cierra section__creation-->
+					</section>	<!--Cierra section__creation-->
 
-						<section class="section__preview" id="preview">
-							<h2 class="preview__title"> Previsualización </h2>
-							<!-- DATOS PERSONALES + IMAGEN -->
-							<div class="showpreview dots philosopher black-pink-grey">
-								<div class="container__preview--intro preview-div">
-									<div class="container__preview--photo">
-										<div class="container__photo">
-										</div>
+					<section class="section__preview" id="preview">
+						<h2 class="preview__title"> Previsualización </h2>
+						<!-- DATOS PERSONALES + IMAGEN -->
+						<div class="showpreview dots philosopher black-pink-grey">
+							<div class="container__preview--intro preview-div">
+								<div class="container__preview--photo">
+									<div class="container__photo">
 									</div>
-									<div class="container__preview--personal-data">
-										<div class="container__personal-data">
-											<div class="preview-text">
-												<div class="preview__personal-data--name"><span id="personal-data--name"></span>
-												</div>
-												<div class="preview__personal-data--surname"><span id="personal-data--surname"></span>
-												</div>
-												<div class="preview__personal-data--job"><span id="personal-data--job"></span>
-												</div>
+								</div>
+								<div class="container__preview--personal-data">
+									<div class="container__personal-data">
+										<div class="preview-text">
+											<div class="preview__personal-data--name"><span id="personal-data--name"></span>
+											</div>
+										<div class="preview__personal-data--surname"><span id="personal-data--surname"></span>
+									</div>
+										<div class="preview__personal-data--job"><span id="personal-data--job"></span>
+											</div>
 											</div>
 										</div>
 										<div class="container__direction">
@@ -501,21 +501,18 @@ class App extends Component {
 							</section> <!--End of section__preview-->
 						</section> <!--End of block__cv-->
 					</main>
-
 					<footer class="section__footer">
 						<div class="container__footer">
 							<ul class="footer__list">
-								<a href="avisolegal.html" class="footer__link"><li class="footer__list--element">Aviso legal</li></a>
-								<a href="" class="footer__link"><li class="footer__list--element">Contacto</li></a>
-								<a href="index.html" class="footer__link"> <li class="footer__list--element">Generatrix &copy; 2017</li></a>
-							</ul>
-							<a href="index.html">
-								<img class="footer__logo" src="images/logocorto.png"  alt="logo-Generatrix"></a>
-							</div>
-						</footer>
-						<script src="js/main.min.js"></script>
-
-					</body>
+							<a href="avisolegal.html" class="footer__link"><li class="footer__list--element">Aviso legal</li></a>
+							<a href="" class="footer__link"><li class="footer__list--element">Contacto</li></a>
+							<a href="index.html" class="footer__link"> <li class="footer__list--element">Generatrix &copy; 2017</li></a>
+						</ul>
+						<a href="index.html">
+						<img class="footer__logo" src="images/logocorto.png"  alt="logo-Generatrix"></a>
+					</div>
+				</footer>
+			</div>
     );
   }
 }

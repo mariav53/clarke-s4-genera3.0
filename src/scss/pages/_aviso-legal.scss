@@ -1,0 +1,16 @@
+
+.section__legal-warning{
+	width: 100vw;
+	@include flexCenterCenter;
+	flex-direction: column;
+}
+.container__legal-warning{
+	width: 90%;
+	@include flexColumn;
+	justify-content: space-around;
+}
+.paragraf__legal-warning{
+	margin: 0;
+	margin-bottom: 5px;
+
+}

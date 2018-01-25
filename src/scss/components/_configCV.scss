@@ -1,0 +1,146 @@
+.block__cv {
+	@include flexColumn();
+	justify-content: space-around;
+	width: 100%;
+	padding: 0;
+	background-color: $colorLightBlue;
+  @media all and (min-width: 1024px) {
+    @include flexRow;
+    padding: 0 2%;
+    background-color: $colorLightBlue;
+  }
+}
+
+// DESIGN SECTION
+
+.creation__design {
+	background-color: $colorSea;
+	height: 126px;
+	width: 100%;
+	@include flexCenterCenter();
+  .creation__design__options {
+  	position: relative;
+  	list-style: none;
+  	display: flex;
+  	justify-content: space-between;
+  	margin: 0;
+  	padding: 0;
+  	height: 106px;
+  }
+}
+
+.creation__design__options-font, .creation__design__options-colour, .creation__design__options-theme {
+  border: 3px solid $colorDarkBlue;
+	padding: 0;
+	height: 106px;
+	background-color: $colorWhite;
+	z-index: 2;
+  .img-design {
+		cursor:pointer;
+  	width: 100px;
+  	height: 100px;
+  }
+  // &:hover .design-fonts,
+  // &:hover .design-colours,
+  // &:hover .design-themes {
+  //   display: block;
+  // }
+}
+
+.design-fonts,
+.design-colours,
+.design-themes {
+	position: absolute;
+	top: 100%;
+	padding: 0;
+	.hidden {
+		display: none;
+	}
+}
+
+.font,
+.colour,
+.theme {
+	@include flexCenterCenter();
+	width: 100px;
+	height: 40px;
+	background-color: $colorDarkBlue;
+	color: $colorLightBlue;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	border-radius: 7px;
+}
+
+.font:hover,
+.colour:hover,
+.theme:hover {
+	background-color: $colorMediumBlue;
+}
+
+
+.font+.font,
+.colour+.colour,
+.theme+.theme {
+	border-top: 1px solid $colorYellow;
+}
+
+.red,
+.green,
+.lime,
+.black,
+.blue,
+.pink,
+.grey {
+	border-radius: 30px;
+	width: 20px;
+	height: 20px;
+	border: 2px solid $colorBlack; // variable
+}
+.red{
+	background-color: $colorRed;
+}
+.green{
+	background-color: $colorDarkGreen;
+}
+.lime{
+	background-color: $colorLime;
+}
+.black{
+	background-color: $colorDarkGrey;
+}
+.blue{
+	background-color: $colorHeavenBlue;
+}
+.pink{
+	background-color: $colorPink;
+}
+.grey{
+	background-color: $colorGrey;
+}
+
+
+// SECTION IMAGE
+
+.creation__photo {
+	padding: 3%;
+	background-color: $colorLightBlue;
+	@include flexRow();
+	@include aroundCenter();
+  .selection-image {
+  	display: none;
+  }
+  .trigger {
+  	display: inline-block;
+  	width: 100px;
+  	height: 100px;
+  	background-color: $colorDarkBlue;
+  	@include backgroundCenter();
+		background-size: cover;
+  	border-radius: 100px;
+  	border-color: $colorDarkBlue;
+		&:hover{
+			cursor: pointer;
+		}
+  }
+}
