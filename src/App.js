@@ -51,7 +51,7 @@ class App extends Component {
 						</div>
 					</section>
 
-					<!-- DESIGN SECTION -->
+				//	<!-- DESIGN SECTION -->
 					<section class="block__cv" id="design">
 						<section class="section__creation">
 							<h2 class="creation__title">Configura tu currículum</h2>
@@ -60,7 +60,7 @@ class App extends Component {
 									<ul class="creation__design__options">
 										<li class="creation__design__options-font">
 											<img class="img-design" src="images/text.svg" title="fuente" alt="fuentes">
-											<!-- hidden -->
+								//			<!-- hidden -->
 											<ul class="design-fonts hidden">
 												<li class="font" data-font-class="cookie"><h3>Cookie</h3></li>
 												<li class="font" data-font-class="annie"><h3>Annie</h3></li>
@@ -69,7 +69,7 @@ class App extends Component {
 										</li>
 										<li class="creation__design__options-colour">
 											<img class="img-design" src="images/paint-palette.svg" title="color" alt="color">
-											<!-- hidden -->
+								//			<!-- hidden -->
 											<ul class="design-colours hidden">
 												<li class="colour" data-colour-class="red-green-lime">
 													<div class="red"></div>
@@ -90,7 +90,7 @@ class App extends Component {
 										</li>
 										<li class="creation__design__options-theme">
 											<img class="img-design" src="images/menu.svg" title="estilo" alt="estilo">
-											<!-- hidden -->
+								//			<!-- hidden -->
 											<ul class="design-themes hidden">
 												<li class="theme" data-theme-class="dots"><h3>Dots</h3></li>
 												<li class="theme" data-theme-class="stripes"><h3>Stripes</h3></li>
@@ -99,7 +99,7 @@ class App extends Component {
 										</li>
 									</ul>
 								</section>
-								<!-- ADD FILES -->
+						//		<!-- ADD FILES -->
 								<section class="creation__photo">
 									<h3 class="label" for="files">Sube tu foto</h3>
 									<input class="selection-image" type="file" id="files" name="files[]"/>
@@ -117,7 +117,7 @@ class App extends Component {
 													<img src="images/arrow.png" id='button--open' class="button--open" alt="abrir" data-idDesplegar="container-inputs__personal-data">
 												</div>
 											</div>
-											<!--oculto-->
+						//					<!--oculto-->
 											<div id="container-inputs__personal-data">
 												<input class="class-input" id="input-name" type="text" name="name" placeholder="Nombre*" required>
 												<input class="class-input" id="input-surname" type="text" name="surname" placeholder="Apellidos*" required>
@@ -142,7 +142,7 @@ class App extends Component {
 											<hr class="line">
 										</fieldset>
 
-										<!-- EXPERIENCE -->
+						//				<!-- EXPERIENCE -->
 										<fieldset class="form__experience">
 											<legend class="legend">Experiencia</legend>
 											<div class="form-section-header">
@@ -152,7 +152,7 @@ class App extends Component {
 													<img src="images/arrow.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__experience" alt="abrir">
 												</div>
 											</div>
-											<!--oculto-->
+					//						<!--oculto-->
 											<div id="container-inputs__experience">
 												<div class="experience-element" id="experience-element">
 
@@ -187,7 +187,7 @@ class App extends Component {
 											<hr class="line">
 										</fieldset>
 
-										<!-- EDUCATION -->
+				//						<!-- EDUCATION -->
 										<fieldset class="form__education">
 											<legend class="legend">Formación</legend>
 											<div class="form-section-header">
@@ -197,7 +197,7 @@ class App extends Component {
 													<img src="images/arrow.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__education" alt="abrir">
 												</div>
 											</div>
-											<!--oculto-->
+					//						<!--oculto-->
 											<div id="container-inputs__education">
 												<div class="education-element" id="education-element">
 													<label class="label" for="titulo"></label>
@@ -235,7 +235,7 @@ class App extends Component {
 										</fieldset>
 
 
-										<!-- SKILLS -->
+					//					<!-- SKILLS -->
 										<fieldset class="form__skills">
 											<legend class="legend">Habilidades</legend>
 											<div class="form-section-header">
@@ -245,7 +245,7 @@ class App extends Component {
 													<img src="images/arrow.png" id='button--open' class="button--open" data-idDesplegar="container-inputs__skills" alt="abrir">
 												</div>
 											</div>
-											<!--oculto-->
+					//						<!--oculto-->
 											<div id="container-inputs__skills">
 												<div class="skills"><!--OJO CON ESTE DIV-->
 													<div class="languages">
@@ -265,7 +265,7 @@ class App extends Component {
 														</div>
 														<button type="button" name="button" class="button--new new-language-button">Añadir idioma</button>
 													</div>
-												</div><!--OJO CON ESTE DIV-->
+												</div> //<!--OJO CON ESTE DIV-->
 												<div class="it">
 													<p class="skills-p">Programas informáticos</p>
 													<div class="it-element">
@@ -292,21 +292,16 @@ class App extends Component {
 												</div>
 												<button type="button" name="button" class="button--new new-skills-button">Añadir habilidad</button>
 											</div>
-											<!-- <div class="various-skills">
-											<p>Destrezas</p>
-											<label class="label" for="skill-element1"></label>
-											<input class="skill-element class-input" id="skill-element1" type="text" name="skill-element" placeholder="Destreza 1">
-											<! <button type="button" name="button" class="new-skill-button">Nueva destreza</button> -->
 											<hr class="line">
 										</fieldset>
 									</form>
-								</section>	<!--Cierra creation__form-->
-							</div>	<!--Cierra container__creation-->
-					</section>	<!--Cierra section__creation-->
+								</section>	//<!--Cierra creation__form-->
+							</div>	//<!--Cierra container__creation-->
+					</section>	//<!--Cierra section__creation-->
 
 					<section class="section__preview" id="preview">
 						<h2 class="preview__title"> Previsualización </h2>
-						<!-- DATOS PERSONALES + IMAGEN -->
+				//		<!-- DATOS PERSONALES + IMAGEN -->
 						<div class="showpreview dots philosopher black-pink-grey">
 							<div class="container__preview--intro preview-div">
 								<div class="container__preview--photo">
@@ -337,7 +332,7 @@ class App extends Component {
 									</div>
 								</div>
 
-								<!-- EXTRACTO + RRSS -->
+				//				<!-- EXTRACTO + RRSS -->
 								<div class="container__preview--summary">
 									<div class="preview-title">
 										<h3 class="summary__title">Extracto</h3>
@@ -356,7 +351,7 @@ class App extends Component {
 									</div>
 								</div>
 
-								<!-- EXPERIENCIA -->
+							//	<!-- EXPERIENCIA -->
 								<div class="container__preview--experience preview-div">
 									<div class="preview-title">
 										<h3 class="experience__title">Experiencia profesional</h3>
@@ -412,7 +407,7 @@ class App extends Component {
 										</div>
 									</div>
 								</div>
-								<!-- FORMACIÓN -->
+				//				<!-- FORMACIÓN -->
 								<div class="container__preview--formation preview-div">
 									<div class="preview-title">
 										<h3 class="formation__title">Formación</h3>
@@ -465,7 +460,7 @@ class App extends Component {
 											</div>
 										</div>
 									</div>
-									<!-- HABILIDADES -->
+					//				<!-- HABILIDADES -->
 									<div class="container__preview--skills">
 										<div class="preview__skills preview-text">
 											<div class="preview__skills--languages">
@@ -496,10 +491,10 @@ class App extends Component {
 												</div>
 											</div>
 										</div>
-									</div> <!--End of SKILLS-->
-								</div> <!--End of show-preview-->
-							</section> <!--End of section__preview-->
-						</section> <!--End of block__cv-->
+									</div> //<!--End of SKILLS-->
+								</div> //<!--End of show-preview-->
+							</section> //<!--End of section__preview-->
+						</section> //<!--End of block__cv-->
 					</main>
 					<footer class="section__footer">
 						<div class="container__footer">
