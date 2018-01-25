@@ -56,7 +56,7 @@ const years = 2018;
 let selectYear = '';
 
 for (let i = 1950; i<years; i++) {
-selectYear = selectYear + '<option>' + (i)+ '</option>';
+selectYear = `${selectYear} <option> ${(i)} </option>`;
 }
 
 const yearsAll = document.querySelectorAll('.year');
