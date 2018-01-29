@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import CoverMobile from './images/cover_mobile2.png';
-import CoverDesktop from './images/desktop.png';
-import IconDesign from './images/designer.svg';
-import IconWrite from './images/writing.svg';
-import IconDownload from './images/download.svg';
-import ButtonFont from './images/text.svg';
-import ButtonPalette from './images/paint-palette.svg';
-import ButtonTheme from './images/menu.svg';
-import ButtonArrow from './images/arrow.png';
-import IconLanguage from './images/speak.png'
-import IconIt from './images/computer-monitor-and-mouse.png';
-import IconSkills from './images/settings.png';
-import LogoSmall from './images/logocorto.png'
+import CoverMobile from './../images/cover_mobile2.png';
+import CoverDesktop from './../images/desktop.png';
+import IconDesign from './../images/designer.svg';
+import IconWrite from './../images/writing.svg';
+import IconDownload from './../images/download.svg';
+import ButtonFont from './../images/text.svg';
+import ButtonPalette from './../images/paint-palette.svg';
+import ButtonTheme from './../images/menu.svg';
+import ButtonArrow from './../images/arrow.png';
+import IconLanguage from './../images/speak.png'
+import IconIt from './../images/computer-monitor-and-mouse.png';
+import IconSkills from './../images/settings.png';
+import LogoSmall from './../images/logocorto.png'
 
-import './scss/main.css';
+import './../scss/main.css';
 
 class App extends Component {
   render() {
