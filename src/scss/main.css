@@ -398,9 +398,6 @@ fieldset {
   background-color: #55607F;
   padding: 0 35px; }
 
-#container-inputs__personal-data, #container-inputs__experience, #container-inputs__education, #container-inputs__skills {
-  display: none; }
-
 .container-birthdate {
   display: flex;
   flex-direction: row;
@@ -443,7 +440,8 @@ fieldset {
 select {
   border: none;
   padding: 3px;
-  width: 50px; }
+  width: 50px;
+  border-radius: 5px; }
 
 .level {
   display: flex;
