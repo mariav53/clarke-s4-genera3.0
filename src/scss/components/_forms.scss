@@ -30,9 +30,9 @@ fieldset {
 	background-color: $colorMediumBlue;
 	padding: 0 35px;
 }
-#container-inputs__personal-data, #container-inputs__experience, #container-inputs__education, #container-inputs__skills {
-	display: none;
-}
+// #container-inputs__personal-data, #container-inputs__experience, #container-inputs__education, #container-inputs__skills {
+// 	display: none;
+// }
 .container-birthdate {
 	@include flexRowBetween();
 	& .label-birthdate {
