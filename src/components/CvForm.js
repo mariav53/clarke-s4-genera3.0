@@ -1,5 +1,7 @@
 import React from 'react';
 import ButtonArrow from './../images/arrow.png';
+import CvSection from './CvSection';
+import PersonalData from './PersonalData';
 
 class CvForm extends React.Component {
 	render() {
@@ -9,35 +11,10 @@ class CvForm extends React.Component {
 
 					<fieldset className="form__personal-data">
 						<legend className="legend">Datos personales</legend>
-						<div className="form-section-header">
-							<h3 className="h3-form">Datos personales</h3>
 
-							<div className="form-section-button">
-								<img src={ButtonArrow} id='button--open' className="button--open" alt="abrir" data-idDesplegar="container-inputs__personal-data" />
-							</div>
-						</div>
+						<CvSection label="Datos personales"/>
+						<PersonalData />
 
-						<div id="container-inputs__personal-data">
-							<input className="class-input" id="input-name" type="text" name="name" placeholder="Nombre*" required />
-							<input className="class-input" id="input-surname" type="text" name="surname" placeholder="Apellidos*" required />
-							<input className="class-input" id="input-profession" type="text" name="profession" placeholder="Profesión*" required />
-							<input className="class-input" id="input-phone" type="tel" name="telephone" placeholder="Teléfono*" required />
-							<div className="container-birthdate">
-								<label className="label label-birthdate" for="input-birthdate">Fecha de Nacimiento</label>
-								<input className="class-input input-birthdate" id="input-birthdate" type="date" name="date" placeholder="Fecha de nacimiento" />
-							</div>
-							<input className="class-input" id="input-email" type="email" name="email" placeholder="Email*" required />
-							<label className="label" for="input-address"></label>
-							<input className="class-input" id="input-address" type="text" name="address" placeholder="Dirección" />
-							<div className="inputs-container-rrss">
-								<textarea className="textarea-aboutme" maxlength="650px" name="extracto" id="text-aboutme" rows="5" cols="50" placeholder="Extracto"></textarea>
-								<p>RRSS</p>
-								<input className="class-input" id="input-twitter" type="text" name="Twitter" placeholder="@Twitter" />
-								<input className="class-input" id="input-linkedin" type="text" name="Linkedin" placeholder="linkedin.com/xxxxx" />
-								<input className="class-input" id="input-facebook" type="text" name="Facebook" placeholder="facebook.com/xxxxx" />
-							</div>
-							<button type="button" name="button" className="button--save save-data-button">Guardar</button>
-						</div>
 						<hr className="line" />
 					</fieldset>
 
