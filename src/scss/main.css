@@ -397,10 +397,16 @@ fieldset {
   border: none;
   margin: 0; }
 
+.section__content--visible {
+  display: block; }
+
+.section__content--invisible {
+  display: none; }
+
 .form__personal-data {
   margin-top: 1.2em; }
 
-.form__personal-data, .form__education, .form__experience, .form__skills {
+.form__section {
   background-color: #55607F;
   padding: 0 35px; }
 

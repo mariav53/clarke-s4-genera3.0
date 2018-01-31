@@ -23,16 +23,20 @@ fieldset {
 	border: none;
 	margin: 0;
 }
+.section__content--visible{
+	display: block;
+}
+.section__content--invisible{
+	display: none;
+}
 .form__personal-data {
 	margin-top: 1.2em;
 }
-.form__personal-data, .form__education, .form__experience,.form__skills {
+.form__section {
 	background-color: $colorMediumBlue;
 	padding: 0 35px;
 }
-// #container-inputs__personal-data, #container-inputs__experience, #container-inputs__education, #container-inputs__skills {
-// 	display: none;
-// }
+
 .container-birthdate {
 	@include flexRowBetween();
 	& .label-birthdate {
@@ -102,7 +106,7 @@ select{
 }
 .date-container-until{
 	display: flex;
-	margin: 4px 0;	
+	margin: 4px 0;
 
 	label{
 		padding:0;
