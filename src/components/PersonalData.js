@@ -28,4 +28,4 @@ class PersonalData extends React.Component {
 	}
 }
 
-export default PersonalData
+export default PersonalData;

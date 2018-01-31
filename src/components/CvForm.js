@@ -8,15 +8,9 @@ class CvForm extends React.Component {
 		return (
 			<section className="creation__form" id="form">
 				<form className="form__container" action="index.html" method="post">
-
-					<fieldset className="form__personal-data">
-						<legend className="legend">Datos personales</legend>
-
-						<CvSection label="Datos personales"/>
+					<CvSection label="Datos personales">
 						<PersonalData />
-
-						<hr className="line" />
-					</fieldset>
+					</CvSection>
 
 
 					<fieldset className="form__experience">
