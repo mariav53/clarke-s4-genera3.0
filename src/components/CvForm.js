@@ -2,6 +2,7 @@ import React from 'react';
 import ButtonArrow from './../images/arrow.png';
 import CvSection from './CvSection';
 import PersonalData from './PersonalData';
+import Experience from './Experience';
 
 class CvForm extends React.Component {
 	render() {
@@ -11,53 +12,12 @@ class CvForm extends React.Component {
 					<CvSection label="Datos personales">
 						<PersonalData />
 					</CvSection>
+					<CvSection label="Experiencia Profesional">
+						<Experience  />
+					</CvSection>
 
 
-					<fieldset className="form__experience">
-						<legend className="legend">Experiencia</legend>
-						<div className="form-section-header">
-							<h3 className="h3-form">Experiencia Profesional</h3>
-
-							<div className="form-section-buttons">
-								<img src={ButtonArrow} id='button--open' className="button--open" data-idDesplegar="container-inputs__experience" alt="abrir" />
-							</div>
-						</div>
-
-						<div id="container-inputs__experience">
-							<div className="experience-element" id="experience-element">
-
-								<input className="class-input" id="job1" type="text" name="puesto" placeholder="Puesto" />
-								<div className="experience-dates">
-									<div className="date-container-from">
-										<label className="label from">Desde</label>
-										<select id="start_month-job1" name="start_month" className="month">
-										</select>
-										<select id="start_year-job1" name="start_year" className="year">
-										</select>
-									</div>
-									<div className="date-container-until">
-										<label className="label until">Hasta</label>
-										<select id="end_month-job1" name="end_month" className="month">
-										</select>
-										<select id="end_year-job1" name="end_year" className="year">
-										</select>
-										<div className="actualidad">
-											<label for="actualidad" className="present-button-p">Actual</label>
-											<input className="present-button" id="actualidad-job1" type="checkbox" name="actualidad" />
-										</div>
-									</div>
-								</div>
-								<input className="class-input" id="company1" type="text" name="lugar" placeholder="Lugar" />
-								<textarea className="experience-text" id="description-job1" name="description" rows="8" cols="80" placeholder="Despripción del puesto"></textarea>
-								<button type="button" name="button" className="button--save save-experience-button" data-id="1">Guardar</button>
-
-							</div>
-							<button type="button" name="button" className="button--new new-experience-button">Añadir experiencia</button>
-						</div>
-						<hr className="line" />
-					</fieldset>
-
-					<fieldset className="form__education">
+				<fieldset className="form__education">
 						<legend className="legend">Formación</legend>
 						<div className="form-section-header">
 							<h3 className="h3-form">Formación</h3>
