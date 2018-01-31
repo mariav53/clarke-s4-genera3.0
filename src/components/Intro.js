@@ -1,19 +1,12 @@
 import React from 'react';
-import CoverMobile from './../images/cover_mobile2.png';
-import CoverDesktop from './../images/desktop.png';
 import IconDesign from './../images/designer.svg';
 import IconWrite from './../images/writing.svg';
 import IconDownload from './../images/download.svg';
 
+
 class Intro extends React.Component {
 	render() {
 		return (
-			<div>
-				<div className="hero">
-					<img className="hero__img-mobile" src={CoverMobile} alt="Imagen de portada movil" />
-					<img className="hero__img-desktop" src={CoverDesktop} alt="Imagen de portada escritorio" />
-				</div>
-				<h1 className="title-hero">Diseña tu CV sin perder tiempo</h1>
 				<section className="block__info">
 					<div className="block__info-steps">
 						<div className="step">
@@ -35,7 +28,7 @@ class Intro extends React.Component {
 						</div>
 					</div>
 				</section>
-			</div>
+			// </div>
 		);
 	}
 }

@@ -4,7 +4,7 @@ import Intro from './Intro';
 import CvForm from './CvForm';
 import CvPreview from './CvPreview';
 import Footer from './Footer';
-
+import Hero from './Hero';
 import ButtonFont from './../images/text.svg';
 import ButtonPalette from './../images/paint-palette.svg';
 import ButtonTheme from './../images/menu.svg';
@@ -18,6 +18,7 @@ class App extends Component {
 			<div>
 				<Header />
 				<main>
+				<Hero />
 					<Intro />
 					<section className="block__cv" id="design">
 						<section className="section__creation">
