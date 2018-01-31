@@ -1,5 +1,14 @@
 // menu
 
+.visible{
+	display: block;
+}
+
+.no-visible{
+	display: none;
+}
+
+
 .container__nav-button {
     width: 20%;
     padding-top: 5px;
