@@ -14,6 +14,7 @@ class CvForm extends React.Component {
 	}
 	handleChange(e) {
 		this.props.updatePreview(e.target.name, e.target.value);
+
 	}
 
 	render() {
@@ -21,7 +22,7 @@ class CvForm extends React.Component {
 			<section className="creation__form" id="form">
 				<form className="form__container" action="index.html" method="post">
 					<CvSection label="Datos personales">
-						<PersonalData />
+						<PersonalData updatePreview={this.props.updatePreview} onChangeFunction={this.handleChange}/>
 					</CvSection>
 					<CvSection label="Experiencia Profesional">
 						<Experience updatePreview ={this.props.updatePreview} onChangeFunction={this.handleChange} />
