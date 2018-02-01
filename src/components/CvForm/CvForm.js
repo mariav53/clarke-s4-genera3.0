@@ -30,7 +30,7 @@ class CvForm extends React.Component {
 						<Education updatePreview ={this.props.updatePreview} onChangeFunction={this.handleChange} />
 					</CvSection>
 					<CvSection label="Habilidades">
-						<Skills  />
+						<Skills updatePreview ={this.props.updatePreview} onChangeFunction={this.handleChange} />
 					</CvSection>
 				</form>
 			</section>

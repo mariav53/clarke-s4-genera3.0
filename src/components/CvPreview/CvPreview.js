@@ -170,7 +170,7 @@ class CvPreview extends React.Component {
 							<div className="preview__skills--languages">
 								<img src={IconLanguage} alt="talk-icon" className="talk-icon" />
 								<div className="content__skills">
-									<div className="skills__language--select"><span id="language-name1-preview-id"> </span><span id="language-level1-preview-id"></span>
+									<div className="skills__language--select"><span id="language-name1-preview-id">{this.props.lang1}</span><span id="language-level1-preview-id"></span>
 									</div>
 									<div className="skills__language--select"><span id="language-name2-preview-id"></span><span id="language-level2-preview-id"></span>
 									</div>
@@ -179,7 +179,7 @@ class CvPreview extends React.Component {
 							<div className="preview__skills--it">
 								<img src={IconIt} alt="it-icon" className="it-icon" />
 								<div className="content__skills">
-									<div className="skills__it--select"><span id="it-name1-preview-id"></span><span id="it-level1-preview-id"></span>
+									<div className="skills__it--select"><span id="it-name1-preview-id">{this.props.tech1}</span><span id="it-level1-preview-id"></span>
 									</div>
 									<div className="skills__it--select"><span id="it-name2-preview-id"></span><span id="it-level2-preview-id"></span>
 									</div>
@@ -188,7 +188,7 @@ class CvPreview extends React.Component {
 							<div className="preview__skills--bonus">
 								<img src={IconSkills} alt="bonus-icon" className="bonus-icon" />
 								<div className="content__skills">
-									<div className="skills__bonus--select"><span id="skill-element1-preview-id"></span>
+									<div className="skills__bonus--select"><span id="skill-element1-preview-id">{this.props.skill1}</span>
 									</div>
 									<div className="skills__bonus--select"><span id="skill-element2-preview-id"></span>
 									</div>
@@ -208,7 +208,8 @@ CvPreview.defaultProps = {
 	descriptionJob: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.",
 	titulation: "Programadora Front-end",
 	center: "Adalab",
-	descriptionEduc: "Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript."
+	descriptionEduc: "Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.",
+
 }
 
 export default CvPreview;
