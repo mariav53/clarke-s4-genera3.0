@@ -13,12 +13,26 @@ import Hero from './Intro/Hero';
 import './../scss/main.css';
 
 class App extends Component {
+	constructor(props){
+		super(props);
+
+		this.updateState = this.updateState.bind(this);
+
+		this.state = {}
+	}
+
+	updateState(prop, value) {
+		const newState = {};
+		newState[prop] = value;
+		this.setState(newState);
+	}
+
   render() {
     return (
 			<div>
 				<Header />
 				<main>
-				<Hero />
+					<Hero />
 					<Intro />
 					<section className="block__cv" id="design">
 						<section className="section__creation">
@@ -26,10 +40,13 @@ class App extends Component {
 							<div className="container__creation">
 								<CreationDesign />
                 <ChooseImage />
-								<CvForm />
+								<CvForm updatePreview={this.updateState}/>
 							</div>
 						</section>
-						<CvPreview />
+						<CvPreview
+							job = {this.state.job}
+
+						/>
 					</section>
 				</main>
 				<Footer />

@@ -64,7 +64,7 @@ class CvPreview extends React.Component {
 							<div className="container__experience--main-data">
 								<div className="jobAndDate">
 									<div>
-										<span id="job-preview-id-1">Social Media</span>
+										<span id="job-preview-id-1">{this.props.job}</span>
 									</div>
 									<div className="joinDate">
 										<div>
@@ -201,5 +201,9 @@ class CvPreview extends React.Component {
 		);
 	}
 }
+
+// CvPreview.defaultProps = {
+// 	job: "Social Media"
+// }
 
 export default CvPreview;

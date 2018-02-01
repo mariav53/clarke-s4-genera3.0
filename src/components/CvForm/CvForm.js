@@ -7,6 +7,7 @@ import Education from './Education';
 import Skills from './Skills';
 
 class CvForm extends React.Component {
+
 	render() {
 		return (
 			<section className="creation__form" id="form">
@@ -15,7 +16,7 @@ class CvForm extends React.Component {
 						<PersonalData />
 					</CvSection>
 					<CvSection label="Experiencia Profesional">
-						<Experience  />
+						<Experience updatePreview ={this.props.updatePreview} />
 					</CvSection>
 					<CvSection label="Formación">
 						<Education  />

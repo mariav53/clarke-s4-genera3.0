@@ -1,11 +1,19 @@
 import React from 'react';
 
 class Experience extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.handleChange = this.handleChange.bind(this);
+	}
+	handleChange(e) {
+		this.props.updatePreview(e.target.name, e.target.value);
+	}
 	render() {
 		return (
 			<div id="container-inputs__experience">
 				<div className="experience-element" id="experience-element">
-					<input className="class-input" id="job1" type="text" name="puesto" placeholder="Puesto" />
+					<input className="class-input" id="job1" type="text" name="job" placeholder="Puesto" onChange ={this.handleChange} />
 					<div className="experience-dates">
 						<div className="date-container-from">
 							<label className="label from">Desde</label>
