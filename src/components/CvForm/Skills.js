@@ -10,7 +10,7 @@ class Skills extends React.Component {
 						<div className="language-element">
 							<label className="label" for="language-name1"></label>
 							<input className="language-name class-input" id="language-name1" type="text" name="lang1" placeholder="Idioma 1" onChange ={this.props.onChangeFunction}/>
-							<select id="language-level1" name="level" className="level">
+							<select id="language-level1" name="levelLanguage1" className="level" onChange ={this.props.onChangeFunction}>
 								<option value="nivel">Nivel</option>
 								<option >--</option>
 								<option>Básico</option>
@@ -28,7 +28,7 @@ class Skills extends React.Component {
 					<div className="it-element">
 						<label className="label" for="it-name1"></label>
 						<input className="it-name class-input" id="it-name1" type="text" name="tech1" placeholder="Tecnología 1" onChange ={this.props.onChangeFunction}/>
-						<select id="it-level1" name="level" className="level">
+						<select id="it-level1" name="levelTech1" className="level" onChange ={this.props.onChangeFunction}>
 							<option value="nivel">Nivel</option>
 							<option >--</option>
 							<option>Básico</option>

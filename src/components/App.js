@@ -51,8 +51,12 @@ class App extends Component {
 							center = {this.state.center}
 							descriptionEduc = {this.state.descriptionEduc}
 							lang1 = {this.state.lang1}
+							levelLanguage1 = {this.state.levelLanguage1}
 							tech1 = {this.state.tech1}
+							levelTech1 = {this.state.levelTech1}
 							skill1 = {this.state.skill1}
+
+
 
 						/>
 					</section>
