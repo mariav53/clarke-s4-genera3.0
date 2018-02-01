@@ -80,7 +80,7 @@ class CvPreview extends React.Component {
 								</div>
 							</div>
 							<div className="container__experience--description">
-								<div><span id="description-job-preview-id1">{this.props.description}</span>
+								<div><span id="description-job-preview-id1">{this.props.descriptionJob}</span>
 								</div>
 							</div>
 						</div>
@@ -119,7 +119,7 @@ class CvPreview extends React.Component {
 							<div className="container__formation--main-data">
 								<div className="jobAndDate">
 									<div>
-										<span id="titulo-preview-id1">Front-end</span>
+										<span id="titulo-preview-id1">{this.props.titulation}</span>
 									</div>
 									<div className="joinDate">
 										<div>
@@ -131,11 +131,11 @@ class CvPreview extends React.Component {
 									</div>
 								</div>
 								<div>
-									<span id="centro-id1">Adalab</span>
+									<span id="centro-id1">{this.props.center}</span>
 								</div>
 							</div>
 							<div className="container__formation--description">
-								<div><span id="description-education-preview-id1">Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.</span></div>
+								<div><span id="description-education-preview-id1">{this.props.descriptionEduc}</span></div>
 							</div>
 						</div>
 						<div className="preview__formation preview-text">
@@ -205,7 +205,10 @@ class CvPreview extends React.Component {
 CvPreview.defaultProps = {
 	job: "Social Media",
 	company: "Swing Swing",
-	description: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial."
+	descriptionJob: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.",
+	titulation: "Programadora Front-end",
+	center: "Adalab",
+	descriptionEduc: "Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript."
 }
 
 export default CvPreview;

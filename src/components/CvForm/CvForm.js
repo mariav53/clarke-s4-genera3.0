@@ -7,6 +7,14 @@ import Education from './Education';
 import Skills from './Skills';
 
 class CvForm extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.handleChange = this.handleChange.bind(this);
+	}
+	handleChange(e) {
+		this.props.updatePreview(e.target.name, e.target.value);
+	}
 
 	render() {
 		return (
@@ -16,10 +24,10 @@ class CvForm extends React.Component {
 						<PersonalData />
 					</CvSection>
 					<CvSection label="Experiencia Profesional">
-						<Experience updatePreview ={this.props.updatePreview} />
+						<Experience updatePreview ={this.props.updatePreview} onChangeFunction={this.handleChange} />
 					</CvSection>
 					<CvSection label="Formación">
-						<Education  />
+						<Education updatePreview ={this.props.updatePreview} onChangeFunction={this.handleChange} />
 					</CvSection>
 					<CvSection label="Habilidades">
 						<Skills  />

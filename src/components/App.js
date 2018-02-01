@@ -46,7 +46,10 @@ class App extends Component {
 						<CvPreview
 							job = {this.state.job}
 							company = {this.state.company}
-							description = {this.state.description}
+							descriptionJob = {this.state.descriptionJob}
+							titulation = {this.state.titulation}
+							center = {this.state.center}
+							descriptionEduc = {this.state.descriptionEduc}
 
 						/>
 					</section>

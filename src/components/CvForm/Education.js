@@ -5,8 +5,7 @@ class Education extends React.Component {
 		return (
       <div id="container-inputs__education">
         <div className="education-element" id="education-element">
-          <label className="label" for="titulo"></label>
-          <input className="class-input" id="titulo1" type="text" name="titulation" placeholder="Título*" required />
+          <input className="class-input" id="titulo1" type="text" name="titulation" placeholder="Título*" required onChange ={this.props.onChangeFunction} />
           <div className="education-dates">
             <div className="date-container-from">
               <label className="label from">Desde</label>
@@ -28,9 +27,9 @@ class Education extends React.Component {
             </div>
           </div>
           <label className="label" for="centro"></label>
-          <input className="class-input" id="centro1" type="text" name="place" placeholder="Centro de estudios*" required />
+          <input className="class-input" id="centro1" type="text" name="center" placeholder="Centro de estudios*" required onChange ={this.props.onChangeFunction} />
           <label className="label" for="description-education1"></label>
-          <textarea className="description" id="description-education1" cols="30" rows="10" name="description" placeholder="Descripción"></textarea>
+          <textarea className="description" id="description-education1" cols="30" rows="10" name="descriptionEduc" placeholder="Descripción" onChange ={this.props.onChangeFunction}></textarea>
           <button type="button" name="button" className="button--save save-education-button" id="save-education-button1" data-id="1">Guardar</button>
         </div>
         <button type="button" name="button" className="button--new new-education-button" data-id="1">Añadir formación</button>

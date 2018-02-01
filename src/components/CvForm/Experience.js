@@ -1,19 +1,12 @@
 import React from 'react';
 
 class Experience extends React.Component {
-	constructor(props) {
-		super(props);
 
-		this.handleChange = this.handleChange.bind(this);
-	}
-	handleChange(e) {
-		this.props.updatePreview(e.target.name, e.target.value);
-	}
 	render() {
 		return (
 			<div id="container-inputs__experience">
 				<div className="experience-element" id="experience-element">
-					<input className="class-input" id="job1" type="text" name="job" placeholder="Puesto" onChange ={this.handleChange} />
+					<input className="class-input" id="job1" type="text" name="job" placeholder="Puesto" onChange ={this.props.onChangeFunction} />
 					<div className="experience-dates">
 						<div className="date-container-from">
 							<label className="label from">Desde</label>
@@ -34,8 +27,8 @@ class Experience extends React.Component {
 							</div>
 						</div>
 					</div>
-					<input className="class-input" id="company1" type="text" name="company" placeholder="Lugar" onChange ={this.handleChange} />
-					<textarea className="experience-text" id="description-job1" name="description" rows="8" cols="80" placeholder="Despripción del puesto" onChange ={this.handleChange}></textarea>
+					<input className="class-input" id="company1" type="text" name="company" placeholder="Lugar" onChange ={this.props.onChangeFunction} />
+					<textarea className="experience-text" id="description-job1" name="descriptionJob" rows="8" cols="80" placeholder="Despripción del puesto" onChange ={this.props.onChangeFunction}></textarea>
 					<button type="button" name="button" className="button--save save-experience-button" data-id="1">Guardar</button>
 				</div>
 				<button type="button" name="button" className="button--new new-experience-button">Añadir experiencia</button>
