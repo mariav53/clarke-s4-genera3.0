@@ -257,6 +257,14 @@ main {
     cursor: pointer;
     width: 100px;
     height: 100px; }
+  .creation__design__options-font:hover .design-fonts,
+  .creation__design__options-font:hover .design-colours,
+  .creation__design__options-font:hover .design-themes, .creation__design__options-colour:hover .design-fonts,
+  .creation__design__options-colour:hover .design-colours,
+  .creation__design__options-colour:hover .design-themes, .creation__design__options-theme:hover .design-fonts,
+  .creation__design__options-theme:hover .design-colours,
+  .creation__design__options-theme:hover .design-themes {
+    display: block; }
 
 .design-fonts,
 .design-colours,
