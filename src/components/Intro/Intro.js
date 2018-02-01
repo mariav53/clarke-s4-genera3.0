@@ -1,7 +1,7 @@
 import React from 'react';
-import IconDesign from './../images/designer.svg';
-import IconWrite from './../images/writing.svg';
-import IconDownload from './../images/download.svg';
+import IconDesign from './../../images/designer.svg';
+import IconWrite from './../../images/writing.svg';
+import IconDownload from './../../images/download.svg';
 
 
 class Intro extends React.Component {
