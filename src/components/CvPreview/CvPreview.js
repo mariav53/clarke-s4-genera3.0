@@ -76,11 +76,11 @@ class CvPreview extends React.Component {
 									</div>
 								</div>
 								<div>
-									<span id="place-preview-id1">Swing Swing</span>
+									<span id="place-preview-id1">{this.props.company}</span>
 								</div>
 							</div>
 							<div className="container__experience--description">
-								<div><span id="description-job-preview-id1">Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.</span>
+								<div><span id="description-job-preview-id1">{this.props.description}</span>
 								</div>
 							</div>
 						</div>
@@ -202,8 +202,10 @@ class CvPreview extends React.Component {
 	}
 }
 
-// CvPreview.defaultProps = {
-// 	job: "Social Media"
-// }
+CvPreview.defaultProps = {
+	job: "Social Media",
+	company: "Swing Swing",
+	description: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial."
+}
 
 export default CvPreview;
