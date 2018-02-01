@@ -4,19 +4,6 @@ import ButtonPalette from './../images/paint-palette.svg';
 import ButtonTheme from './../images/menu.svg';
 
 class CreationDesign extends React.Component {
-  // constructor(props){
-	// 	super(props);
-	// 	this.toggleContentClickDesign = this.toggleContentClickDesign.bind(this);
-	// 	this.state={
-	// 		visible:false
-	// 	}
-	// }
-	// toggleContentClickDesign(event){
-	// 	event.preventDefault();
-	// 	this.setState({
-	// 		visible:!this.state.visible
-	// 	})
-	// }
   render () {
     return (
       <section className="creation__design">

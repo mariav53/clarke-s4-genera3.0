@@ -74,6 +74,9 @@
       color: #E7ECED;
       padding: 10px; }
 
+.hidden {
+  display: none; }
+
 * {
   box-sizing: border-box; }
 
@@ -254,6 +257,14 @@ main {
     cursor: pointer;
     width: 100px;
     height: 100px; }
+  .creation__design__options-font:hover .design-fonts,
+  .creation__design__options-font:hover .design-colours,
+  .creation__design__options-font:hover .design-themes, .creation__design__options-colour:hover .design-fonts,
+  .creation__design__options-colour:hover .design-colours,
+  .creation__design__options-colour:hover .design-themes, .creation__design__options-theme:hover .design-fonts,
+  .creation__design__options-theme:hover .design-colours,
+  .creation__design__options-theme:hover .design-themes {
+    display: block; }
 
 .design-fonts,
 .design-colours,
@@ -261,6 +272,10 @@ main {
   position: absolute;
   top: 100%;
   padding: 0; }
+  .design-fonts .hidden,
+  .design-colours .hidden,
+  .design-themes .hidden {
+    display: none; }
 
 .font,
 .colour,
