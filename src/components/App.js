@@ -8,8 +8,6 @@ import CvPreview from './CvPreview';
 import Footer from './Footer';
 import Hero from './Hero';
 
-
-
 import './../scss/main.css';
 
 class App extends Component {
