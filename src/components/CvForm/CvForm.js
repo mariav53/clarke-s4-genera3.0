@@ -7,12 +7,21 @@ import Education from './Education';
 import Skills from './Skills';
 
 class CvForm extends React.Component {
+	constructor(props){
+		super(props);
+		this.handleChange = this.handleChange.bind(this);
+	}
+
+	handleChange(event){
+		this.props.updatePreview(event.target.name, event.target.value);
+	}
+
 	render() {
 		return (
 			<section className="creation__form" id="form">
 				<form className="form__container" action="index.html" method="post">
 					<CvSection label="Datos personales">
-						<PersonalData />
+						<PersonalData updatePreview={this.props.updatePreview} onChangeFunction={this.handleChange}/>
 					</CvSection>
 					<CvSection label="Experiencia Profesional">
 						<Experience  />
