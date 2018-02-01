@@ -1,7 +1,7 @@
 import React from 'react';
 // import Nav from './Hero';
-import CoverMobile from './../images/cover_mobile2.png';
-import CoverDesktop from './../images/desktop.png';
+import CoverMobile from './../../images/cover_mobile2.png'; 
+import CoverDesktop from './../../images/desktop.png';
 
 class Hero extends React.Component{
 	render() {

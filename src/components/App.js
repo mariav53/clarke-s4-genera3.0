@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Intro from './Intro';
-import CreationDesign from './CreationDesign';
-import ChooseImage from './ChooseImage';
-import CvForm from './CvForm';
-import CvPreview from './CvPreview';
-import Footer from './Footer';
-import Hero from './Hero';
+import Header from './Header/Header';
+import Intro from './Intro/Intro';
+import CreationDesign from './CvForm/CreationDesign';
+import ChooseImage from './CvForm/ChooseImage';
+import CvForm from './CvForm/CvForm';
+import CvPreview from './CvPreview/CvPreview';
+import Footer from './Footer/Footer';
+import Hero from './Intro/Hero';
 
 import './../scss/main.css';
 

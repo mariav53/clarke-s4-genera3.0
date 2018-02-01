@@ -1,7 +1,7 @@
 import React from 'react';
-import IconLanguage from './../images/speak.png'
-import IconIt from './../images/computer-monitor-and-mouse.png';
-import IconSkills from './../images/settings.png';
+import IconLanguage from './../../images/speak.png'
+import IconIt from './../../images/computer-monitor-and-mouse.png';
+import IconSkills from './../../images/settings.png';
 
 class CvPreview extends React.Component {
 	render() {

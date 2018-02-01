@@ -1,5 +1,5 @@
 import React from 'react';
-import ButtonArrow from './../images/arrow.png';
+import ButtonArrow from './../../images/arrow.png';
 
 class CvSection extends React.Component{
 	constructor(props) {

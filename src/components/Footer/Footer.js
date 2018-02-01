@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoSmall from './../images/logocorto.png'
+import LogoSmall from './../../images/logocorto.png'
 
 class Footer extends React.Component {
 	render() {
