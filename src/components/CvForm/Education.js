@@ -1,4 +1,6 @@
 import React from 'react';
+import SelectMonth from './SelectMonth';
+import SelectYears from './SelectYears';
 
 class Education extends React.Component {
 	render() {
@@ -10,17 +12,13 @@ class Education extends React.Component {
           <div className="education-dates">
             <div className="date-container-from">
               <label className="label from">Desde</label>
-              <select id="start_month-education1" name="start_month" className="month">
-              </select>
-              <select id="start_year-education1" name="start_year" className="year">
-              </select>
+							<SelectMonth />
+							<SelectYears />
             </div>
             <div className="date-container-until">
               <label className="label until">Hasta</label>
-              <select id="end_month-education1" name="end_month" className="month">
-              </select>
-              <select id="end_year-education1" name="end_year" className="year">
-              </select>
+							<SelectMonth />
+							<SelectYears />
               <div className="actualidad">
                 <label for="actualidad" className="present-button-p">Actual</label>
                 <input className="present-button" id="actualidad-education1" type="checkbox" name="actualidad" />
