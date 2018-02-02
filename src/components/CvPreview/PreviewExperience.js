@@ -18,7 +18,7 @@ class PreviewExperience extends React.Component {
 									<span id="from-job-preview-id1" className="from-date-preview">Nov/2016</span>
 								</div>
 								<div>
-									<span id="until-job-preview-id1">Ago/2017</span>
+									<span id="until-job-preview-id1">{this.props.actualidad} Ago/2017</span>
 								</div>
 							</div>
 						</div>

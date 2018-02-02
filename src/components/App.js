@@ -16,9 +16,7 @@ import './../scss/main.css';
 
 class App extends Component {
 	constructor(props){
-
 		super(props);
-
 		this.updateState = this.updateState.bind(this);
 
 		this.state = {}

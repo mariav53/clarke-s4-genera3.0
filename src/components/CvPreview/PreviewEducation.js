@@ -18,7 +18,7 @@ class PreviewEducation extends React.Component{
 									<span id="from-education-preview-id1" className="from-date-preview">Oct/2017</span>
 								</div>
 								<div>
-									<span id="until-education-preview-id1">Actual</span>
+									<span id="until-education-preview-id1">{this.props.actualidad} Actual</span>
 								</div>
 							</div>
 						</div>

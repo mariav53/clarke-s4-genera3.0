@@ -1,6 +1,7 @@
 import React from 'react';
 import SelectMonth from './SelectMonth';
 import SelectYears from './SelectYears';
+import Checkbox from './Checkbox';
 
 class Experience extends React.Component {
 
@@ -19,10 +20,7 @@ class Experience extends React.Component {
 							<label className="label until">Hasta</label>
 							<SelectMonth />
 							<SelectYears />
-							<div className="actualidad">
-								<label for="actualidad" className="present-button-p">Actual</label>
-								<input className="present-button" id="actualidad-job1" type="checkbox" name="actualidad" />
-							</div>
+							<Checkbox />
 						</div>
 					</div>
 					<input className="class-input" id="company1" type="text" name="company" placeholder="Lugar" onChange ={this.props.onChangeFunction} />
