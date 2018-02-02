@@ -12,13 +12,13 @@ class Experience extends React.Component {
 					<div className="experience-dates">
 						<div className="date-container-from">
 							<label className="label from">Desde</label>
-							<SelectMonth />
-							<SelectYears />
+							<SelectMonth onChangeSelect ={this.props.onChangeFunction} name='ExperiencieStartMonth' />
+							<SelectYears onChangeSelect ={this.props.onChangeFunction} name='ExperiencieStartYear' />
 						</div>
 						<div className="date-container-until">
 							<label className="label until">Hasta</label>
-							<SelectMonth />
-							<SelectYears />
+							<SelectMonth  onChangeSelect ={this.props.onChangeFunction} name='ExperiencieEndMonth'/>
+							<SelectYears onChangeSelect ={this.props.onChangeFunction} name='ExperiencieEndYear' />
 							<div className="actualidad">
 								<label for="actualidad" className="present-button-p">Actual</label>
 								<input className="present-button" id="actualidad-job1" type="checkbox" name="actualidad" />

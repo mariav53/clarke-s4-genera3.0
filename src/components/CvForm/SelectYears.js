@@ -1,18 +1,7 @@
 import React from 'react';
 
 class SelectYears extends React.Component {
-	constructor(props){
-		super(props);
-		this.onChangeSelects = this.onChangeSelects.bind(this);
-		this.state ={
-			value: "Año"
-		}
-	}
-	onChangeSelects(e){
-		this.setState({
-			value: e.target.value
-		})
-	}
+
 	createSelectItems() {
     let yearsInput = [];
     for (let i = 1950; i <= 2018; i++) {
@@ -23,7 +12,7 @@ class SelectYears extends React.Component {
 	render() {
 		return (
       <div>
-				<select id="end_year-education1" name="end_year" className="year" value={this.state.value} onChange={this.onChangeSelects} >{this.createSelectItems()}
+				<select id="end_year-education1" name={this.props.name} className="year"  onChange={this.props.onChangeSelect}> {this.createSelectItems()}
 				</select>
 			</div>
     );

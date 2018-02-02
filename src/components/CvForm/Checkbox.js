@@ -20,7 +20,6 @@ class Checkbox extends React.Component {
 				<label for="actualidad" className="present-button-p">Actual</label>
 				<input className="present-button" id="actualidad-job1" type="checkbox" name="actualidad" />
 			</div>
-
     );
   }
 }

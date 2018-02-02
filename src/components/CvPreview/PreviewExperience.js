@@ -15,10 +15,10 @@ class PreviewExperience extends React.Component {
 							</div>
 							<div className="joinDate">
 								<div>
-									<span id="from-job-preview-id1" className="from-date-preview">Nov/2016</span>
+									<span id="from-job-preview-id1" className="from-date-preview">{this.props.ExperiencieStartMonth}  {this.props.ExperiencieStartYear} </span>
 								</div>
 								<div>
-									<span id="until-job-preview-id1">Ago/2017</span>
+									<span id="until-job-preview-id1">{this.props.ExperiencieEndMonth} {this.props.ExperiencieEndYear}</span>
 								</div>
 							</div>
 						</div>
@@ -64,6 +64,10 @@ PreviewExperience.defaultProps = {
 	job: "Social Media",
 	company: "Swing Swing",
 	descriptionJob: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.",
+	ExperiencieStartMonth : "Nov",
+	ExperiencieStartYear : "2015",
+	ExperiencieEndMonth : "Ago",
+	ExperiencieEndYear : "2016",
 }
 
 export default PreviewExperience;
