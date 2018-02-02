@@ -19,10 +19,6 @@ class Experience extends React.Component {
 							<label className="label until">Hasta</label>
 							<SelectMonth  onChangeSelect ={this.props.onChangeFunction} name='ExperiencieEndMonth'/>
 							<SelectYears onChangeSelect ={this.props.onChangeFunction} name='ExperiencieEndYear' />
-							<div className="actualidad">
-								<label for="actualidad" className="present-button-p">Actual</label>
-								<input className="present-button" id="actualidad-job1" type="checkbox" name="actualidad" />
-							</div>
 						</div>
 					</div>
 					<input className="class-input" id="company1" type="text" name="company" placeholder="Lugar" onChange ={this.props.onChangeFunction} />

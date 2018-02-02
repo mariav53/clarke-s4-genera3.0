@@ -15,10 +15,11 @@ class PreviewEducation extends React.Component{
 							</div>
 							<div className="joinDate">
 								<div>
-									<span id="from-education-preview-id1" className="from-date-preview">{this.props.EducationStartMonth} {this.props.EducationStartYear}</span>
+									<span id="from-education-preview-id1" className="from-date-preview">{this.props.EducationStartMonth} {this.props.EducationStartYear ? ` ${this.props.EducationStartYear} / `: ''} </span>
 								</div>
 								<div>
 									<span id="until-education-preview-id1">{this.props.EducationEndMonth} {this.props.EducationEndYear}</span>
+
 								</div>
 							</div>
 						</div>

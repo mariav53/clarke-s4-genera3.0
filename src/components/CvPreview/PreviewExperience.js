@@ -15,7 +15,10 @@ class PreviewExperience extends React.Component {
 							</div>
 							<div className="joinDate">
 								<div>
-									<span id="from-job-preview-id1" className="from-date-preview">{this.props.ExperiencieStartMonth}  {this.props.ExperiencieStartYear} </span>
+									<span id="from-job-preview-id1" className="from-date-preview">
+										{this.props.ExperiencieStartMonth}
+										{this.props.ExperiencieStartYear ? ` ${this.props.ExperiencieStartYear} / `: ''}
+									</span>
 								</div>
 								<div>
 									<span id="until-job-preview-id1">{this.props.ExperiencieEndMonth} {this.props.ExperiencieEndYear}</span>
