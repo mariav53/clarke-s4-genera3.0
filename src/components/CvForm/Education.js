@@ -3,6 +3,8 @@ import SelectMonth from './SelectMonth';
 import SelectYears from './SelectYears';
 
 class Education extends React.Component {
+
+
 	render() {
 		return (
       <div id="container-inputs__education">
@@ -11,17 +13,13 @@ class Education extends React.Component {
           <div className="education-dates">
             <div className="date-container-from">
               <label className="label from">Desde</label>
-							<SelectMonth />
-							<SelectYears />
+							<SelectMonth onChangeSelect ={this.props.onChangeFunction} name='EducationStartMonth' />
+							<SelectYears onChangeSelect ={this.props.onChangeFunction} name='EducationStartYear' />
             </div>
             <div className="date-container-until">
               <label className="label until">Hasta</label>
-							<SelectMonth />
-							<SelectYears />
-              <div className="actualidad">
-                <label for="actualidad" className="present-button-p">Actual</label>
-                <input className="present-button" id="actualidad-education1" type="checkbox" name="actualidad" />
-              </div>
+							<SelectMonth onChangeSelect ={this.props.onChangeFunction} name='EducationEndMonth' />
+							<SelectYears onChangeSelect ={this.props.onChangeFunction} name='EducationEndYear' />
             </div>
           </div>
           <label className="label" for="centro"></label>

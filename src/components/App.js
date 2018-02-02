@@ -18,7 +18,6 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.updateState = this.updateState.bind(this);
-
 		this.state = {}
 	}
 
@@ -27,7 +26,6 @@ class App extends Component {
 		newState[prop] = value;
 		this.setState(newState);
 	}
-
   render() {
     return (
 			<div>
@@ -72,11 +70,19 @@ class App extends Component {
 								<PreviewExperience
 									job = {this.state.job}
 									company = {this.state.company}
+									ExperiencieStartMonth={this.state.ExperiencieStartMonth}
+									ExperiencieEndMonth={this.state.ExperiencieEndMonth}
+									ExperiencieStartYear={this.state.ExperiencieStartYear}
+									ExperiencieEndYear={this.state.ExperiencieEndYear}
 									descriptionJob = {this.state.descriptionJob}
 								/>
 								<PreviewEducation
 									titulation = {this.state.titulation}
 									center = {this.state.center}
+									EducationStartMonth={this.state.EducationStartMonth}
+									EducationEndMonth={this.state.EducationEndMonth}
+									EducationStartYear={this.state.EducationStartYear}
+									EducationEndYear={this.state.EducationEndYear}
 									descriptionEduc = {this.state.descriptionEduc}
 								/>
 								<PreviewSkills
