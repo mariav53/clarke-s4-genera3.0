@@ -330,17 +330,9 @@ main {
   justify-content: space-around;
   align-items: center; }
   .creation__photo .selection-image {
-    display: none; }
-  .creation__photo .trigger {
     display: inline-block;
-    width: 100px;
-    height: 100px;
-    background-color: #424A5F;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    border-radius: 100px;
-    border-color: #424A5F; }
+    width: 132px;
+    height: 20px; }
 
 .button--open, .button--close {
   height: 20px;
@@ -658,29 +650,32 @@ select {
   align-content: flex-start;
   height: auto; }
 
-.thumb {
-  width: 100%;
-  width: 60px;
-  border-radius: 100px;
-  height: 60px; }
-  @media all and (min-width: 768px) {
-    .thumb {
-      width: 70px;
-      height: 70px; } }
-
 .container__preview--photo {
   margin-right: 30px;
   position: relative; }
 
 .container__photo {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background-color: #31B89A;
+  background-size: contain;
   border-radius: 100px; }
   @media all and (min-width: 768px) {
     .container__photo {
-      width: 70px;
-      height: 70px; } }
+      width: 120px;
+      height: 120px; } }
+
+.background__photo-preview {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%; }
+  @media all and (min-width: 768px) {
+    .background__photo-preview {
+      width: 120px;
+      height: 120px; } }
 
 .container__preview--personal-data {
   display: flex;
