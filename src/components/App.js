@@ -4,8 +4,11 @@ import Intro from './Intro/Intro';
 import CreationDesign from './CvForm/CreationDesign';
 import ChooseImage from './CvForm/ChooseImage';
 import CvForm from './CvForm/CvForm';
-import CvPreview from './CvPreview/CvPreview';
 import PreviewPersonalData from './CvPreview/Preview-PersonalData';
+import PreviewSummary from './CvPreview/PreviewSummary';
+import PreviewExperience from './CvPreview/PreviewExperience';
+import PreviewEducation from './CvPreview/PreviewEducation';
+import PreviewSkills from './CvPreview/PreviewSkills';
 import Footer from './Footer/Footer';
 import Hero from './Intro/Hero';
 
@@ -13,21 +16,20 @@ import './../scss/main.css';
 
 class App extends Component {
 	constructor(props){
-     super(props);
-     this.state = {
-			 summary: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
-			 twitter: '@usuario',
-			 linkedin: 'linkedin.es/usuario',
-			 github: 'github.com/usuario'
-		 };
-     this.updateState = this.updateState.bind(this);
-   }
 
-   updateState(prop, value){
+		super(props);
+
+		this.updateState = this.updateState.bind(this);
+
+		this.state = {}
+	}
+
+	updateState(prop, value) {
 		const newState = {};
-    newState[prop] = value;
-    this.setState(newState);
-   }
+		newState[prop] = value;
+		this.setState(newState);
+	}
+
   render() {
     return (
 			<div>
@@ -41,24 +43,55 @@ class App extends Component {
 							<div className="container__creation">
 								<CreationDesign />
                 <ChooseImage />
-								<CvForm updatePreview={this.updateState} />
+
+								<CvForm updatePreview={this.updateState}/>
 							</div>
 						</section>
-						<PreviewPersonalData
-							name={this.state.name}
-							surname={this.state.surname}
-							profession={this.state.profession}
-							telephone={this.state.telephone}
-							date={this.state.date}
-							email={this.state.email}
-							address={this.state.address}
-							summary={this.state.summary}
-							twitter={this.state.twitter}
-							linkedin={this.state.linkedin}
-							github={this.state.github}
-						/>
+						<section className="section__preview" id="preview">
+							<h2 className="preview__title"> Previsualización </h2>
+							<div className="showpreview dots philosopher black-pink-grey">
+								<div className="container__preview--intro preview-div">
+									<div className="container__preview--photo">
+										<div className="container__photo">
+										</div>
+									</div>
+									<PreviewPersonalData
+										name={this.state.name}
+										surname={this.state.surname}
+										profession={this.state.profession}
+										telephone={this.state.telephone}
+										date={this.state.date}
+										email={this.state.email}
+										address={this.state.address}
+									/>
+								</div>
+								<PreviewSummary
+									summary={this.state.summary}
+									twitter={this.state.twitter}
+									linkedin={this.state.linkedin}
+									github={this.state.github}
+								/>
+								<PreviewExperience
+									job = {this.state.job}
+									company = {this.state.company}
+									descriptionJob = {this.state.descriptionJob}
+								/>
+								<PreviewEducation
+									titulation = {this.state.titulation}
+									center = {this.state.center}
+									descriptionEduc = {this.state.descriptionEduc}
+								/>
+								<PreviewSkills
+									lang1 = {this.state.lang1}
+									levelLanguage1 = {this.state.levelLanguage1}
+									tech1 = {this.state.tech1}
+									levelTech1 = {this.state.levelTech1}
+									skill1 = {this.state.skill1}
+								/>
+							</div>
+						</section>
 					</section>
-				</main>
+					</main>
 				<Footer />
 			</div>
     );
