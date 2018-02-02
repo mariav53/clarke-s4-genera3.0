@@ -74,11 +74,19 @@ class App extends Component {
 								<PreviewExperience
 									job = {this.state.job}
 									company = {this.state.company}
+									start-month={this.state.start-month}
+									start-year={this.state.start-year}
+									end-month={this.state.end-month}
+									end-year={this.state.end-year}
 									descriptionJob = {this.state.descriptionJob}
 								/>
 								<PreviewEducation
 									titulation = {this.state.titulation}
 									center = {this.state.center}
+									start-month={this.state.start-month}
+									start-year={this.state.start-year}
+									end-month={this.state.end-month}
+									end-year={this.state.end-year}
 									descriptionEduc = {this.state.descriptionEduc}
 								/>
 								<PreviewSkills

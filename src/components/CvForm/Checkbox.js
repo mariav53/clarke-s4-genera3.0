@@ -1,6 +1,6 @@
 import React from 'react';
 
-class SelectMonth extends React.Component {
+class Checkbox extends React.Component {
 	constructor(props){
 		super(props);
 		this.onChangeSelects = this.onChangeSelects.bind(this);
@@ -16,14 +16,12 @@ class SelectMonth extends React.Component {
 	render() {
 		const monthsArray = [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"];
 		return (
-      <div>
-				<select id="end_month-education1" name="month" className="month" value={this.state.value} onChange={this.onChangeSelects}>
-					{monthsArray.map(option => {
-						return <option value={option} key={option}>{option}</option>})}
-				</select>
+			<div className="actualidad">
+				<label for="actualidad" className="present-button-p">Actual</label>
+				<input className="present-button" id="actualidad-job1" type="checkbox" name="actualidad" />
 			</div>
 
     );
   }
 }
-export default SelectMonth;
+export default Checkbox;

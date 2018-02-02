@@ -14,7 +14,6 @@ class CvForm extends React.Component {
 	}
 	handleChange(e) {
 		this.props.updatePreview(e.target.name, e.target.value);
-
 	}
 
 	render() {

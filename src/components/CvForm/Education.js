@@ -3,6 +3,8 @@ import SelectMonth from './SelectMonth';
 import SelectYears from './SelectYears';
 
 class Education extends React.Component {
+
+	
 	render() {
 		return (
       <div id="container-inputs__education">
