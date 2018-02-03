@@ -20,8 +20,8 @@ class ChoseeColor extends React.Component {
 	}
   render () {
     return (
-			<ul className="creation__design__options">
-				<li className="creation__design__options-colour" onClick ={this.HandleClickMenu}>
+			<ul className="creation__design__options" onClick ={this.HandleClickMenu}>
+				<li className="creation__design__options-colour" >
 					<img className="img-design" src={ButtonPalette} title="color" alt="color" />
 					<ul className={`design-colours ${this.state.visible ? 'visible' : 'no-visible'}`}>
 						<li className="colour" data-colour-class="red-green-lime" >

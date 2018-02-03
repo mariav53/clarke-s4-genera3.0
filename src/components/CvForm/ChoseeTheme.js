@@ -20,8 +20,8 @@ class ChoseeTheme extends React.Component {
 	}
   render () {
     return (
-			<ul className="creation__design__options">
-				<li className="creation__design__options-theme" onClick ={this.HandleClickMenu}>
+			<ul className="creation__design__options" onClick ={this.HandleClickMenu}>
+				<li className="creation__design__options-theme">
 					<img className="img-design" src={ButtonTheme} title="estilo" alt="estilo" />
 					<ul  className={`design-themes ${this.state.visible ? 'visible' : 'no-visible'}`}>
 						<li className="theme" data-theme-class="dots"><h3>Dots</h3></li>
