@@ -1,0 +1,91 @@
+// HERO
+
+.hero {
+  .hero__img-mobile {
+  	width: 100%;
+  	height: auto;
+    display: block;
+    @media all and (min-width: 768px) {
+      display: none;
+    }
+  }
+  .hero__img-desktop {
+  	display: none;
+    @media all and (min-width: 768px) {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.title-hero {
+	color: $colorYellow;
+	text-align: center;
+	background-color: $colorDarkBlue;
+  font-size: 18px;
+	padding: 20px 5px;
+	margin: 0;
+  @media all and (min-width: 768px) and (max-width: 1024px) {
+    font-size: 30px;
+		padding: 30px 5px;
+  }
+
+  @media all and (min-width: 1024px) {
+    font-size: 45px;
+		padding: 35px 5px;
+  }
+}
+
+// INFO STEPS DESIGN CV
+.block__info-steps {
+	display: flex;
+	@include aroundCenter();
+	width: auto;
+	padding: 10px;
+  @media all and (min-width: 768px) {
+    padding: 3em 0em 2em;
+    width: auto;
+  }
+  .step {
+  	display: block;
+  	text-align: center;
+    @media all and (min-width: 768px) {
+      width: 45%;
+    }
+  }
+}
+.img-step {
+	display: block;
+	width: 80px;
+	height: 60px;
+	margin: 8px auto 10px;
+	filter: opacity(0.3);
+  @media all and (min-width:768px) {
+    height:120px;
+    margin: 8px auto 10px;
+    width: auto;
+  }
+  .span-step {
+  	display: block;
+  	align-items: center;
+  	font-size: 13px;
+  	padding-top: 1.2em;
+    @media all and (min-width:768px) {
+      font-size: 20px;
+      padding-top: 1.2em;
+    }
+  }
+}
+
+// INSTRUCTIONS
+.container__instructions {
+	padding: 3%;
+	text-align: center;
+	background-color: $colorLightBlue;
+  .container__instructions-paragraph {
+  	color: $colorDarkBlue;
+    @media all and (min-width:768px) {
+      font-size: 20px;
+    }
+  }
+}
