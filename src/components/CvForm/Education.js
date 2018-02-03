@@ -22,9 +22,9 @@ class Education extends React.Component {
 							<SelectYears onChangeSelect ={this.props.onChangeFunction} name='EducationEndYear' />
             </div>
           </div>
-          <label className="label" for="centro"></label>
+          <label className="label" htmlFor="centro"></label>
           <input className="class-input" id="centro1" type="text" name="center" placeholder="Centro de estudios*" required onChange ={this.props.onChangeFunction} />
-          <label className="label" for="description-education1"></label>
+          <label className="label" htmlFor="description-education1"></label>
           <textarea className="description" id="description-education1" cols="30" rows="10" name="descriptionEduc" placeholder="Descripción" onChange ={this.props.onChangeFunction}></textarea>
           <button type="button" name="button" className="button--save save-education-button" id="save-education-button1" data-id="1">Guardar</button>
         </div>

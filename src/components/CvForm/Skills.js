@@ -9,7 +9,7 @@ class Skills extends React.Component {
 					<div className="languages">
 						<p className="skills-p">Idiomas</p>
 						<div className="language-element">
-							<label className="label" for="language-name1"></label>
+							<label className="label" htmlFor="language-name1"></label>
 							<input className="language-name class-input" id="language-name1" type="text" name="lang1" placeholder="Idioma 1" onChange ={this.props.onChangeFunction}/>
 							<select id="language-level1" name="levelLanguage1" className="level" onChange ={this.props.onChangeFunction}>
 								<option value="nivel">Nivel</option>
@@ -27,7 +27,7 @@ class Skills extends React.Component {
 				<div className="it">
 					<p className="skills-p">Programas informáticos</p>
 					<div className="it-element">
-						<label className="label" for="it-name1"></label>
+						<label className="label" htmlFor="it-name1"></label>
 						<input className="it-name class-input" id="it-name1" type="text" name="tech1" placeholder="Tecnología 1" onChange ={this.props.onChangeFunction}/>
 						<select id="it-level1" name="levelTech1" className="level" onChange ={this.props.onChangeFunction}>
 							<option value="nivel">Nivel</option>
@@ -43,7 +43,7 @@ class Skills extends React.Component {
 				<div className="various-skills">
 					<p className="skills-p">Destrezas</p>
 					<div className="skills-element">
-						<label className="label" for="skill-element1"></label>
+						<label className="label" htmlFor="skill-element1"></label>
 						<input className="skills-element class-input" id="skill-element1" type="text" name="skill1" placeholder="Destreza 1" onChange ={this.props.onChangeFunction} />
 						<button type="button" name="button" className="button--save save-skills-button" data-id="1">Guardar</button>
 					</div>
