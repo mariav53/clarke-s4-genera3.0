@@ -8,8 +8,9 @@ class ChoseeColor extends React.Component {
 	constructor(props){
 		super(props);
 		this.HandleClickMenu = this.HandleClickMenu.bind(this);
+
 		this.state={
-			visible:false
+			visible:false,
 		}
 	}
 	HandleClickMenu(event){
@@ -18,13 +19,14 @@ class ChoseeColor extends React.Component {
 			visible:!this.state.visible
 		})
 	}
+
   render () {
     return (
-			<ul className="creation__design__options">
-				<li className="creation__design__options-colour" onClick ={this.HandleClickMenu}>
-					<img className="img-design" src={ButtonPalette} title="color" alt="color" />
+
+				<li className="creation__design__options-colour" >
+					<img className="img-design" src={ButtonPalette} title="color" alt="color" onClick ={this.HandleClickMenu} />
 					<ul className={`design-colours ${this.state.visible ? 'visible' : 'no-visible'}`}>
-						<li className="colour" data-colour-class="red-green-lime" >
+						<li className="colour" onClick = {this.HandleGreenLimeClick} data-colour-class="red-green-lime" >
 							<div className="red"></div>
 							<div className="green"></div>
 							<div className="lime"></div>
@@ -41,7 +43,7 @@ class ChoseeColor extends React.Component {
 						</li>
 					</ul>
 				</li>
-				</ul>
+
 
     );
   }
