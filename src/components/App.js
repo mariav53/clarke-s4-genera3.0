@@ -30,13 +30,35 @@ class App extends Component {
 		this.HandleGreenLimeClick = this.HandleGreenLimeClick.bind(this);
 		this.HandleBlueLimeClick = this.HandleBlueLimeClick.bind(this);
 		this.HandlePinkGreyClick = this.HandlePinkGreyClick.bind(this);
+		this.handleChangeThemeDots = this.handleChangeThemeDots.bind(this);
+		this.handleChangeThemeStripes = this.handleChangeThemeStripes.bind(this);
+		this.handleChangeThemeZigZag = this.handleChangeThemeZigZag.bind(this);
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
-			fontOption:'philosopher',
-			colorOption: 'black-pink-grey'
+			fontOption: 'philosopher',
+			colorOption: 'black-pink-grey',
+			themeOption: 'dots'
 		};
+	}
+	handleChangeThemeZigZag(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'zigZag'
+		})
+	}
+	handleChangeThemeStripes(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'stripes'
+		})
+	}
+	handleChangeThemeDots(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'dots'
+		})
 	}
 
 	handleChangeFontCookie(e){
@@ -129,7 +151,11 @@ class App extends Component {
 											onClickBlueLime = {this.HandleBlueLimeClick}
 											onClickPinkGrey = {this.HandlePinkGreyClick}
 										/>
-										<ChoseeTheme />
+										<ChoseeTheme
+										onClickDots= {this.handleChangeThemeDots}
+										onClickStripes = {this.handleChangeThemeStripes}
+										onClickZigZag = {this.handleChangeThemeZigZag}
+									 />
 									</ul>
 								</section>
 								<ChooseImage
@@ -143,7 +169,7 @@ class App extends Component {
 						<section className="section__preview" id="preview">
 							<h2 className="preview__title"> Previsualización </h2>
 
-							<div className={`showpreview dots ${this.state.fontOption} ${this.state.colorOption}`}>
+							<div className={`showpreview ${this.state.fontOption} ${this.state.colorOption} ${this.state.themeOption}`}>
 								<div className="container__preview--intro preview-div">
 									<div className="container__preview--photo">
 										<div className="container__photo">

@@ -1,4 +1,5 @@
 import React from 'react';
+import AddExperience from './AddExperience'
 
 class PreviewExperience extends React.Component {
 	render() {
@@ -60,6 +61,7 @@ class PreviewExperience extends React.Component {
 					</div>
 				</div>
 			</div>
+		
 		);
 	}
 }
