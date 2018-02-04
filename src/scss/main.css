@@ -284,6 +284,12 @@ main {
   list-style: none;
   border-radius: 7px; }
 
+.font:hover,
+.colour:hover,
+.theme:hover {
+  background-color: #55607F;
+  cursor: pointer; }
+
 .font + .font,
 .colour + .colour,
 .theme + .theme {

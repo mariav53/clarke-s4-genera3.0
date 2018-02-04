@@ -4,9 +4,9 @@ class SelectYears extends React.Component {
 
 	createSelectItems() {
     let yearsInput = [];
-		let actual = <option></option>;
+		let actual = <option key='0' value=''></option>;
 		 yearsInput.push (actual);
-    for (let i = 1950; i <= 2018; i++) {
+    for (let i = 1950; i <= (new Date()).getFullYear(); i++) {
 			if (i === 2000){
 				yearsInput.push(<option key={i} value={i} selected="selected">{i} </option>);
 			} else{
