@@ -1,19 +1,8 @@
 import React from 'react';
 import SelectMonth from './SelectMonth';
 import SelectYears from './SelectYears';
-import AddExperience from './AddExperience'
 
-class Experience extends React.Component {
-
-
-
-	HandleClickAdd(){
-		return (
-			alert ('vamos')
-		)
-
-	}
-
+class AddExperience extends React.Component {
 
 	render() {
 		return (
@@ -36,10 +25,10 @@ class Experience extends React.Component {
 					<textarea className="experience-text" id="description-job1" name="descriptionJob" rows="8" cols="80" placeholder="Despripción del puesto" onChange ={this.props.onChangeFunction}></textarea>
 					<button type="button" name="button" className="button--save save-experience-button" data-id="1">Guardar</button>
 				</div>
-				<button type="button" name="button" className="button--new new-experience-button" onChange ={this.HandleClickAdd}>Añadir experiencia</button>
+				<button type="button" name="button" className="button--new new-experience-button">Añadir experiencia</button>
 			</div>
 		);
 	}
 }
 
-export default Experience;
+export default AddExperience;
