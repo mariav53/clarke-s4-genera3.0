@@ -10,20 +10,16 @@ class ChoseeFont extends React.Component {
 		this.HandleClickMenu = this.HandleClickMenu.bind(this);
 		this.state={
 			visible:false,
-			fonts : ['cookie', 'annie', 'philosopher']
 		}
 	}
 	HandleClickMenu(event){
 		event.preventDefault();
 		this.setState({
-			visible:!this.state.visible
+			visible: !this.state.visible,
+			cookie: !this.state.cookie,
+			annie: !this.state.annie,
+			philosopher: !this.state.philosopher
 		})
-	}
-
-	selectFont(){
-
-
-
 	}
   render () {
     return (
@@ -38,7 +34,6 @@ class ChoseeFont extends React.Component {
 				</li>
 			</ul>
 		);
-  }
+	}
 }
-
 export default ChoseeFont;

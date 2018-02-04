@@ -29,8 +29,7 @@ class ChoseeTheme extends React.Component {
 						<li className="theme" data-theme-class="zigZag"><h3>Zig Zag</h3></li>
 					</ul>
 				</li>
-				</ul>
-
+			</ul>
     );
   }
 }
