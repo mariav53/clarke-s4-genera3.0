@@ -24,15 +24,37 @@ class App extends Component {
 		this.updateState = this.updateState.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleImageUpload = this.handleImageUpload.bind(this);
-		this.handleChangeFont = this.handleChangeFont.bind(this);
+		this.handleChangeFontCookie = this.handleChangeFontCookie.bind(this);
+		this.handleChangeFontAnnie = this.handleChangeFontAnnie.bind(this);
+		this.handleChangeFontPhilosopher = this.handleChangeFontPhilosopher.bind(this);
 
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
-			fontSelected: 'philosopher'
+			fontOption:'philosopher'
 		};
 	}
+
+	handleChangeFontCookie(e){
+		e.preventDefault();
+		this.setState({
+			fontOption: 'cookie'
+		})
+	}
+	handleChangeFontAnnie(e){
+		e.preventDefault();
+		this.setState({
+			fontOption: 'annie'
+		})
+	}
+	handleChangeFontPhilosopher(e){
+		e.preventDefault();
+		this.setState({
+			fontOption: 'philosopher'
+		})
+	}
+
 
 	handleSubmit(e) {
 		e.preventDefault();
@@ -58,22 +80,6 @@ class App extends Component {
 		this.setState(newState);
 	}
 
-	handleChangeFont=(event)=> {
-		const chooseFont = event.target.value;
-	 	if (chooseFont === 'cookie'){
-		  this.setState({
-				fontSelected: 'cookie'
-			})
-		} else if (chooseFont === 'annie'){
-		  this.setState({
-			 	fontSelected: 'annie'
-			})
-	 	} else if (chooseFont === 'philosopher'){
-		  this.setState({
-				fontSelected: 'philosopher'
-	 		})
-		}
-	}
   render() {
 		let {imagePreviewUrl} = this.state;
 		let $imagePreview = null;
@@ -92,7 +98,11 @@ class App extends Component {
 							<div className="container__creation">
 								<section className="creation__design">
 									<ul className="creation__design__options">
-										<ChoseeFont changeFont= {(e)=>this.handleChangeFont(e)} />
+										<ChoseeFont
+											onClickCookie = {this.handleChangeFontCookie}
+											onClickAnnie = {this.handleChangeFontAnnie}
+											onClickPhilosopher = {this.handleChangeFontPhilosopher}
+										/>
 										<ChoseeColor />
 										<ChoseeTheme />
 									</ul>
@@ -107,7 +117,7 @@ class App extends Component {
 						</section>
 						<section className="section__preview" id="preview">
 							<h2 className="preview__title"> Previsualización </h2>
-							<div className={`showpreview ${this.state.fontSelected} dots black-pink-grey`}>
+							<div className={`showpreview dots ${this.state.fontOption} ${this.state.colorOption}`}>
 								<div className="container__preview--intro preview-div">
 									<div className="container__preview--photo">
 										<div className="container__photo">
