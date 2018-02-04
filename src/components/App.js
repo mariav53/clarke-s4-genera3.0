@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import Intro from './Intro/Intro';
-import CreationDesign from './CvForm/CreationDesign';
+// import CreationDesign from './CvForm/CreationDesign';
+import ChoseeFont from './CvForm/ChoseeFont';
+import ChoseeColor from './CvForm/ChoseeColors';
+import ChoseeTheme from './CvForm/ChoseeTheme';
 import ChooseImage from './CvForm/ChooseImage';
 import CvForm from './CvForm/CvForm';
 import PreviewPersonalData from './CvPreview/Preview-PersonalData';
@@ -84,8 +87,13 @@ class App extends Component {
 						<section className="section__creation">
 							<h2 className="creation__title">Configura tu currículum</h2>
 							<div className="container__creation">
-								<CreationDesign />
-
+								<section className="creation__design">
+									<ul className="creation__design__options">
+										<ChoseeFont />
+										<ChoseeColor />
+										<ChoseeTheme />
+									</ul>
+								</section>
 								<ChooseImage
 									onSubmitFunction = {(e)=>this.handleSubmit(e)}
 									onChangeUploadImage = {(e)=>this.handleImageUpload(e)}
