@@ -27,12 +27,15 @@ class App extends Component {
 		this.handleChangeFontCookie = this.handleChangeFontCookie.bind(this);
 		this.handleChangeFontAnnie = this.handleChangeFontAnnie.bind(this);
 		this.handleChangeFontPhilosopher = this.handleChangeFontPhilosopher.bind(this);
-
+		this.HandleGreenLimeClick = this.HandleGreenLimeClick.bind(this);
+		this.HandleBlueLimeClick = this.HandleBlueLimeClick.bind(this);
+		this.HandlePinkGreyClick = this.HandlePinkGreyClick.bind(this);
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
-			fontOption:'philosopher'
+			fontOption:'philosopher',
+			colorOption: 'black-pink-grey'
 		};
 	}
 
@@ -55,7 +58,24 @@ class App extends Component {
 		})
 	}
 
-
+	HandleGreenLimeClick(e){
+		e.preventDefault();
+		this.setState({
+			colorOption: 'red-green-lime'
+		})
+	}
+	HandleBlueLimeClick(e){
+		e.preventDefault();
+		this.setState({
+			colorOption: 'black-blue-lime'
+		})
+	}
+	HandlePinkGreyClick(e){
+		e.preventDefault();
+		this.setState({
+			colorOption: 'black-pink-grey'
+		})
+	}
 	handleSubmit(e) {
 		e.preventDefault();
 		console.log('handle uploading-', this.state.file);
@@ -98,12 +118,17 @@ class App extends Component {
 							<div className="container__creation">
 								<section className="creation__design">
 									<ul className="creation__design__options">
+
 										<ChoseeFont
 											onClickCookie = {this.handleChangeFontCookie}
 											onClickAnnie = {this.handleChangeFontAnnie}
 											onClickPhilosopher = {this.handleChangeFontPhilosopher}
 										/>
-										<ChoseeColor />
+										<ChoseeColor
+											onClickGreenLime = {this.HandleGreenLimeClick}
+											onClickBlueLime = {this.HandleBlueLimeClick}
+											onClickPinkGrey = {this.HandlePinkGreyClick}
+										/>
 										<ChoseeTheme />
 									</ul>
 								</section>
@@ -117,6 +142,7 @@ class App extends Component {
 						</section>
 						<section className="section__preview" id="preview">
 							<h2 className="preview__title"> Previsualización </h2>
+
 							<div className={`showpreview dots ${this.state.fontOption} ${this.state.colorOption}`}>
 								<div className="container__preview--intro preview-div">
 									<div className="container__preview--photo">
