@@ -15,10 +15,11 @@ class PreviewEducation extends React.Component{
 							</div>
 							<div className="joinDate">
 								<div>
-									<span id="from-education-preview-id1" className="from-date-preview">Oct/2017</span>
+									<span id="from-education-preview-id1" className="from-date-preview">{this.props.EducationStartMonth} {this.props.EducationStartYear ? ` ${this.props.EducationStartYear} / `: ''} </span>
 								</div>
 								<div>
-									<span id="until-education-preview-id1">Actual</span>
+									<span id="until-education-preview-id1">{this.props.EducationEndMonth} {this.props.EducationEndYear}</span>
+
 								</div>
 							</div>
 						</div>
@@ -62,7 +63,11 @@ class PreviewEducation extends React.Component{
 PreviewEducation.defaultProps = {
 	titulation: "Programadora Front-end",
 	center: "Adalab",
-	descriptionEduc: "Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript."
+	descriptionEduc: "Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.",
+	EducationStartMonth : "Nov",
+	EducationStartYear : "2015",
+	EducationEndMonth : "Ago",
+	EducationEndYear : "2016",
 }
 
 export default PreviewEducation;

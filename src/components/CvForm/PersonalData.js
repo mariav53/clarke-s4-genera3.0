@@ -11,14 +11,14 @@ class PersonalData extends React.Component {
 				<input className="class-input" id="input-profession" type="text" name="profession" placeholder="Profesión*" required onChange={this.props.onChangeFunction}   />
 				<input className="class-input" id="input-phone" type="tel" name="telephone" placeholder="Teléfono*" required onChange={this.props.onChangeFunction}   />
 				<div className="container-birthdate">
-					<label className="label label-birthdate" for="input-birthdate">Fecha de Nacimiento</label>
+					<label className="label label-birthdate" htmlFor="input-birthdate">Fecha de Nacimiento</label>
 					<input className="class-input input-birthdate" id="input-birthdate" type="date" name="date" placeholder="Fecha de nacimiento" value='' onChange={this.props.onChangeFunction}  />
 				</div>
 				<input className="class-input" id="input-email" type="email" name="email" placeholder="Email*" required onChange={this.props.onChangeFunction}  />
-				<label className="label" for="input-address"></label>
+				<label className="label" htmlFor="input-address"></label>
 				<input className="class-input" id="input-address" type="text" name="address" placeholder="Dirección"  onChange={this.props.onChangeFunction}  />
 				<div className="inputs-container-rrss">
-					<textarea className="textarea-aboutme" maxlength="650px" name="summary" id="text-aboutme" rows="5" cols="50" placeholder="Extracto" onChange={this.props.onChangeFunction}></textarea>
+					<textarea className="textarea-aboutme" maxLength="650px" name="summary" id="text-aboutme" rows="3" cols="50" placeholder="Extracto" onChange={this.props.onChangeFunction}></textarea>
 					<p>RRSS</p>
 					<input className="class-input" id="input-twitter" type="text" name="twitter" placeholder="@Twitter" onChange={this.props.onChangeFunction} />
 					<input className="class-input" id="input-linkedin" type="text" name="linkedin" placeholder="linkedin.com/xxxxx" onChange={this.props.onChangeFunction} />

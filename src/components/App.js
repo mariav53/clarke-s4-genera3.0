@@ -16,12 +16,33 @@ import './../scss/main.css';
 
 class App extends Component {
 	constructor(props){
-
 		super(props);
-
 		this.updateState = this.updateState.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleImageUpload = this.handleImageUpload.bind(this);
+		this.state = {
+			file: '',
+			imagePreviewUrl: ''
+		};
+	}
+	handleSubmit(e) {
+		e.preventDefault();
+		console.log('handle uploading-', this.state.file);
+	}
 
-		this.state = {}
+	handleImageUpload(e) {
+		e.preventDefault();
+
+		let reader = new FileReader();
+    let file = e.target.files[0];
+
+		reader.onloadend = () => {
+      this.setState({
+        file: file,
+        imagePreviewUrl: reader.result
+      });
+    }
+		reader.readAsDataURL(file)
 	}
 
 	updateState(prop, value) {
@@ -29,8 +50,13 @@ class App extends Component {
 		newState[prop] = value;
 		this.setState(newState);
 	}
-
   render() {
+		let {imagePreviewUrl} = this.state;
+		let $imagePreview = null;
+		if (imagePreviewUrl) {
+			$imagePreview = (<div className="background__photo-preview" style={{backgroundImage: `url(${imagePreviewUrl})`}}></div>);
+		}
+
     return (
 			<div>
 				<Header />
@@ -42,8 +68,11 @@ class App extends Component {
 							<h2 className="creation__title">Configura tu currículum</h2>
 							<div className="container__creation">
 								<CreationDesign />
-                <ChooseImage />
-
+								<ChooseImage
+									onSubmitFunction = {(e)=>this.handleSubmit(e)}
+									onChangeUploadImage = {(e)=>this.handleImageUpload(e)}
+									newImagePreview = {$imagePreview}
+								/>
 								<CvForm updatePreview={this.updateState}/>
 							</div>
 						</section>
@@ -53,6 +82,7 @@ class App extends Component {
 								<div className="container__preview--intro preview-div">
 									<div className="container__preview--photo">
 										<div className="container__photo">
+											{$imagePreview}
 										</div>
 									</div>
 									<PreviewPersonalData
@@ -74,11 +104,19 @@ class App extends Component {
 								<PreviewExperience
 									job = {this.state.job}
 									company = {this.state.company}
+									ExperiencieStartMonth={this.state.ExperiencieStartMonth}
+									ExperiencieEndMonth={this.state.ExperiencieEndMonth}
+									ExperiencieStartYear={this.state.ExperiencieStartYear}
+									ExperiencieEndYear={this.state.ExperiencieEndYear}
 									descriptionJob = {this.state.descriptionJob}
 								/>
 								<PreviewEducation
 									titulation = {this.state.titulation}
 									center = {this.state.center}
+									EducationStartMonth={this.state.EducationStartMonth}
+									EducationEndMonth={this.state.EducationEndMonth}
+									EducationStartYear={this.state.EducationStartYear}
+									EducationEndYear={this.state.EducationEndYear}
 									descriptionEduc = {this.state.descriptionEduc}
 								/>
 								<PreviewSkills
@@ -91,7 +129,7 @@ class App extends Component {
 							</div>
 						</section>
 					</section>
-					</main>
+				</main>
 				<Footer />
 			</div>
     );

@@ -3,11 +3,11 @@ import React from 'react';
 class ChooseImage extends React.Component {
   render () {
     return (
-      <section className="creation__photo">
-        <h3 className="label" for="files">Sube tu foto</h3>
-        <input className="selection-image" type="file" id="files" name="files[]" />
-        <div className="trigger"></div>
-      </section>
+			<form className="creation__photo" onSubmit = {this.props.onSubmitFunction}>
+				<h3 className="label" htmlFor="files">Sube tu foto</h3>
+				<input className="selection-image" type="file" onChange={this.props.onChangeUploadImage}/>
+				{this.props.newImagePreview}
+			</form>
     );
   }
 }

@@ -128,19 +128,29 @@
 	@include flexRow();
 	@include aroundCenter();
   .selection-image {
-  	display: none;
-  }
-  .trigger {
-  	display: inline-block;
-  	width: 100px;
-  	height: 100px;
-  	background-color: $colorDarkBlue;
-  	@include backgroundCenter();
-		background-size: cover;
-  	border-radius: 100px;
-  	border-color: $colorDarkBlue;
-		// &:hover{
-		// 	cursor: pointer;
-		// }
-  }
+   // 	display: none;
+		display: inline-block;
+		width: 132px;
+  	height: 20px;
+	//  width: 100px;
+	//  height: 100px;
+		// background-color: $colorDarkBlue;
+		// @include backgroundCenter();
+		// background-size: cover;
+		// border-radius: 50%;
+		// border-color: $colorDarkBlue;
+   }
+  // .trigger {
+  // 	display: inline-block;
+  // 	width: 100px;
+  // 	height: 100px;
+  // 	background-color: $colorDarkBlue;
+  // 	@include backgroundCenter();
+	// 	background-size: cover;
+  // 	border-radius: 100px;
+  // 	border-color: $colorDarkBlue;
+	// 	// &:hover{
+	// 	// 	cursor: pointer;
+	// 	// }
+  // }
 }
