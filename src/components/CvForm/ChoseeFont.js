@@ -10,30 +10,30 @@ class ChoseeFont extends React.Component {
 		this.HandleClickMenu = this.HandleClickMenu.bind(this);
 		this.state={
 			visible:false,
-			cookie:false,
-			annie: false,
-			philosopher: false
+			// cookie:false,
+			// annie: false,
+			// philosopher: false
 
 		}
 	}
 	HandleClickMenu(event){
 		event.preventDefault();
 		this.setState({
-			visible:!this.state.visible
-			cookie:!this.state.cookie
-			annie:!this.state.annie
-			philosopher:!this.state.philosopher
+			visible: !this.state.visible,
+			cookie: !this.state.cookie,
+			annie: !this.state.annie,
+			philosopher: !this.state.philosopher
 		})
 	}
-	HandleClickFont(event){
-		event.preventDefault();
-		this.setState({
-			
-			cookie:!this.state.cookie
-			annie:!this.state.annie
-			philosopher:!this.state.philosopher
-		})
-	}
+	// HandleClickFont(event){
+	// 	event.preventDefault();
+	// 	this.setState({
+	//
+	// 		cookie:!this.state.cookie,
+	// 		annie:!this.state.annie,
+	// 		philosopher:!this.state.philosopher
+	// 	})
+	// }
   render () {
     return (
 			<div>
