@@ -24,12 +24,13 @@ class App extends Component {
 		this.updateState = this.updateState.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleImageUpload = this.handleImageUpload.bind(this);
+		this.handleChangeFont = this.handleChangeFont.bind(this);
 
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
-
+			fontSelected: 'philosopher'
 		};
 	}
 
@@ -40,10 +41,8 @@ class App extends Component {
 
 	handleImageUpload(e) {
 		e.preventDefault();
-
 		let reader = new FileReader();
     let file = e.target.files[0];
-
 		reader.onloadend = () => {
       this.setState({
         file: file,
@@ -58,13 +57,29 @@ class App extends Component {
 		newState[prop] = value;
 		this.setState(newState);
 	}
+
+	handleChangeFont=(event)=> {
+		const chooseFont = event.target.value;
+	 	if (chooseFont === 'cookie'){
+		  this.setState({
+				fontSelected: 'cookie'
+			})
+		} else if (chooseFont === 'annie'){
+		  this.setState({
+			 	fontSelected: 'annie'
+			})
+	 	} else if (chooseFont === 'philosopher'){
+		  this.setState({
+				fontSelected: 'philosopher'
+	 		})
+		}
+	}
   render() {
 		let {imagePreviewUrl} = this.state;
 		let $imagePreview = null;
 		if (imagePreviewUrl) {
 			$imagePreview = (<div className="background__photo-preview" style={{backgroundImage: `url(${imagePreviewUrl})`}}></div>);
 		}
-
     return (
 			<div>
 				<Header />
@@ -77,7 +92,7 @@ class App extends Component {
 							<div className="container__creation">
 								<section className="creation__design">
 									<ul className="creation__design__options">
-										<ChoseeFont />
+										<ChoseeFont changeFont= {(e)=>this.handleChangeFont(e)} />
 										<ChoseeColor />
 										<ChoseeTheme />
 									</ul>
@@ -92,7 +107,7 @@ class App extends Component {
 						</section>
 						<section className="section__preview" id="preview">
 							<h2 className="preview__title"> Previsualización </h2>
-							<div className="showpreview dots philosopher black-pink-grey">
+							<div className={`showpreview ${this.state.fontSelected} dots black-pink-grey`}>
 								<div className="container__preview--intro preview-div">
 									<div className="container__preview--photo">
 										<div className="container__photo">
