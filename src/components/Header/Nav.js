@@ -15,6 +15,8 @@ class Nav extends React.Component{
 			visible:!this.state.visible
 		})
 	}
+
+
 	render() {
 		return (
 		<div>
