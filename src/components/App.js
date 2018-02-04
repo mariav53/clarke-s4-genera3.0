@@ -17,14 +17,31 @@ import './../scss/main.css';
 class App extends Component {
 	constructor(props){
 		super(props);
+
 		this.updateState = this.updateState.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleImageUpload = this.handleImageUpload.bind(this);
+		// this.HandleGreenLimeClick = this.HandleGreenLimeClick.bind(this);
+		// this.HandleBlueLimeClick = this.HandleBlueLimeClick.bind(this);
+
 		this.state = {
 			file: '',
-			imagePreviewUrl: ''
+			imagePreviewUrl: '',
+			// colorOption: blackPinkGrey
 		};
 	}
+	// HandleGreenLimeClick(e){
+	// 	e.preventDefault();
+	// 	this.setState({
+	// 		colorOption: redGreenLime
+	// 	})
+	// }
+	// HandleBlueLimeClick(e){
+	// 	e.preventDefault();
+	// 	this.setState({
+	// 		colorOption: blackBlueLime
+	// 	})
+	// }
 	handleSubmit(e) {
 		e.preventDefault();
 		console.log('handle uploading-', this.state.file);
@@ -68,6 +85,7 @@ class App extends Component {
 							<h2 className="creation__title">Configura tu currículum</h2>
 							<div className="container__creation">
 								<CreationDesign />
+
 								<ChooseImage
 									onSubmitFunction = {(e)=>this.handleSubmit(e)}
 									onChangeUploadImage = {(e)=>this.handleImageUpload(e)}
