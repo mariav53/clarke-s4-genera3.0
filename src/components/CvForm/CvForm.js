@@ -34,7 +34,6 @@ class CvForm extends React.Component {
 						<div id="container-inputs__skills">
 							<div className="skills">
 								<Languages onChangeFunction={this.handleChange} updateLanguagesPreview ={this.props.updateLanguagesPreview} />
-								{/* <Skills onChangeFunction={this.handleChange}  updateEducationPreview ={this.props.updateEducationPreview}/> */}
 								<It onChangeFunction={this.handleChange} updateItPreview ={this.props.updateItPreview} />
 								<VariouSkills onChangeFunction={this.handleChange} updateVariouSkillsPreview ={this.props.updateVariouSkillsPreview} />
 							</div>

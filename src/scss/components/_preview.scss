@@ -263,14 +263,22 @@
 			@include flexRow();
 			justify-content: space-between;
 		}
-
+}
+.div-Languages,
+.div-It,
+.div-VariouSkills {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 
 }
 .preview__skills--languages,
 .preview__skills--it,
 .preview__skills--bonus {
-	padding: 15px 0;
-	@include flexRowVerticalcenter();
+	padding: 5px 0;
+	display:flex;
+	flex-direction: column;
 }
 
 .content__skills {
@@ -279,8 +287,12 @@
 .talk-icon, .it-icon, .bonus-icon {
 	width: 30px;
 	height: 30px;
+	margin: 10px;
 }
-.skills__language--select, .skills__it--select, .skills__bonus--select {
+.skills__language--select,
+.skills__it--select,
+.skills__bonus--select {
+	display: flex;
 	width: 100%;
 	padding: 0 10px;
 

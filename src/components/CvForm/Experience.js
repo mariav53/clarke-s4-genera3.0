@@ -84,7 +84,7 @@ class Experience extends React.Component {
 					<textarea className="experience-text" id="description-job1" ref="descriptionJob" name="descriptionJob" rows="8" cols="80" placeholder="Despripción del puesto" onChange ={this.handleJob} ></textarea>
 					<button type="button" name="button" className="button--new new-experience-button" data-id="1" onClick={this.handleClickAddJob }>Añadir experiencia</button>
 				</div>
-				
+
 			</div>
 		);
 	}

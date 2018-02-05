@@ -12,9 +12,9 @@ class PreviewIt extends React.Component {
 
 							<div key={i} className="content__skills">
 								<div className="skills__it--select">
-									<span id="it-name1-preview-id">{myIt.tech1 ? `${myIt.tech1} |`: ''}
+									<span id="it-name1-preview-id">{myIt.tech1 ? `${myIt.tech1} | ` : ''}
 									</span>
-									<span id="it-level1-preview-id"> {myIt.levelTech1}
+									<span id="it-level1-preview-id">  {myIt.levelTech1}
 									</span>
 								</div>
 							</div>

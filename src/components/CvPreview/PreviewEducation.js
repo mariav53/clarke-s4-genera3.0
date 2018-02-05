@@ -40,14 +40,5 @@ class PreviewEducation extends React.Component{
 		);
 	}
 }
-PreviewEducation.defaultProps = {
-	titulation: "Programadora Front-end",
-	center: "Adalab",
-	descriptionEduc: "Estudios de programacion front-end en la Fundación Adalab. HTML, CSS, Javascript.",
-	EducationStartMonth : "Nov",
-	EducationStartYear : "2015",
-	EducationEndMonth : "Ago",
-	EducationEndYear : "2016",
-}
 
 export default PreviewEducation;
