@@ -23,10 +23,10 @@
 	font-size: 0.8em;
 	@media all and (min-width: 768px) {
 			font-size: 1em;
-		}
+	}
 	@media all and (min-width: 1024px) {
 			font-size: 1.1em;
-		}
+	}
 }
 .cookie .preview-text{
 	font-family: 'arial';
@@ -119,7 +119,6 @@
 .showpreview.stripes {
 	background-image: url($pathImages + 'themes/stripes.png');
 	background-position: 0 0;
-	// background-size: 100%;
 	padding: 70px 60px 190px;
 	background-repeat: repeat-y;
 	height: auto;
@@ -127,7 +126,6 @@
 }
 .showpreview.zigZag {
 	background-image: url($pathImages + 'themes/zigZag.png');
-	// background-size: 100%;
   padding: 100px;
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -148,16 +146,6 @@
 	align-content: flex-start;
 	height: auto;
 }
-// .thumb {
-// 	// width: 70px;
-// 	width: 70px;
-// 	border-radius: 100px;
-// 	height: 70px;
-// 	@media all and (min-width: 768px) {
-// 		width: 90px;
-// 		height: 90px;
-// 	}
-// }
 .container__preview--photo {
 	margin-right: 30px;
 	position: relative;

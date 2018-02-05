@@ -30,17 +30,47 @@ class App extends Component {
 		this.HandleGreenLimeClick = this.HandleGreenLimeClick.bind(this);
 		this.HandleBlueLimeClick = this.HandleBlueLimeClick.bind(this);
 		this.HandlePinkGreyClick = this.HandlePinkGreyClick.bind(this);
+<<<<<<< HEAD
 		this.updateJobState = this.updateJobState.bind(this);
 		this.updateEducationState = this.updateEducationState.bind(this);
+=======
+		this.handleChangeThemeDots = this.handleChangeThemeDots.bind(this);
+		this.handleChangeThemeStripes = this.handleChangeThemeStripes.bind(this);
+		this.handleChangeThemeZigZag = this.handleChangeThemeZigZag.bind(this);
+>>>>>>> 487c9a56a72af05b11e5e1117faf876d2107931b
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
+<<<<<<< HEAD
 			fontOption:'philosopher',
 			colorOption: 'black-pink-grey',
 			listJobs: [],
 			listEducation: []
+=======
+			fontOption: 'philosopher',
+			colorOption: 'black-pink-grey',
+			themeOption: 'dots'
+>>>>>>> 487c9a56a72af05b11e5e1117faf876d2107931b
 		};
+	}
+	handleChangeThemeZigZag(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'zigZag'
+		})
+	}
+	handleChangeThemeStripes(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'stripes'
+		})
+	}
+	handleChangeThemeDots(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'dots'
+		})
 	}
 
 	updateJobState(myExperience){
@@ -146,7 +176,11 @@ class App extends Component {
 											onClickBlueLime = {this.HandleBlueLimeClick}
 											onClickPinkGrey = {this.HandlePinkGreyClick}
 										/>
-										<ChoseeTheme />
+										<ChoseeTheme
+										onClickDots= {this.handleChangeThemeDots}
+										onClickStripes = {this.handleChangeThemeStripes}
+										onClickZigZag = {this.handleChangeThemeZigZag}
+									 />
 									</ul>
 								</section>
 								<ChooseImage
@@ -164,7 +198,7 @@ class App extends Component {
 						<section className="section__preview" id="preview">
 							<h2 className="preview__title"> Previsualización </h2>
 
-							<div className={`showpreview dots ${this.state.fontOption} ${this.state.colorOption}`}>
+							<div className={`showpreview ${this.state.fontOption} ${this.state.colorOption} ${this.state.themeOption}`}>
 								<div className="container__preview--intro preview-div">
 									<div className="container__preview--photo">
 										<div className="container__photo">

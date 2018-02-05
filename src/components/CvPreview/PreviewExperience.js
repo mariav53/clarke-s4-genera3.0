@@ -1,4 +1,5 @@
 import React from 'react';
+import AddExperience from './AddExperience'
 
 class PreviewExperience extends React.Component {
 
@@ -39,13 +40,20 @@ class PreviewExperience extends React.Component {
 								</div>
 							</div>
 						)}
-
 				</div>
 			</div>
-				);
-				}
-				}
-
-
+		);
+	}
+}
+PreviewExperience.defaultProps = {
+	job: "Social Media",
+	company: "Swing Swing",
+	descriptionJob: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.",
+	ExperiencieStartMonth : "Nov",
+	ExperiencieStartYear : "2015",
+	ExperiencieEndMonth : "Ago",
+	ExperiencieEndYear : "2016",
+}
+>>>>>>> 487c9a56a72af05b11e5e1117faf876d2107931b
 
 export default PreviewExperience;

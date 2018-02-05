@@ -1,9 +1,12 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import SelectMonth from './SelectMonth';
+import SelectYears from './SelectYears';
 
 class Experience extends React.Component {
 	constructor(props){
 		super(props);
-
 	this.handleJob = this.handleJob.bind(this);
 	this.handleClickAddJob = this.handleClickAddJob.bind(this);
 	this.state = {
@@ -53,6 +56,7 @@ class Experience extends React.Component {
 		}
 		return yearsInput;
 	}
+
 	render() {
 		const monthsArray = [ "Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic", "Actual"];
 		return (
@@ -83,7 +87,7 @@ class Experience extends React.Component {
 					<textarea className="experience-text" id="description-job1" ref="descriptionJob" name="descriptionJob" rows="8" cols="80" placeholder="Despripción del puesto" onChange ={this.handleJob} ></textarea>
 					<button type="button" name="button" className="button--save save-experience-button" data-id="1" onClick={this.handleClickAddJob }>Guardar</button>
 				</div>
-				<button type="button" name="button" className="button--new new-experience-button">Añadir experiencia</button>
+				<button type="button" name="button" className="button--new new-experience-button" onChange ={this.HandleClickAdd}>Añadir experiencia</button>
 			</div>
 		);
 	}
