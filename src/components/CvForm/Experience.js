@@ -1,24 +1,22 @@
 import React from 'react';
-import SelectMonth from './SelectMonth';
-import SelectYears from './SelectYears';
 
 class Experience extends React.Component {
 	constructor(props){
 		super(props);
 
-		this.handleJob = this.handleJob.bind(this);
-		this.handleClickAddJob = this.handleClickAddJob.bind(this);
-		this.state = {
-				myExperience: {
-					job: " ",
-					ExperiencieStartMont: " ",
-					ExperiencieStartYear: " ",
-					ExperiencieEndMonth: " ",
-					ExperiencieEndYear: " ",
-					company: " ",
-					descriptionJob: " "
-				}
+	this.handleJob = this.handleJob.bind(this);
+	this.handleClickAddJob = this.handleClickAddJob.bind(this);
+	this.state = {
+			myExperience: {
+				job: " ",
+				ExperiencieStartMont: " ",
+				ExperiencieStartYear: " ",
+				ExperiencieEndMonth: " ",
+				ExperiencieEndYear: " ",
+				company: " ",
+				descriptionJob: " "
 			}
+		}
 	}
 
 	handleJob(event){
@@ -68,7 +66,6 @@ class Experience extends React.Component {
 								{monthsArray.map(option => {
 									return <option value={option} key={option}>{option}</option>})}
 							</select>
-
 							<select name='ExperiencieStartYear' ref= 'ExperiencieStartYear' className="year"  onChange={this.handleJob}> {this.createSelectItems()}
 							</select>
 						</div>

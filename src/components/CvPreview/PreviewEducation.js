@@ -8,54 +8,34 @@ class PreviewEducation extends React.Component{
 					<h3 className="formation__title">Formación</h3>
 				</div>
 				<div className="preview__formation preview-text">
-					<div className="container__formation--main-data">
-						<div className="jobAndDate">
-							<div>
-								<span id="titulo-preview-id1">{this.props.titulation}</span>
-							</div>
-							<div className="joinDate">
-								<div>
-									<span id="from-education-preview-id1" className="from-date-preview">{this.props.EducationStartMonth} {this.props.EducationStartYear ? ` ${this.props.EducationStartYear} / `: ''} </span>
-								</div>
-								<div>
-									<span id="until-education-preview-id1">{this.props.EducationEndMonth} {this.props.EducationEndYear}</span>
+					{
+						this.props.listEducation.map((myEducation,i) =>
+							<div  key={i}  className="container__formation--main-data">
+								<div className="jobAndDate">
+									<div>
+										<span id="titulo-preview-id1">{myEducation.titulation}</span>
+									</div>
+									<div className="joinDate">
+										<div>
+											<span id="from-education-preview-id1" className="from-date-preview">{myEducation.EducationStartMonth} {myEducation.EducationStartYear ? ` ${myEducation.EducationStartYear} / `: ''} </span>
+										</div>
+										<div>
+											<span id="until-education-preview-id1">{myEducation.EducationEndMonth} {myEducation.EducationEndYear}</span>
 
-								</div>
-							</div>
-						</div>
-						<div>
-							<span id="centro-id1">{this.props.center}</span>
-						</div>
-					</div>
-					<div className="container__formation--description">
-						<div><span id="description-education-preview-id1">{this.props.descriptionEduc}</span></div>
-					</div>
-				</div>
-				<div className="preview__formation preview-text">
-					<div className="container__formation--main-data">
-						<div className="jobAndDate">
-							<div>
-								<span id="titulo-preview-id2"></span>
-							</div>
-							<div className="joinDate">
-								<div>
-									<span id="from-education-preview-id2" className="from-date-preview"></span>
+										</div>
+									</div>
 								</div>
 								<div>
-									<span id="until-education-preview-id2"></span>
+									<span id="centro-id1">{myEducation.center}</span>
+								</div>
+
+								<div className="container__formation--description">
+									<div><span id="description-education-preview-id1">{myEducation.descriptionEduc}</span></div>
 								</div>
 							</div>
-						</div>
-						<div>
-							<span id="centro-id2"></span>
-						</div>
-						<div className="container__formation--description">
-							<div>
-								<span id="description-education-preview-id2"></span>
-							</div>
-						</div>
-					</div>
+						)}
 				</div>
+
 			</div>
 		);
 	}

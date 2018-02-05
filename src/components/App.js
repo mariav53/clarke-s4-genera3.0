@@ -31,19 +31,27 @@ class App extends Component {
 		this.HandleBlueLimeClick = this.HandleBlueLimeClick.bind(this);
 		this.HandlePinkGreyClick = this.HandlePinkGreyClick.bind(this);
 		this.updateJobState = this.updateJobState.bind(this);
+		this.updateEducationState = this.updateEducationState.bind(this);
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
 			fontOption:'philosopher',
 			colorOption: 'black-pink-grey',
-			listJobs: []
+			listJobs: [],
+			listEducation: []
 		};
 	}
 
 	updateJobState(myExperience){
 		this.setState(prevState => ({
     	listJobs: [...prevState.listJobs, myExperience]
+		}))
+
+	}
+	updateEducationState(myEducation){
+		this.setState(prevState => ({
+    	listEducation: [...prevState.listEducation, myEducation]
 		}))
 
 	}
@@ -149,6 +157,7 @@ class App extends Component {
 								<CvForm
 									updatePreview={this.updateState}
 									updateJobsPreview={this.updateJobState}
+									updateEducationPreview ={this.updateEducationState}
 								/>
 							</div>
 						</section>
@@ -189,13 +198,14 @@ class App extends Component {
 									// descriptionJob = {this.state.descriptionJob}
 								/>
 								<PreviewEducation
-									titulation = {this.state.titulation}
-									center = {this.state.center}
-									EducationStartMonth={this.state.EducationStartMonth}
-									EducationEndMonth={this.state.EducationEndMonth}
-									EducationStartYear={this.state.EducationStartYear}
-									EducationEndYear={this.state.EducationEndYear}
-									descriptionEduc = {this.state.descriptionEduc}
+									listEducation ={this.state.listEducation}
+									// titulation = {this.state.titulation}
+									// center = {this.state.center}
+									// EducationStartMonth={this.state.EducationStartMonth}
+									// EducationEndMonth={this.state.EducationEndMonth}
+									// EducationStartYear={this.state.EducationStartYear}
+									// EducationEndYear={this.state.EducationEndYear}
+									// descriptionEduc = {this.state.descriptionEduc}
 								/>
 								<PreviewSkills
 									lang1 = {this.state.lang1}
