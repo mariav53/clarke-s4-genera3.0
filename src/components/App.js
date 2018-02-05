@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import Intro from './Intro/Intro';
-// import CreationDesign from './CvForm/CreationDesign';
 import ChoseeFont from './CvForm/ChoseeFont';
 import ChoseeColor from './CvForm/ChoseeColors';
 import ChoseeTheme from './CvForm/ChoseeTheme';
@@ -30,28 +29,21 @@ class App extends Component {
 		this.HandleGreenLimeClick = this.HandleGreenLimeClick.bind(this);
 		this.HandleBlueLimeClick = this.HandleBlueLimeClick.bind(this);
 		this.HandlePinkGreyClick = this.HandlePinkGreyClick.bind(this);
-<<<<<<< HEAD
-		this.updateJobState = this.updateJobState.bind(this);
-		this.updateEducationState = this.updateEducationState.bind(this);
-=======
 		this.handleChangeThemeDots = this.handleChangeThemeDots.bind(this);
 		this.handleChangeThemeStripes = this.handleChangeThemeStripes.bind(this);
 		this.handleChangeThemeZigZag = this.handleChangeThemeZigZag.bind(this);
->>>>>>> 487c9a56a72af05b11e5e1117faf876d2107931b
+		this.updateJobState = this.updateJobState.bind(this);
+		this.updateEducationState = this.updateEducationState.bind(this);
+
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
-<<<<<<< HEAD
 			fontOption:'philosopher',
 			colorOption: 'black-pink-grey',
+			themeOption: 'dots',
 			listJobs: [],
 			listEducation: []
-=======
-			fontOption: 'philosopher',
-			colorOption: 'black-pink-grey',
-			themeOption: 'dots'
->>>>>>> 487c9a56a72af05b11e5e1117faf876d2107931b
 		};
 	}
 	handleChangeThemeZigZag(e){

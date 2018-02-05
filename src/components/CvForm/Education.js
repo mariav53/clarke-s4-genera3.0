@@ -81,9 +81,8 @@ class Education extends React.Component {
           <input className="class-input" id="centro1" type="text" ref="center" name="center" placeholder="Centro de estudios*" required onChange ={this.handleEducation}/>
           <label className="label" htmlFor="description-education1"></label>
           <textarea className="description" id="description-education1" cols="30" rows="10"  ref="descriptionEduc"  name="descriptionEduc" placeholder="Descripción" onChange ={this.handleEducation}></textarea>
-          <button type="button" name="button" className="button--save save-education-button" id="save-education-button1" data-id="1" onClick={this.handleClickAddEducation }>Guardar</button>
+          <button type="button" name="button" className="button--new new-education-button" id="save-education-button1" data-id="1" onClick={this.handleClickAddEducation }>Añadir formación</button>
         </div>
-        <button type="button" name="button" className="button--new new-education-button" data-id="1">Añadir formación</button>
       </div>
     );
   }
