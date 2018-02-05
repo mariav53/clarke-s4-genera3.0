@@ -40,11 +40,6 @@
   	width: 100px;
   	height: 100px;
   }
-  // &:hover .design-fonts,
-  // &:hover .design-colours,
-  // &:hover .design-themes {
-  //   display: block;
-  // }
 }
 
 .design-fonts,
@@ -129,29 +124,8 @@
 	@include flexRow();
 	@include aroundCenter();
   .selection-image {
-   // 	display: none;
 		display: inline-block;
 		width: 120px;
   	height: 20px;
-	//  width: 100px;
-	//  height: 100px;
-		// background-color: $colorDarkBlue;
-		// @include backgroundCenter();
-		// background-size: cover;
-		// border-radius: 50%;
-		// border-color: $colorDarkBlue;
    }
-  // .trigger {
-  // 	display: inline-block;
-  // 	width: 100px;
-  // 	height: 100px;
-  // 	background-color: $colorDarkBlue;
-  // 	@include backgroundCenter();
-	// 	background-size: cover;
-  // 	border-radius: 100px;
-  // 	border-color: $colorDarkBlue;
-	// 	// &:hover{
-	// 	// 	cursor: pointer;
-	// 	// }
-  // }
 }
