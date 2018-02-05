@@ -1,7 +1,6 @@
 import React from 'react';
-import ButtonFont from './../../images/text.svg';
 import ButtonPalette from './../../images/paint-palette.svg';
-import ButtonTheme from './../../images/menu.svg';
+
 
 class ChoseeColor extends React.Component {
 

@@ -337,7 +337,7 @@ main {
   align-items: center; }
   .creation__photo .selection-image {
     display: inline-block;
-    width: 132px;
+    width: 120px;
     height: 20px; }
 
 .button--open, .button--close {
