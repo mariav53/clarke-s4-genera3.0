@@ -10,7 +10,9 @@ import PreviewPersonalData from './CvPreview/Preview-PersonalData';
 import PreviewSummary from './CvPreview/PreviewSummary';
 import PreviewExperience from './CvPreview/PreviewExperience';
 import PreviewEducation from './CvPreview/PreviewEducation';
-import PreviewSkills from './CvPreview/PreviewSkills';
+import PreviewLanguages from './CvPreview/PreviewLanguages';
+import PreviewIt from './CvPreview/PreviewIt';
+import PreviewVariouSkills from './CvPreview/PreviewVariouSkills';
 import Footer from './Footer/Footer';
 import Hero from './Intro/Hero';
 
@@ -34,7 +36,9 @@ class App extends Component {
 		this.handleChangeThemeZigZag = this.handleChangeThemeZigZag.bind(this);
 		this.updateJobState = this.updateJobState.bind(this);
 		this.updateEducationState = this.updateEducationState.bind(this);
-
+		this.updateLanguagesState = this.updateLanguagesState.bind(this);
+		this.updateItState = this.updateItState.bind(this);
+		this.updateVariouSkillsState = this.updateVariouSkillsState.bind(this);
 
 		this.state = {
 			file: '',
@@ -43,9 +47,39 @@ class App extends Component {
 			colorOption: 'black-pink-grey',
 			themeOption: 'dots',
 			listJobs: [],
-			listEducation: []
+			listEducation: [],
+			listLanguages: [],
+			listIt: [],
+			listVariouSkills: []
 		};
 	}
+
+	updateJobState(myExperience){
+		this.setState(prevState => ({
+    	listJobs: [...prevState.listJobs, myExperience]
+		}))
+	}
+	updateEducationState(myEducation){
+		this.setState(prevState => ({
+    	listEducation: [...prevState.listEducation, myEducation]
+		}))
+	}
+	updateLanguagesState(myLanguages){
+		this.setState(prevState => ({
+			listLanguages: [...prevState.listLanguages,myLanguages]
+		}))
+	}
+	updateItState(myIt){
+		this.setState(prevState => ({
+			listIt: [...prevState.listIt,myIt]
+		}))
+	}
+	updateVariouSkillsState(myVariouSkills){
+		this.setState(prevState => ({
+			listVariouSkills: [...prevState.listVariouSkills,myVariouSkills]
+		}))
+	}
+
 	handleChangeThemeZigZag(e){
 		e.preventDefault();
 		this.setState({
@@ -63,19 +97,6 @@ class App extends Component {
 		this.setState({
 			themeOption: 'dots'
 		})
-	}
-
-	updateJobState(myExperience){
-		this.setState(prevState => ({
-    	listJobs: [...prevState.listJobs, myExperience]
-		}))
-
-	}
-	updateEducationState(myEducation){
-		this.setState(prevState => ({
-    	listEducation: [...prevState.listEducation, myEducation]
-		}))
-
 	}
 
 	handleChangeFontCookie(e){
@@ -169,10 +190,10 @@ class App extends Component {
 											onClickPinkGrey = {this.HandlePinkGreyClick}
 										/>
 										<ChoseeTheme
-										onClickDots= {this.handleChangeThemeDots}
-										onClickStripes = {this.handleChangeThemeStripes}
-										onClickZigZag = {this.handleChangeThemeZigZag}
-									 />
+											onClickDots= {this.handleChangeThemeDots}
+											onClickStripes = {this.handleChangeThemeStripes}
+											onClickZigZag = {this.handleChangeThemeZigZag}
+										/>
 									</ul>
 								</section>
 								<ChooseImage
@@ -183,7 +204,9 @@ class App extends Component {
 								<CvForm
 									updatePreview={this.updateState}
 									updateJobsPreview={this.updateJobState}
-									updateEducationPreview ={this.updateEducationState}
+									updateEducationPreview ={this.updateEducationState} updateLanguagesPreview ={this.updateLanguagesState}
+									updateItPreview={this.updateItState}
+									updateVariouSkillsPreview={this.updateVariouSkillsState}
 								/>
 							</div>
 						</section>
@@ -233,13 +256,22 @@ class App extends Component {
 									// EducationEndYear={this.state.EducationEndYear}
 									// descriptionEduc = {this.state.descriptionEduc}
 								/>
-								<PreviewSkills
-									lang1 = {this.state.lang1}
-									levelLanguage1 = {this.state.levelLanguage1}
-									tech1 = {this.state.tech1}
-									levelTech1 = {this.state.levelTech1}
-									skill1 = {this.state.skill1}
-								/>
+								<div className="container__preview--skills">
+									<div className="preview__skills preview-text">
+										<PreviewLanguages listLanguages={this.state.listLanguages}
+										/>
+										<PreviewIt listIt={this.state.listIt}/>
+										<PreviewVariouSkills listVariouSkills={this.state.listVariouSkills}/>
+										{/* <PreviewSkills
+											lang1 = {this.state.lang1}
+											levelLanguage1 = {this.state.levelLanguage1}
+											tech1 = {this.state.tech1}
+											levelTech1 = {this.state.levelTech1}
+											skill1 = {this.state.skill1}
+										/> */}
+
+									</div>
+								</div>
 							</div>
 						</section>
 					</section>
