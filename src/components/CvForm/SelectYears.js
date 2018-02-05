@@ -18,7 +18,7 @@ class SelectYears extends React.Component {
 	render() {
 		return (
       <div>
-				<select id="end_year-education1" name={this.props.name} className="year"  onChange={this.props.onChangeSelect}> {this.createSelectItems()}
+				<select id="end_year-education1" name={this.props.name} className="year"  onChange={this.props.handleJob}> {this.createSelectItems()}
 				</select>
 			</div>
     );

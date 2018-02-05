@@ -30,13 +30,22 @@ class App extends Component {
 		this.HandleGreenLimeClick = this.HandleGreenLimeClick.bind(this);
 		this.HandleBlueLimeClick = this.HandleBlueLimeClick.bind(this);
 		this.HandlePinkGreyClick = this.HandlePinkGreyClick.bind(this);
+		this.updateJobState = this.updateJobState.bind(this);
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
 			fontOption:'philosopher',
-			colorOption: 'black-pink-grey'
+			colorOption: 'black-pink-grey',
+			listJobs: []
 		};
+	}
+
+	updateJobState(myExperience){
+		this.setState(prevState => ({
+    	listJobs: [...prevState.listJobs, myExperience]
+		}))
+
 	}
 
 	handleChangeFontCookie(e){
@@ -137,7 +146,10 @@ class App extends Component {
 									onChangeUploadImage = {(e)=>this.handleImageUpload(e)}
 									newImagePreview = {$imagePreview}
 								/>
-								<CvForm updatePreview={this.updateState}/>
+								<CvForm
+									updatePreview={this.updateState}
+									updateJobsPreview={this.updateJobState}
+								/>
 							</div>
 						</section>
 						<section className="section__preview" id="preview">
@@ -167,13 +179,14 @@ class App extends Component {
 									github={this.state.github}
 								/>
 								<PreviewExperience
-									job = {this.state.job}
-									company = {this.state.company}
-									ExperiencieStartMonth={this.state.ExperiencieStartMonth}
-									ExperiencieEndMonth={this.state.ExperiencieEndMonth}
-									ExperiencieStartYear={this.state.ExperiencieStartYear}
-									ExperiencieEndYear={this.state.ExperiencieEndYear}
-									descriptionJob = {this.state.descriptionJob}
+									listJobs ={this.state.listJobs}
+									// job = {this.state.job}
+									// company = {this.state.company}
+									// ExperiencieStartMonth={this.state.ExperiencieStartMonth}
+									// ExperiencieEndMonth={this.state.ExperiencieEndMonth}
+									// ExperiencieStartYear={this.state.ExperiencieStartYear}
+									// ExperiencieEndYear={this.state.ExperiencieEndYear}
+									// descriptionJob = {this.state.descriptionJob}
 								/>
 								<PreviewEducation
 									titulation = {this.state.titulation}

@@ -25,9 +25,9 @@ class Nav extends React.Component{
 			<nav className="header__nav">
 				<div className="container__nav">
 					<ul className={`nav__list ${this.state.visible ? 'visible' : 'no-visible'}`}>
-						<NavItems name= "Diseño" url="index.html#design" />
-						<NavItems name= "Crea tu CV" url="index.html#form" />
-						<NavItems name= "Previsualización" url="index.html#previo" />
+						<NavItems name= "Diseño" url="#design" />
+						<NavItems name= "Crea tu CV" url="#form" />
+						<NavItems name= "Previsualización" url="#previo" />
 					</ul>
 				</div>
 			</nav>

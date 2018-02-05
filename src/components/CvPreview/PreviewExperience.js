@@ -1,6 +1,8 @@
 import React from 'react';
 
 class PreviewExperience extends React.Component {
+
+
 	render() {
 		return (
 			<div className="container__preview--experience preview-div">
@@ -8,69 +10,42 @@ class PreviewExperience extends React.Component {
 					<h3 className="experience__title">Experiencia profesional</h3>
 				</div>
 				<div className="preview__experience preview-text">
-					<div className="container__experience--main-data">
-						<div className="jobAndDate">
-							<div>
-								<span id="job-preview-id-1">{this.props.job}</span>
-							</div>
-							<div className="joinDate">
-								<div>
-									<span id="from-job-preview-id1" className="from-date-preview">
-										{this.props.ExperiencieStartMonth}
-										{this.props.ExperiencieStartYear ? ` ${this.props.ExperiencieStartYear} / `: ''}
-									</span>
+					{
+						this.props.listJobs.map((myExperience,i) =>
+							<div key={i} className="container__experience--main-data">
+								<div className="jobAndDate">
+									<div>
+										<span id="job-preview-id-1">{myExperience.job}</span>
+									</div>
+									<div className="joinDate">
+										<div>
+											<span id="from-job-preview-id1" className="from-date-preview">
+												{myExperience.ExperiencieStartMonth}
+												{myExperience.ExperiencieStartYear ? ` ${myExperience.ExperiencieStartYear} / `: ''}
+											</span>
+										</div>
+										<div>
+											<span id="until-job-preview-id1">{myExperience.ExperiencieEndMonth} {myExperience.ExperiencieEndYear}</span>
+										</div>
+									</div>
 								</div>
 								<div>
-									<span id="until-job-preview-id1">{this.props.ExperiencieEndMonth} {this.props.ExperiencieEndYear}</span>
+									<span id="place-preview-id1">{myExperience.company}</span>
+								</div>
+
+								<div className="container__experience--description">
+									<div><span id="description-job-preview-id1">{myExperience.descriptionJob}</span>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div>
-							<span id="place-preview-id1">{this.props.company}</span>
-						</div>
-					</div>
-					<div className="container__experience--description">
-						<div><span id="description-job-preview-id1">{this.props.descriptionJob}</span>
-						</div>
-					</div>
-				</div>
-				<div className="preview__experience preview-text">
-					<div className="container__experience--main-data">
-						<div className="jobAndDate">
-							<div>
-								<span id="job-preview-id-2" className="from-date-preview"></span>
-							</div>
-							<div className="joinDate">
-								<div>
-									<span id="from-job-preview-id2"></span>
-								</div>
-								<div>
-									<span id="until-job-preview-id2"></span>
-								</div>
-							</div>
-						</div>
-						<div>
-							<span id="place-preview-id2"></span>
-						</div>
-					</div>
-					<div className="container__experience--description">
-						<div>
-							<span id="description-job-preview-id2"></span>
-						</div>
-					</div>
+						)}
+
 				</div>
 			</div>
-		);
-	}
-}
-PreviewExperience.defaultProps = {
-	job: "Social Media",
-	company: "Swing Swing",
-	descriptionJob: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.",
-	ExperiencieStartMonth : "Nov",
-	ExperiencieStartYear : "2015",
-	ExperiencieEndMonth : "Ago",
-	ExperiencieEndYear : "2016",
-}
+				);
+				}
+				}
+
+
 
 export default PreviewExperience;

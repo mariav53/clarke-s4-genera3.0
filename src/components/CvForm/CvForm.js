@@ -21,7 +21,8 @@ class CvForm extends React.Component {
 						<PersonalData onChangeFunction={this.handleChange}/>
 					</CvSection>
 					<CvSection label="Experiencia Profesional">
-						<Experience  onChangeFunction={this.handleChange} />
+						<Experience  onChangeFunction={this.handleChange}
+							updateJobsPreview ={this.props.updateJobsPreview}/>
 
 					</CvSection>
 					<CvSection label="Formación">
