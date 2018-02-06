@@ -1,5 +1,4 @@
 import React from 'react';
-// import PreviewPersonalData from './../CvPreview/Preview-PersonalData'
 
 class PersonalData extends React.Component {
 
