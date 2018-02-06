@@ -42,14 +42,16 @@ class PreviewExperience extends React.Component {
 		);
 	}
 }
-PreviewExperience.defaultProps = {
-	job: "Social Media",
-	company: "Swing Swing",
-	descriptionJob: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.",
-	ExperiencieStartMonth : "Nov",
-	ExperiencieStartYear : "2015",
-	ExperiencieEndMonth : "Ago",
-	ExperiencieEndYear : "2016",
-}
+
+// PreviewExperience.defaultProps = {
+// 	job: "Social Media",
+// 	company: "Swing Swing",
+// 	descriptionJob: "Responsable del departamento digital de la agencia gestionando dos grandes cuentas de bebidas alcohólicas y un centro comercial.",
+// 	ExperiencieStartMonth : "Nov",
+// 	ExperiencieStartYear : "2015",
+// 	ExperiencieEndMonth : "Ago",
+// 	ExperiencieEndYear : "2016",
+// }
+
 
 export default PreviewExperience;

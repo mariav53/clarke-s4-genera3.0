@@ -3,7 +3,9 @@ import CvSection from './CvSection';
 import PersonalData from './PersonalData';
 import Experience from './Experience';
 import Education from './Education';
-import Skills from './Skills';
+import Languages from './Languages';
+import It from './It';
+import VariouSkills from './VariouSkills';
 
 class CvForm extends React.Component {
 	constructor(props) {
@@ -29,7 +31,13 @@ class CvForm extends React.Component {
 							updateEducationPreview ={this.props.updateEducationPreview}/>
 					</CvSection>
 					<CvSection label="Habilidades">
-						<Skills onChangeFunction={this.handleChange} />
+						<div id="container-inputs__skills">
+							<div className="skills">
+								<Languages onChangeFunction={this.handleChange} updateLanguagesPreview ={this.props.updateLanguagesPreview} />
+								<It onChangeFunction={this.handleChange} updateItPreview ={this.props.updateItPreview} />
+								<VariouSkills onChangeFunction={this.handleChange} updateVariouSkillsPreview ={this.props.updateVariouSkillsPreview} />
+							</div>
+						</div>
 					</CvSection>
 				</form>
 			</section>

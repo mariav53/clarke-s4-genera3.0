@@ -42,7 +42,7 @@ class Education extends React.Component {
 		 yearsInput.push (actual);
 		for (let i = 1950; i <= (new Date()).getFullYear(); i++) {
 			if (i === 2000){
-				yearsInput.push(<option key={i} value={i} selected="selected">{i} </option>);
+				yearsInput.push(<option key={i} value={i} selected>{i} </option>);
 			} else{
 				yearsInput.push(<option key={i} value={i}>{i}</option>);
 			}
@@ -79,9 +79,9 @@ class Education extends React.Component {
           <input className="class-input" id="centro1" type="text" ref="center" name="center" placeholder="Centro de estudios*" required onChange ={this.handleEducation}/>
           <label className="label" htmlFor="description-education1"></label>
           <textarea className="description" id="description-education1" cols="30" rows="10"  ref="descriptionEduc"  name="descriptionEduc" placeholder="Descripción" onChange ={this.handleEducation}></textarea>
-          <button type="button" name="button" className="button--save save-education-button" id="save-education-button1" data-id="1" onClick={this.handleClickAddEducation }>Añadir</button>
-        </div>
 
+					<button type="button" name="button" className="button--new new-education-button" id="new-education-button1" data-id="1" onClick={this.handleClickAddEducation }>Añadir </button>
+				</div>
       </div>
     );
   }

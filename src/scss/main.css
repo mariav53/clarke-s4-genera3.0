@@ -337,7 +337,7 @@ main {
   align-items: center; }
   .creation__photo .selection-image {
     display: inline-block;
-    width: 120px;
+    width: 132px;
     height: 20px; }
 
 .button--open, .button--close {
@@ -349,7 +349,8 @@ main {
       width: 30px;
       height: auto; } }
 
-.button--save, .button--new {
+.button--save,
+.button--new {
   background-color: #EAB931;
   color: #424A5F;
   font-size: 18px;
@@ -754,7 +755,8 @@ select {
 .container__formation--main-data {
   display: flex;
   flex-direction: column;
-  width: 100%; }
+  width: 100%;
+  margin-bottom: 10px; }
 
 .jobAndDate {
   display: flex;
@@ -781,13 +783,20 @@ select {
       flex-direction: row;
       justify-content: space-between; } }
 
+.div-Languages,
+.div-It,
+.div-VariouSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
 .preview__skills--languages,
 .preview__skills--it,
 .preview__skills--bonus {
-  padding: 15px 0;
+  padding: 5px 0;
   display: flex;
-  flex-direction: row;
-  align-items: center; }
+  flex-direction: column; }
 
 .content__skills {
   display: flex;
@@ -795,9 +804,13 @@ select {
 
 .talk-icon, .it-icon, .bonus-icon {
   width: 30px;
-  height: 30px; }
+  height: 30px;
+  margin: 10px; }
 
-.skills__language--select, .skills__it--select, .skills__bonus--select {
+.skills__language--select,
+.skills__it--select,
+.skills__bonus--select {
+  display: flex;
   width: 100%;
   padding: 0 10px; }
 
@@ -807,25 +820,3 @@ select {
 
 .from-date-preview {
   padding-right: 4px; }
-
-.section__legal-warning {
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column; }
-
-.container__legal-warning {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around; }
-
-.paragraf__legal-warning {
-  margin: 0;
-  margin-bottom: 5px; }
-
-/*azul marino: #424A5F; AZUL: #55607F; AZUL CLARO: #E7ECED; AMARILLO: #EAB931; VERDE: #31B89A */
-/*font-family: 'annie', sans-serif;
-font-family: 'Cookie', cursive;
-font-family: 'Philosopher', sans-serif;*/
