@@ -1,9 +1,7 @@
 import React from 'react';
 import ButtonFont from './../../images/text.svg';
 
-
 class ChoseeFont extends React.Component {
-
 	constructor(props){
 		super(props);
 		this.HandleClickMenu = this.HandleClickMenu.bind(this);

@@ -23,7 +23,6 @@ class PreviewPersonalData extends React.Component {
 					<div className="preview-text">
 						<div className="preview__direction--phone"><span id="preview__direction--phone">{this.props.telephone}</span>
 						</div>
-
 						<div className="preview__direction--date"><span id="preview__direction--date">{this.formattedDate(this.props.date)} </span>
 						</div>
 						<div className="preview__direction--mail"><span id="preview__direction--mail">{this.props.email}</span></div>

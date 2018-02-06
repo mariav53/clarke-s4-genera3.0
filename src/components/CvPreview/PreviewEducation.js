@@ -28,7 +28,6 @@ class PreviewEducation extends React.Component{
 								<div>
 									<span id="centro-id1">{myEducation.center}</span>
 								</div>
-
 								<div className="container__formation--description">
 									<div><span id="description-education-preview-id1">{myEducation.descriptionEduc}</span></div>
 								</div>

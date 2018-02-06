@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Skills extends React.Component {
 	render() {
 		return (
@@ -50,7 +49,6 @@ class Skills extends React.Component {
 				</div>
 				<button type="button" name="button" className="button--new new-skills-button">Añadir habilidad</button>
 			</div>
-
 		);
 	}
 }

@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-import SelectMonth from './SelectMonth';
-import SelectYears from './SelectYears';
 
 class Experience extends React.Component {
 	constructor(props){
@@ -85,9 +81,9 @@ class Experience extends React.Component {
 					</div>
 					<input className="class-input" id="company1" type="text" ref="company" name="company" placeholder="Lugar" onChange ={this.handleJob}  />
 					<textarea className="experience-text" id="description-job1" ref="descriptionJob" name="descriptionJob" rows="8" cols="80" placeholder="Despripción del puesto" onChange ={this.handleJob} ></textarea>
-					<button type="button" name="button" className="button--save save-experience-button" data-id="1" onClick={this.handleClickAddJob }>Guardar</button>
+					<button type="button" name="button" className="button--save save-experience-button" data-id="1" onClick={this.handleClickAddJob }>Añadir</button>
 				</div>
-				<button type="button" name="button" className="button--new new-experience-button" onChange ={this.HandleClickAdd}>Añadir experiencia</button>
+
 			</div>
 		);
 	}

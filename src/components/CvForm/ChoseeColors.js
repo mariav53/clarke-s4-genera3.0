@@ -1,13 +1,10 @@
 import React from 'react';
 import ButtonPalette from './../../images/paint-palette.svg';
 
-
 class ChoseeColor extends React.Component {
-
 	constructor(props){
 		super(props);
 		this.HandleClickMenu = this.HandleClickMenu.bind(this);
-
 		this.state={
 			visible:false,
 		}
@@ -18,7 +15,6 @@ class ChoseeColor extends React.Component {
 			visible:!this.state.visible
 		})
 	}
-
   render () {
     return (
 			<ul className="creation__design__options" onClick ={this.HandleClickMenu}>

@@ -2,7 +2,6 @@ import React from 'react';
 import ButtonTheme from './../../images/menu.svg';
 
 class ChoseeTheme extends React.Component {
-
 	constructor(props){
 		super(props);
 		this.HandleClickMenu = this.HandleClickMenu.bind(this);

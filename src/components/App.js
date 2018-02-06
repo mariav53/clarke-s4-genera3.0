@@ -30,62 +30,22 @@ class App extends Component {
 		this.HandleGreenLimeClick = this.HandleGreenLimeClick.bind(this);
 		this.HandleBlueLimeClick = this.HandleBlueLimeClick.bind(this);
 		this.HandlePinkGreyClick = this.HandlePinkGreyClick.bind(this);
-<<<<<<< HEAD
-		this.updateJobState = this.updateJobState.bind(this);
-		this.updateEducationState = this.updateEducationState.bind(this);
-=======
 		this.handleChangeThemeDots = this.handleChangeThemeDots.bind(this);
 		this.handleChangeThemeStripes = this.handleChangeThemeStripes.bind(this);
 		this.handleChangeThemeZigZag = this.handleChangeThemeZigZag.bind(this);
->>>>>>> 487c9a56a72af05b11e5e1117faf876d2107931b
+		this.updateJobState = this.updateJobState.bind(this);
+		this.updateEducationState = this.updateEducationState.bind(this);
 
 		this.state = {
 			file: '',
 			imagePreviewUrl: '',
-<<<<<<< HEAD
-			fontOption:'philosopher',
-			colorOption: 'black-pink-grey',
-			listJobs: [],
-			listEducation: []
-=======
 			fontOption: 'philosopher',
 			colorOption: 'black-pink-grey',
-			themeOption: 'dots'
->>>>>>> 487c9a56a72af05b11e5e1117faf876d2107931b
+			themeOption: 'dots',
+			listJobs: [],
+			listEducation: []
 		};
 	}
-	handleChangeThemeZigZag(e){
-		e.preventDefault();
-		this.setState({
-			themeOption: 'zigZag'
-		})
-	}
-	handleChangeThemeStripes(e){
-		e.preventDefault();
-		this.setState({
-			themeOption: 'stripes'
-		})
-	}
-	handleChangeThemeDots(e){
-		e.preventDefault();
-		this.setState({
-			themeOption: 'dots'
-		})
-	}
-
-	updateJobState(myExperience){
-		this.setState(prevState => ({
-    	listJobs: [...prevState.listJobs, myExperience]
-		}))
-
-	}
-	updateEducationState(myEducation){
-		this.setState(prevState => ({
-    	listEducation: [...prevState.listEducation, myEducation]
-		}))
-
-	}
-
 	handleChangeFontCookie(e){
 		e.preventDefault();
 		this.setState({
@@ -123,11 +83,28 @@ class App extends Component {
 			colorOption: 'black-pink-grey'
 		})
 	}
+	handleChangeThemeZigZag(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'zigZag'
+		})
+	}
+	handleChangeThemeStripes(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'stripes'
+		})
+	}
+	handleChangeThemeDots(e){
+		e.preventDefault();
+		this.setState({
+			themeOption: 'dots'
+		})
+	}
 	handleSubmit(e) {
 		e.preventDefault();
 		console.log('handle uploading-', this.state.file);
 	}
-
 	handleImageUpload(e) {
 		e.preventDefault();
 		let reader = new FileReader();
@@ -140,13 +117,21 @@ class App extends Component {
     }
 		reader.readAsDataURL(file)
 	}
-
 	updateState(prop, value) {
 		const newState = {};
 		newState[prop] = value;
 		this.setState(newState);
 	}
-
+	updateJobState(myExperience){
+		this.setState(prevState => ({
+    	listJobs: [...prevState.listJobs, myExperience]
+		}))
+	}
+	updateEducationState(myEducation){
+		this.setState(prevState => ({
+    	listEducation: [...prevState.listEducation, myEducation]
+		}))
+	}
   render() {
 		let {imagePreviewUrl} = this.state;
 		let $imagePreview = null;
@@ -165,7 +150,6 @@ class App extends Component {
 							<div className="container__creation">
 								<section className="creation__design">
 									<ul className="creation__design__options">
-
 										<ChoseeFont
 											onClickCookie = {this.handleChangeFontCookie}
 											onClickAnnie = {this.handleChangeFontAnnie}
@@ -177,10 +161,10 @@ class App extends Component {
 											onClickPinkGrey = {this.HandlePinkGreyClick}
 										/>
 										<ChoseeTheme
-										onClickDots= {this.handleChangeThemeDots}
-										onClickStripes = {this.handleChangeThemeStripes}
-										onClickZigZag = {this.handleChangeThemeZigZag}
-									 />
+											onClickDots= {this.handleChangeThemeDots}
+											onClickStripes = {this.handleChangeThemeStripes}
+											onClickZigZag = {this.handleChangeThemeZigZag}
+										/>
 									</ul>
 								</section>
 								<ChooseImage
@@ -197,7 +181,6 @@ class App extends Component {
 						</section>
 						<section className="section__preview" id="preview">
 							<h2 className="preview__title"> Previsualización </h2>
-
 							<div className={`showpreview ${this.state.fontOption} ${this.state.colorOption} ${this.state.themeOption}`}>
 								<div className="container__preview--intro preview-div">
 									<div className="container__preview--photo">
@@ -223,23 +206,9 @@ class App extends Component {
 								/>
 								<PreviewExperience
 									listJobs ={this.state.listJobs}
-									// job = {this.state.job}
-									// company = {this.state.company}
-									// ExperiencieStartMonth={this.state.ExperiencieStartMonth}
-									// ExperiencieEndMonth={this.state.ExperiencieEndMonth}
-									// ExperiencieStartYear={this.state.ExperiencieStartYear}
-									// ExperiencieEndYear={this.state.ExperiencieEndYear}
-									// descriptionJob = {this.state.descriptionJob}
 								/>
 								<PreviewEducation
 									listEducation ={this.state.listEducation}
-									// titulation = {this.state.titulation}
-									// center = {this.state.center}
-									// EducationStartMonth={this.state.EducationStartMonth}
-									// EducationEndMonth={this.state.EducationEndMonth}
-									// EducationStartYear={this.state.EducationStartYear}
-									// EducationEndYear={this.state.EducationEndYear}
-									// descriptionEduc = {this.state.descriptionEduc}
 								/>
 								<PreviewSkills
 									lang1 = {this.state.lang1}

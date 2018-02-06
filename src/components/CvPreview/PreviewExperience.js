@@ -1,9 +1,6 @@
 import React from 'react';
-import AddExperience from './AddExperience'
 
 class PreviewExperience extends React.Component {
-
-
 	render() {
 		return (
 			<div className="container__preview--experience preview-div">
@@ -54,6 +51,5 @@ PreviewExperience.defaultProps = {
 	ExperiencieEndMonth : "Ago",
 	ExperiencieEndYear : "2016",
 }
->>>>>>> 487c9a56a72af05b11e5e1117faf876d2107931b
 
 export default PreviewExperience;

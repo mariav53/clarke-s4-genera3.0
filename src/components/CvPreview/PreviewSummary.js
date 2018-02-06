@@ -1,7 +1,6 @@
 import React from 'react';
 
 class PreviewSummary extends React.Component {
-
 	render() {
 		return (
 			<div className="container__preview--summary">
