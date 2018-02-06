@@ -1,0 +1,21 @@
+.button--open, .button--close {
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+ 	@media all and (min-width:768px){
+ 		width: 30px;
+ 		height: auto;
+	}
+}
+
+.button--save, .button--new{
+	background-color: $colorYellow;
+	color: $colorDarkBlue;
+	font-size: 18px;
+	font-weight: bold;
+	border-style: none;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 4px 5px;
+	margin: 7px 0;
+}
