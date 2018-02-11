@@ -1,7 +1,7 @@
 #  Project from Sprint #4 Adalab
 Refactoring inherit code to React.Js
 
-## Proyecto 4: Caso de código heredad
+## Proyecto 4: Caso de código heredado
 Trabajar con el código heredado del proyecto #2 de Curriculo interactivo del equipo [Generatrix](https://github.com/Adalab/clarke-s2-generatrix) y crear un aplicación web con React.
 
 ## Especificaciones
