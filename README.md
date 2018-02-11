@@ -20,6 +20,7 @@ Modificar el código mejorando su estructura, pero sin añadir nuevas funcionali
 - Incluir pequeñas mejoras: incluir foto en el CV, mostrar en preview el contenido que se va rellenando en el formulario.
 
 **Integrantes del equipo**
+
 Aida Albarrán
 
 Gloria Fernández
