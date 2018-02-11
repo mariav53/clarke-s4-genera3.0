@@ -2,7 +2,7 @@
 Refactoring inherit code to React.Js
 
 ## Proyecto 4: Caso de código heredad
-Trabajar con el código heredado del proyecto #2 de Curriculo interactivo del equipo [Generatrix]https://github.com/Adalab/clarke-s2-generatrix) y crear un aplicación web con React.
+Trabajar con el código heredado del proyecto #2 de Curriculo interactivo del equipo [Generatrix](https://github.com/Adalab/clarke-s2-generatrix) y crear un aplicación web con React.
 
 ## Especificaciones
 Modificar el código mejorando su estructura, pero sin añadir nuevas funcionalidades.
